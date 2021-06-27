@@ -1,2 +1,4 @@
 thistuple = ("apple", "banana", "cherry", "apple", "cherry")
-print(thistuple)
+
+print('tuple', thistuple)
+print('list', list(thistuple))

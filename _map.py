@@ -3,5 +3,6 @@
 def myFunc(n):
   return len(n)
 
-x1 = map(myFunc, ('apple', 'banana', 'cherry'))
-print(list(x1)) # << Thats how we convert `tuple` to `list`(i.e., array).
+x1 = map(myFunc, ('a', 'bc', 'defg'))
+
+print(list(x1)) # << Thats how we convert `map generator/tuple` to `list`(i.e., array).
