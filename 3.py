@@ -1,4 +1,4 @@
-# Nested list comprehentsion example.
+# Nested list comprehension example.
 # I stands for input from user.
 x = int(input('Enter x\n'))
 y = int(input('Enter y\n'))
@@ -8,16 +8,15 @@ n = int(input('Enter n\n'))
 myLambda = lambda a, b, c, d: a + b + c != d # this prints True or False.
 
 X = range(x) # X [0, 1, 2 , ...x-1]
-Y = range(y) # .. similarly for below
-Z = range(z) #
-N = range(n) #
+Y = range(y)
+Z = range(z)
+N = range(n)
 
-
+# PRINTS ALL THE POINTS IN SPACE.
 # points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z] # Prints all the points.
 
 # SOLUTION BELOW:
 points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z if myLambda(xval, yval, zval, n)] # SOLUTION USING LAMBDA FUNCTION.
 # points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z if xval+yval+zval != n] # SIMPLE SOLUTION.
-
 
 print(points)
