@@ -1,3 +1,9 @@
+# Readme
+
+## Refer w3documentation is awesome for python
+
+https://www.w3schools.com/python/
+
 ## \*\* operator in python
 
 It's a bitwise XOR (exclusive OR).
