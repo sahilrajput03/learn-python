@@ -166,3 +166,5 @@ Default value in taken into string, we should conver to int or boolean or else a
 ## uppercase , lowercase string methods
 
 `isupper(), islower(), lower(), upper()`
+
+## closing 27 june, complete day4
