@@ -42,6 +42,8 @@ Example:
 
 ## Tuple
 
+src: https://www.w3schools.com/python/python_tuples.asp
+
 A tuple is an ordered collection of different data types like list but tuples can not be modified once they are created. They are immutable.
 
 Example:
@@ -159,6 +161,8 @@ print(challenge.startswith('thirty')) # False\
 - Ordered: List, Tuple
 - Unordered: Set, Dictionary
 
+- tuples: `mytuple = ("apple", "banana", "cherry")`
+
 ## input
 
 Default value in taken into string, we should conver to int or boolean or else as required.
@@ -166,5 +170,38 @@ Default value in taken into string, we should conver to int or boolean or else a
 ## uppercase , lowercase string methods
 
 `isupper(), islower(), lower(), upper()`
+
+## range in python
+
+```py
+x = range(6)
+# here x becomes [0,1,2,3,4,5]
+```
+
+src: https://www.w3schools.com/python/ref_func_range.asp
+
+## Using lamda function
+
+```py
+x = lambda a, b: a * b
+print(x(5, 6))
+```
+
+FYI: You can't use multiple lines in lambda function, just use `def` instead.
+
+## Using map in python
+
+Why map values aren't getting printed (i.e., you get something like `<map object at 0x7f8457c0f670> ` as output)!
+https://stackoverflow.com/a/45018536
+
+A map object is a generator returned from calling the map() built-in function. It is intended to be iterated over (e.g. by passing it to list()) only once, after which it is consumed. Trying to iterate over it a second time will result in an empty sequence.
+
+Fix:
+
+```py
+my_map = map(...)
+# convert above to below to fix...
+my_map = list(map(...))
+```
 
 ## closing 27 june, complete day4
