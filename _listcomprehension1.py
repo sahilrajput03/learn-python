@@ -4,5 +4,5 @@ x = int(input('Enter x\n'))
 X = range(x) # X [0, 1, 2 , ...x-1]
 
 m1 = [ i for i in X]
-
+#     ^ here this is the return value and it works exactly like map function in javascript.
 print(m1)
