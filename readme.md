@@ -1,6 +1,6 @@
 # Readme
 
-## Refer w3documentation is awesome for python
+## Refer w3documentation is awesome for python:
 
 https://www.w3schools.com/python/
 
