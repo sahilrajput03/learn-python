@@ -2,6 +2,25 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## mimic input in python
+
+```
+input_arr = ["one", "two"]
+i = -1
+def mock_input():
+    global i
+    i = i + 1
+    if i < len(input_arr):
+        return input_arr[i]
+
+# Enabling `mock_input` (comment below line to to disable mocking input):
+input = mock_input
+
+# Testing input calls
+for k in range(len(input_arr)):
+    print(input())
+```
+
 ## Refer w3documentation is awesome for python:
 
 https://www.w3schools.com/python/
