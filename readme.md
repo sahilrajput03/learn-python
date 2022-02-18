@@ -1,5 +1,7 @@
 # Readme
 
+Python cheatsheet: https://cheatography.com/sschaub/cheat-sheets/essential-python/
+
 ## Refer w3documentation is awesome for python:
 
 https://www.w3schools.com/python/
