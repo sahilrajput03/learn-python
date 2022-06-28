@@ -1,5 +1,7 @@
 # Readme
 
+*The repository name is changed from `python-30-days-weekends` to `learn-python` on 28 Jun, 2022.*
+
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
 ## mimic input in python
