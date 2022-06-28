@@ -1,4 +1,4 @@
-# Readme
+# learn-python
 
 *The repository name is changed from `python-30-days-weekends` to `learn-python` on 28 Jun, 2022.*
 
