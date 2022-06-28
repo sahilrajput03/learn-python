@@ -1,6 +1,6 @@
 # learn-python
 
-*The repository name is changed from `python-30-days-weekends` to `learn-python` on 28 Jun, 2022.*
+*UPDATE: (28 Jun, 2022) :The repository name is changed from `python-30-days-weekends` to `learn-python` *
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
