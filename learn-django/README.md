@@ -1,5 +1,7 @@
 # Learn django
 
+Continue from: https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin
+
 ```bash
 # Starting a new project named `mysite`
 django-admin startproject mysite
