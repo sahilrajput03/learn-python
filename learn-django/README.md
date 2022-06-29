@@ -8,6 +8,14 @@ django-admin startproject mysite
 cd mysite
 python manage.py runserver
 # Browse @ http://localhost:8000/
+
+# create web app in our project
+python manage.py startapp polls
+
+## Important files
+mysite/mysite/urls.py
+mysite/polls/urls.py
+mysite/polls/views.py
 ```
 
 source: https://docs.djangoproject.com/en/4.0/intro/tutorial01/
