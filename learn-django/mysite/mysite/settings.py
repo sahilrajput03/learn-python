@@ -30,13 +30,16 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# These applications are included by default as a convenience for the common case.
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'polls.apps.PollsConfig',
+    #~Sahil:  To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add that dotted path to the INSTALLED_APPS setting.
+    'django.contrib.admin', # The admin site. You’ll use it shortly.
+    'django.contrib.auth', # An authentication system
+    'django.contrib.contenttypes', # A framework for content types.
+    'django.contrib.sessions', # A session framework.
+    'django.contrib.messages', #  A messaging framework.
+    'django.contrib.staticfiles', #  A framework for managing static files.
 ]
 
 MIDDLEWARE = [
@@ -91,6 +94,12 @@ DATABASES = {
         'PORT' : '', ## Will use default port i.e., 5432
     }
 }
+# See the database via psql:
+# psql -U postgres -d django_app1
+
+# Learn ~sahil
+# For the minimalists
+# Like we said above, the default applications are included for the common case, but not everybody needs them. If you don’t need any or all of them, feel free to comment-out or delete the appropriate line(s) from INSTALLED_APPS before running migrate. The migrate command will only run migrations for apps in INSTALLED_APPS.
 
 
 # Password validation
@@ -117,7 +126,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
+# ~ Setting to indian timezone, src: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 USE_I18N = True
 
