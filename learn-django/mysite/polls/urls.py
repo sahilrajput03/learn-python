@@ -6,8 +6,8 @@ urlpatterns = [
 	# This matches /polls and /polls/
     path('', views.index, name='index'),
 
-	# This matches /polls/page1 and not /polls/page1/
-    path('page1', views.page1, name='index'),
+	# This matches /polls/page1/ and /polls/page1 is redirected to /polls/page1/
+    path('page1/', views.page1, name='index'),
 ]
 
 # This file is created by my own ~ Sahil

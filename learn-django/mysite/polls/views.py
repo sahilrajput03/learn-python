@@ -9,4 +9,5 @@ def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 def page1(request):
-    return HttpResponse("Hello, world. I am page1.")
+    # When Django finds a matching pattern, it calls the specified view function with an HttpRequest object as the first argument and any “captured” values from the route as keyword arguments. We’ll give an example of this in a bit.
+    return HttpResponse("Hello, world. I am page 1.")
