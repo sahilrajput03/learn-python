@@ -16,6 +16,20 @@ python manage.py startapp polls
 mysite/mysite/urls.py
 mysite/polls/urls.py
 mysite/polls/views.py
+
+# Added settings for db config in file: `mysite/mysite/settings.py`
+# src: Setting up postgres with django: https://youtu.be/KqcS3P32s6Y
+# BEWARE: pgadmin is actually a good ui manager for postgres, src above^^.
+# Instlled for postgres support
+sudo pacman -S python-psycopg2
+# Seup migrations and migrate to db
+python manage.py makemigrations
+python manage.py migrate
+# That'll fill the database with appropriate data and you would be able to see lots of tables created by command:
+psql -d django_app1 -U postgres -c "\d"
+
+# Creating a super user:
+python manage.py createsuperuser # use username as `admin` and choose some passwd.
 ```
 
 source: https://docs.djangoproject.com/en/4.0/intro/tutorial01/
