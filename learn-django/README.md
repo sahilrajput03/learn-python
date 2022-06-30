@@ -1,5 +1,7 @@
 # Learn django
 
+**Getting Started with django:** [Click here](https://www.djangoproject.com/start/)
+
 Continue from: https://docs.djangoproject.com/en/4.0/intro/tutorial03/#raising-a-404-error
 
 ```bash
@@ -19,8 +21,7 @@ mysite/mysite/urls.py
 mysite/polls/urls.py
 mysite/polls/views.py
 
-# Added settings for db config in file: `mysite/mysite/settings.py`
-# src: Setting up postgres with django: https://youtu.be/KqcS3P32s6Y
+# Added settings for db config in file: `mysite/mysite/settings.py` # src: Setting up postgres with django: https://youtu.be/KqcS3P32s6Y
 # BEWARE: pgadmin is actually a good ui manager for postgres, src above^^.
 # Instlled for postgres support
 sudo pacman -S python-psycopg2
@@ -36,8 +37,7 @@ python manage.py createsuperuser # use username as `admin` and choose some passw
 
 
 ## ~Sahil, Migrating models after adding Mode definition in `polls/models.py` and adding `polls` app i.e., `polls.apps.PollsConfig` to array i.e., `INSTALLED_APPS` in `mysite/settings.py`.
-# DJANGO DOCS: By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
-# DJANGO DOCS: Migrations are how Django stores changes to your models (and thus your database schema) - they’re files on disk. You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py. Don’t worry, you’re not expected to read them every time Django makes one, but they’re designed to be human-editable in case you want to manually tweak how Django changes things.
+# DJANGO DOCS: By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration. ** Migrations are how Django stores changes to your models (and thus your database schema) - they’re files on disk. You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py. Don’t worry, you’re not expected to read them every time Django makes one, but they’re designed to be human-editable in case you want to manually tweak how Django changes things.
 python manage.py makemigrations polls
 
 
@@ -55,16 +55,14 @@ python manage.py check;
 python manage.py migrate
 
 
-# SHORT NOTES FROM django
-# Remember the three-step guide to making model changes:
+# Remember the three-step guide to making model changes: (SHORT NOTES FROM django)
 # 1. Change your models (in models.py).
 # 2. Run python manage.py makemigrations to create migrations for those changes
 # 3. Run python manage.py migrate to apply those changes to the database.
 
 
 ## Creating superuser
-python manage.py createsuperuser
-## admin,sahilrajput03@gmail.com, password: <same as archlinux user>
+python manage.py createsuperuser ## admin,sahilrajput03@gmail.com, password: <same as archlinux user>
 # Now you can browse admin section via: http://localhost:8000/admin/
 ```
 
@@ -109,7 +107,7 @@ src: https://wsgi.readthedocs.io/en/latest/what.html
 
 - Lean how to deploy with ASGI: https://docs.djangoproject.com/en/4.0/howto/deployment/asgi/
 
-# command logs
+# Command Logs
 
 ```bash
 python manage.py makemigrations
