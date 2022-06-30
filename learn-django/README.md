@@ -60,6 +60,12 @@ python manage.py migrate
 # 1. Change your models (in models.py).
 # 2. Run python manage.py makemigrations to create migrations for those changes
 # 3. Run python manage.py migrate to apply those changes to the database.
+
+
+## Creating superuser
+python manage.py createsuperuser
+## admin,sahilrajput03@gmail.com, password: <same as archlinux user>
+# Now you can browse admin section via: http://localhost:8000/admin/
 ```
 
 source: https://docs.djangoproject.com/en/4.0/intro/tutorial01/
@@ -191,4 +197,17 @@ Operations to perform:
   Apply all migrations: admin, auth, contenttypes, polls, sessions
 Running migrations:
   Applying polls.0001_initial... OK
+
+
+## Creating superuser
+python manage.py createsuperuser
+# OUTPUT:
+Username (leave blank to use 'array'): admin
+Email address: sahilrajput03@gmail.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
 ```
