@@ -1,6 +1,6 @@
 # Learn django
 
-Continue from: https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin
+Continue from: https://docs.djangoproject.com/en/4.0/intro/tutorial03/#raising-a-404-error
 
 ```bash
 # Starting a new project named `mysite`
