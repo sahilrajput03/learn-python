@@ -2,6 +2,8 @@
 
 *UPDATE: (28 Jun, 2022) :The repository name is changed from `python-30-days-weekends` to `learn-python` *
 
+**Lean python via learnxinyminutes.com: https://learnxinyminutes.com/docs/python/**
+
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
 ## mimic input in python
