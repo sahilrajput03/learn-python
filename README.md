@@ -6,6 +6,16 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## Deploying sample python app to heroku
+
+```bash
+git clone https://github.com/heroku/python-getting-started.git
+cd python-getting-started
+heroku create
+git push heroku main
+# YO! ITS UP
+```
+
 ## Learn flask
 
 Read amazing quick start in Official Docs: [Click here](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application)
