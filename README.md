@@ -6,6 +6,33 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## Python Debugger for autoattach works really great
+
+```
+{
+    "name": "Python: Attach |Debug Flask App",
+    // This is just "Python: Remote Attach" script (no modifications from myside at at all).
+    // You can run below command from external terminal and this task will attach the debugger to vscode, yo!
+    // BTW: USE ALIAS: `fkDebug`
+    // python -m debugpy --listen 0.0.0.0:5678 -m flask --debug run --host=0.0.0.0
+    // To make code not run before attaching to the vscode debugger you can use `--wait-for-client` flag of python. YO ~Sahil
+    // python -m debugpy --wait-for-client --listen 0.0.0.0:5678 -m flask run --host=0.0.0.0
+    "type": "python",
+    "request": "attach",
+    "connect": {
+        "host": "localhost",
+        "port": 5678
+    },
+    "pathMappings": [
+        {
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "."
+        }
+    ],
+    "justMyCode": true
+}
+```
+
 ## Interesting feature of debugger
 
 This is an intersting thing to use in debuggers, especially when you are leanring a new language so you get to whenever some exception occurs and where exactly it occured.
