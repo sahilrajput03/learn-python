@@ -12,6 +12,8 @@ https://github.com/mugdevs/flask-tailwind-template
 
 ## Deploying sample python app to heroku
 
+I pushed it to my github: https://github.com/sahilrajput03/python-getting-started-heroku/tree/main
+
 Source: [Official Guide](https://devcenter.heroku.com/articles/getting-started-with-python#prepare-the-app)
 
 ```bash
