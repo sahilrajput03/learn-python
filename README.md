@@ -6,6 +6,10 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## flask tailwind template
+
+https://github.com/mugdevs/flask-tailwind-template
+
 ## Deploying sample python app to heroku
 
 Source: [Official Guide](https://devcenter.heroku.com/articles/getting-started-with-python#prepare-the-app)
