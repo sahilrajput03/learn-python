@@ -8,6 +8,8 @@
 
 ## Deploying sample python app to heroku
 
+Source: [Official Guide](https://devcenter.heroku.com/articles/getting-started-with-python#prepare-the-app)
+
 ```bash
 git clone https://github.com/heroku/python-getting-started.git
 cd python-getting-started
