@@ -8,9 +8,10 @@
 
 ## Learn flask
 
+Read amazing quick start in Official Docs: [Click here](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application)
+
 ![image](https://user-images.githubusercontent.com/31458531/187025342-236c7b0e-7ce5-4f12-9166-47ce37ec913d.png)
 
-Read amazing quick start in Official Docs: [Click here](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application)
 
 ## Python Debugger for autoattach works really great
 
