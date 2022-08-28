@@ -6,6 +6,10 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## Created a python skype bot which sends build notificaiton messages to desired skype group
+
+https://github.com/sahilrajput03/skype-bot-with-heroku-webhook-for-build-notifications/tree/main
+
 ## flask tailwind template
 
 https://github.com/mugdevs/flask-tailwind-template
