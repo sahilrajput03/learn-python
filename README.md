@@ -1,6 +1,9 @@
 # learn-python
 
-*UPDATE: (28 Jun, 2022) :The repository name is changed from `python-30-days-weekends` to `learn-python` *
+**PYTHON TODO:**
+- Prepare crud application with django's example
+
+*UPDATE: (28 Jun, 2022) :The repository name is changed from `python-30-days-weekends` to `learn-python`*
 
 **Lean python via learnxinyminutes.com: https://learnxinyminutes.com/docs/python/**
 
