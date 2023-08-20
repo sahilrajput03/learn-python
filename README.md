@@ -9,6 +9,12 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## Learn fixing some more dependencies
+
+Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/zachan-dev/reactjs-django-twitter-clone)
+
+<img src="https://github.com/sahilrajput03/learn-python/assets/31458531/5e20b00d-136c-4d67-9c6e-8a9cb1b2d516" width="700" />
+
 ## Learn fixing the dependency issue of `psycopg2` dependency issue?
 
 Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/zachan-dev/reactjs-django-twitter-clone)
