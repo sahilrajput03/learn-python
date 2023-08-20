@@ -9,6 +9,12 @@
 
 **Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+## Learn fixing the dependency issue of `psycopg2` dependency issue?
+
+Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/zachan-dev/reactjs-django-twitter-clone)
+
+Just install postgres on archlinux and that's all it needs for the dependency to be installed.
+
 ## Created a python skype bot which sends build notificaiton messages to desired skype group
 
 https://github.com/sahilrajput03/skype-bot-with-heroku-webhook-for-build-notifications/tree/main
