@@ -11,13 +11,13 @@
 
 ## Learn fixing some more dependencies
 
-Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/zachan-dev/reactjs-django-twitter-clone)
+Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)
 
 <img src="https://github.com/sahilrajput03/learn-python/assets/31458531/5e20b00d-136c-4d67-9c6e-8a9cb1b2d516" width="700" />
 
 ## Learn fixing the dependency issue of `psycopg2` dependency issue?
 
-Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/zachan-dev/reactjs-django-twitter-clone)
+Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)
 
 Just install postgres on archlinux and that's all it needs for the dependency to be installed.
 
