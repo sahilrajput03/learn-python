@@ -2,6 +2,7 @@
 
 **PYTHON TODO:**
 - Prepare crud application with django's example
+- **Study the Django DRF from this project: [sahilrajput03/reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)**
 
 *UPDATE: (28 Jun, 2022) :The repository name is changed from `python-30-days-weekends` to `learn-python`*
 
