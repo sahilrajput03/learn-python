@@ -1,12 +1,12 @@
 # learn-python
 
-**PYTHON TODO:**
+**Todo:**
 - Prepare crud application with django's example
 - **Study the Django DRF from this project: [sahilrajput03/reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)**
 
-**Lean python via learnxinyminutes.com: https://learnxinyminutes.com/docs/python/**
-
-**Python cheatsheet**: https://cheatography.com/sschaub/cheat-sheets/essential-python/
+**Quick Links:**
+- Lean python via learnxinyminutes.com: https://learnxinyminutes.com/docs/python/
+- Python cheatsheet: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
 ## Learn fixing some more dependencies
 
