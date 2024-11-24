@@ -8,6 +8,11 @@
 - Lean python via learnxinyminutes.com: https://learnxinyminutes.com/docs/python/
 - Python cheatsheet: https://cheatography.com/sschaub/cheat-sheets/essential-python/
 
+
+## Python Libraries
+
+![image](https://github.com/user-attachments/assets/a8c554b6-ff39-4ebd-a776-71d347d2240c)
+
 ## Learn fixing some more dependencies
 
 Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)
