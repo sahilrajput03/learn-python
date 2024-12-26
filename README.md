@@ -40,6 +40,7 @@ print()
 ```py
 # All below if statements resolve to true.
 
+#### Using `type` function
 if type(10) == int:
     print("integer type")
 
@@ -48,6 +49,9 @@ if type(3.14) == float:
 
 if type(1 + 3j) == complex:
     print("complex type")
+
+if type('Asabeneh') == str:
+    print("str type")
 
 if type([1,2,3]) == list:
     print("list type")
@@ -59,8 +63,9 @@ if type((9.8, 3.14, 2.7)) == tuple:
     print("tuple type")
 print()
 
+#### However, it's often better to use isinstance() for type checking, as it
+#     works with inheritance:
 
-# ############
 # check variable type using `isinstance`
 if isinstance(10, int):
     print("integer type")
@@ -70,6 +75,9 @@ if isinstance(3.14, float):
 
 if isinstance(1 + 3j, complex):
     print("complex type")
+
+if type('Asabeneh') == str:
+    print("str type")
 
 if isinstance([1,2,3], list):
     print("list type")
@@ -89,10 +97,28 @@ print()
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/2.1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.1.py -->
 ```py
+# Printing variables
+# #########################
+
 x = input('Please enter your name\n')
-print(f"{x} , good to meet you!")
-# f means formatted string, cool.!
-# From python 3 we use mordern syntax.
+
+if type(x) == str:
+    print("str type")
+
+# f-strings (formatted string literals)     (Way 1)
+print(f"{x}, good to meet you!")
+# Note:
+# 1. From Python 3.6 (2016) we use this `f-strings` syntax widely for their readability and efficiency
+# when formatting strings.)
+# 2. This approach is concise and more efficient compared to older methods like str.format() or string concatenation.
+
+
+# Using str.format()                        (Way 2)
+print("{}, good to meet you!".format(x))
+
+# ###
+# Note: Both methods (`f-strings` & `str.format`) allow you to include multiple variables in a string, but f-strings are generally preferred for their cleaner syntax.
+# ###
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -102,7 +128,10 @@ print(f"{x} , good to meet you!")
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.2.py -->
 ```py
 s = 'sahil'
-print(len(s))
+print(len(s)) # 5
+
+if len(s) == 5:
+    print('Yes it is a 5.')
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -113,13 +142,13 @@ print(len(s))
 ```py
 a = 4
 b = 3
-print(f'{a} + {b} = {a +b}')
-print(f'{a} - {b} = {a - b}')
-print(f'{a} * {b} = {a * b}')
-print(f'{a} / {b} = {a / b:.2f}')
-print(f'{a} % {b} = {a % b}')
-print(f'{a} // {b} = {a // b}')
-print(f'{a} ** {b} = {a ** b}')
+print(f'{a} + {b} = {a +b}')        # 4 + 3 = 7
+print(f'{a} - {b} = {a - b}')       # 4 - 3 = 1
+print(f'{a} * {b} = {a * b}')       # 4 * 3 = 12
+print(f'{a} / {b} = {a / b:.2f}')   # 4 / 3 = 1.33
+print(f'{a} % {b} = {a % b}')       # 4 % 3 = 1
+print(f'{a} // {b} = {a // b}')     # 4 // 3 = 1
+print(f'{a} ** {b} = {a ** b}')     # 4 ** 3 = 64
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -145,8 +174,9 @@ print(f) # n
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.5.py -->
 ```py
 language = 'Python'
-pto = language[0,6:2] #
-print(pto) # Pto
+pto = language[0:6:2] #
+print(pto)              # "Pto"
+print(type(pto) == str) # True
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -192,27 +222,34 @@ userInput()
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.2.py -->
 ```py
 # Nested list comprehension example.
-# I stands for input from user.
-x = int(input('Enter x\n'))
-y = int(input('Enter y\n'))
-z = int(input('Enter z\n'))
-n = int(input('Enter n\n'))
+myLambda = lambda a, b, sum: a + b != sum # Returns True or False
 
-myLambda = lambda a, b, c, d: a + b + c != d # this prints True or False.
+X = range(3) # [0, 1, 2 , ...n-1]
+Y = range(2)
 
-X = range(x) # X [0, 1, 2 , ...x-1]
-Y = range(y)
-Z = range(z)
-N = range(n)
+# PRINTS ALL THE POINTS IN TWO-DIMENSION SPACE.
+points = [[xval, yval] for xval in X for yval in Y] # Prints all the points.
+print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0], [2, 1]]
 
-# PRINTS ALL THE POINTS IN SPACE.
-# points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z] # Prints all the points.
+# Note to Sahil: This above syntax of nested loop works like
+# `for Loop1 for Loop2`
+# Loop1 (e.g., X values in this case)
+#       Loop2 (e.g, Y values in this case)
 
-# SOLUTION BELOW:
-points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z if myLambda(xval, yval, zval, n)] # SOLUTION USING LAMBDA FUNCTION.
-# points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z if xval+yval+zval != n] # SIMPLE SOLUTION.
 
-print(points)
+
+# Print values only when sum of values is `required_sum`
+required_sum = 3
+
+points = [[xval, yval] for xval in X for yval in Y if xval+yval != required_sum] # SIMPLE SOLUTION.
+print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
+# We learn in this example that we can pass a condition after the `for-loop` and return values if that condition passes.
+
+
+points = [[xval, yval] for xval in X for yval in Y if myLambda(xval, yval, required_sum)] # SOLUTION USING LAMBDA FUNCTION.
+print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
+# We learn in this example that we can pass a lambda function after the `for-loop` and condition returned from
+#   lambda function will judge whether to show a variable
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
