@@ -251,6 +251,12 @@ points = [[xval, yval] for xval in X for yval in Y if myLambda(xval, yval, requi
 print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
 # We learn in this example that we can pass a lambda function after the `for-loop` and condition returned from
 #   lambda function will judge whether to show a variable
+
+
+
+
+# Sahil: Probably these ways are helpful in using when we need functionalities
+# similar to `find` or `filter` array methods in Javascript.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -266,7 +272,7 @@ print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/4.1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/4.1.py -->
 ```py
-target = 7 # right no.
+secret_number = 7 # right number
 
 count = 1
 
@@ -275,7 +281,7 @@ allowed_attempts = 3
 def game(count):
   i = int(input(f'You have {allowed_attempts} attempts to guess the number. \nTry your luck, choose a number:\n'))
   count += 1
-  if i == target:
+  if i == secret_number:
     print('Hooray..!')
   else:
     if count > allowed_attempts:
