@@ -2,3 +2,6 @@
 build
 #The format of .prettierignore is same as .gitignore syntax. src:https://prettier.io/docs/en/ignore.html
 #gitignore syntax: https://git-scm.com/docs/gitignore#_pattern_format 
+
+# Need to add this to prevent autoformat on save in VsCode.
+README.md
