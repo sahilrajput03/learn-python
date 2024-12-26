@@ -22,3 +22,9 @@ points = [[xval, yval, zval] for xval in X for yval in Y for zval in Z if myLamb
 print(points) # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
 # We learn in this example that we can pass a lambda function after the `for-loop` and condition returned from
 #   lambda function will judge whether to show a variable
+
+
+
+
+# Sahil: Probably these ways are helpful in using when we need functionalities
+# similar to `find` or `filter` array methods in Javascript.
