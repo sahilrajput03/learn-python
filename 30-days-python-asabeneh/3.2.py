@@ -1,3 +1,4 @@
+# Nested list comprehension example.
 myLambda = lambda a, b, sum: a + b != sum # Returns True or False
 
 X = range(3) # [0, 1, 2 , ...n-1]
