@@ -216,10 +216,10 @@ print(points)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/4-s.py`
+## File - `30-days-python-asabeneh/4.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/4-s.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/4-s.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/4.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/4.1.py -->
 ```py
 # Get no. of user.
 # max no. of attempt 3.
@@ -245,10 +245,10 @@ game(count)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/5-game.py`
+## File - `30-days-python-asabeneh/5.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/5-game.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/5-game.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/5.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/5.1.py -->
 ```py
 print("""🤠︎ Welcome to the game
 Infomation:
