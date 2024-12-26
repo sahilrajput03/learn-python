@@ -7,11 +7,80 @@ Code generate via autodocs
 ## File - `30-days-python-asabeneh/1.1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/1.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/1.1.py -->
+```py
+# Day 1 - 30DaysOfPython Challenge
+
+print(2 + 3)                     # addition(+)
+print(3 - 1)                     # subtraction(-)
+print(2 * 3)                     # multiplication(*)
+print(3 / 2)                     # division(/)
+print(3 ** 2)                    # exponential(**)
+print(3 % 2)                     # modulus(%)
+print(3 // 2)                    # Floor division operator(//)
+print()
+
+# Checking data types
+print(type(10))                  # <class 'int'>
+print(type(3.14))                # <class 'float'>
+print(type(1 + 3j))              # <class 'complex'>
+print(type('Asabeneh'))          # <class 'str'>
+print(type([1, 2, 3]))           # Li<class 'list'>st   
+print(type({'name':'Asabeneh'})) # <class 'dict'>
+print(type({9.8, 3.14, 2.7}))    # <class 'set'>
+print(type((9.8, 3.14, 2.7)))    # <class 'tuple'>
+print()
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/1.2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/1.2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/1.2.py -->
+```py
+# All below if statements resolve to true.
+
+if type(10) == int:
+    print("integer type")
+
+if type(3.14) == float:
+    print("float type")
+
+if type(1 + 3j) == complex:
+    print("complex type")
+
+if type([1,2,3]) == list:
+    print("list type")
+
+if type({9.8, 3.14, 2.7}) == set:
+    print("set type")
+
+if type((9.8, 3.14, 2.7)) == tuple:
+    print("tuple type")
+print()
+
+
+# ############
+# check variable type using `isinstance`
+if isinstance(10, int):
+    print("integer type")
+
+if isinstance(3.14, float):
+    print("float type")
+
+if isinstance(1 + 3j, complex):
+    print("complex type")
+
+if isinstance([1,2,3], list):
+    print("list type")
+
+if isinstance({9.8, 3.14, 2.7}, set):
+    print("set type")
+
+if isinstance((9.8, 3.14, 2.7), tuple):
+    print("tuple type")
+print()
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
