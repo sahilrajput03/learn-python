@@ -254,6 +254,13 @@ print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+
+
+## File - `30-days-python-asabeneh/3.3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
 ## File - `30-days-python-asabeneh/4.1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/4.1.py) -->
