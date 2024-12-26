@@ -98,15 +98,16 @@ print()
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.1.py -->
 ```py
 # Printing variables
-# #########################
+# ##################
 
 x = input('Please enter your name\n')
+# x = 'Alice' # (Testing)
 
 if type(x) == str:
     print("str type")
 
 # f-strings (formatted string literals)     (Way 1)
-print(f"{x}, good to meet you!")
+print(f"{x}, good to meet you!")            # You can use single ('') or double ("") quotes as you wish
 # Note:
 # 1. From Python 3.6 (2016) we use this `f-strings` syntax widely for their readability and efficiency
 # when formatting strings.)
@@ -114,7 +115,7 @@ print(f"{x}, good to meet you!")
 
 
 # Using str.format()                        (Way 2)
-print("{}, good to meet you!".format(x))
+print("{}, good to meet you!".format(x))    # You can use single ('') or double ("") quotes as you wish
 
 # ###
 # Note: Both methods (`f-strings` & `str.format`) allow you to include multiple variables in a string, but f-strings are generally preferred for their cleaner syntax.
@@ -258,26 +259,24 @@ print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/4.1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/4.1.py -->
 ```py
-# Get no. of user.
-# max no. of attempt 3.
-
 target = 7 # right no.
 
 count = 1
 
+allowed_attempts = 3
+
 def game(count):
-  i = int(input('Try your luck, choose a number..\n'))
+  i = int(input(f'You have {allowed_attempts} attempts to guess the number. \nTry your luck, choose a number:\n'))
   count += 1
   if i == target:
     print('Hooray..!')
   else:
-    if count > 3:
+    if count > allowed_attempts:
       print('Sorry, You loose!!')
-      return
-      # ^^ terminate the function execution.
+      return # terminate the function execution.
     game(count)
 
-# start the game...
+# Start the game
 game(count)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -287,17 +286,47 @@ game(count)
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/5.1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/5.1.py -->
 ```py
-print("""🤠︎ Welcome to the game
-Infomation:
-Start - to start the car
+info = """
+start - to start the car
 stop - to stop the car
 quit - to exit
-help - car manual""")
+"""
 
-info = """Start - to start the car
-stop - to stop the car
-quit - to exit
+welcome_message = """🤠︎ Welcome to the game!"""
 
+print(welcome_message, info)
+
+def game(is_started):
+  choice = input().lower()
+  if choice == 'help':
+    print(info)
+    game(is_started)
+  elif choice == 'start':
+    if is_started == True:
+      print('You car is already started🥶︎!')
+      game(is_started)
+    print('Your car started..🚀︎🚀︎!!.')
+    is_started = True
+    game(is_started)
+  elif choice == 'stop':
+    if is_started == False:
+      print('You car is already stopped🥶︎!')
+      game(is_started)
+    print('You car stopped ..🛑︎🛑︎')
+    is_started = False
+    game(is_started)
+  elif choice == 'quit':
+    print('Thanks for playing the game 🧸︎')
+    return
+  else:
+    print("I don't understand that...")
+    print('Try again..')
+    game(is_started)
+
+game(False)
+
+# Some case flow of this game:
+"""
 CASE: If user types any wrong choice..!
 print >>> I don't understand that...
 
@@ -305,36 +334,7 @@ CASE: If choose start
 Car started...Ready to go!
 
 CASE: If choose stop
-Car stopped."""
-isCarStarted = False
-
-def game(isCarStarted):
-  choice = input().lower()
-  if choice == 'help':
-    print(info)
-    game(isCarStarted)
-  elif choice == 'start':
-    if isCarStarted == True:
-      print('You car is already started🥶︎!')
-      game(isCarStarted)
-    print('Your car started..🚀︎🚀︎!!.')
-    isCarStarted = True
-    game(isCarStarted)
-  elif choice == 'stop':
-    if isCarStarted == False:
-      print('You car is already stopped🥶︎!')
-      game(isCarStarted)
-    print('You car stopped ..🛑︎🛑︎')
-    isCarStarted = False
-    game(isCarStarted)
-  elif choice == 'quit':
-    print('Thanks for playing the game 🧸︎')
-    return
-  else:
-    print("I don't understand that...")
-    print('Try again..')
-    game(isCarStarted)
-
-game(isCarStarted)
+Car stopped.
+"""
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
