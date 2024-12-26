@@ -152,8 +152,8 @@ print(pto) # Pto
 
 ## File - `30-days-python-asabeneh/3.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3-game.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3-game.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.1.py -->
 ```py
 # Print weight in pounds, kg.
 print('This is weight calculate machine...')
@@ -188,8 +188,8 @@ userInput()
 
 ## File - `30-days-python-asabeneh/3.2.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.2.py -->
 ```py
 # Nested list comprehension example.
 # I stands for input from user.
