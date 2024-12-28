@@ -31,6 +31,10 @@ This ensures the program continues running even when unexpected issues arise.
 
 Code generate via autodocs
 
+## Todos:
+
+- Move files of 1.1 to 5.1 to `day_01` folder
+
 ## File - `30-days-python-asabeneh/1.1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/1.1.py) -->

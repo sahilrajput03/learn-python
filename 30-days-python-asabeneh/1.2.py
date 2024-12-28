@@ -10,10 +10,10 @@ if type(3.14) == float:
 if type(1 + 3j) == complex:
     print("complex type")
 
-if type('Asabeneh') == str:
+if type("Asabeneh") == str:
     print("str type")
 
-if type([1,2,3]) == list:
+if type([1, 2, 3]) == list:
     print("list type")
 
 if type({9.8, 3.14, 2.7}) == set:
@@ -21,6 +21,11 @@ if type({9.8, 3.14, 2.7}) == set:
 
 if type((9.8, 3.14, 2.7)) == tuple:
     print("tuple type")
+
+if type(zip([1, 2], [3, 4])) == zip:
+    print("zip type")
+
+
 print()
 
 #### However, it's often better to use isinstance() for type checking, as it
@@ -36,10 +41,10 @@ if isinstance(3.14, float):
 if isinstance(1 + 3j, complex):
     print("complex type")
 
-if type('Asabeneh') == str:
+if type("Asabeneh") == str:
     print("str type")
 
-if isinstance([1,2,3], list):
+if isinstance([1, 2, 3], list):
     print("list type")
 
 if isinstance({9.8, 3.14, 2.7}, set):
@@ -47,4 +52,6 @@ if isinstance({9.8, 3.14, 2.7}, set):
 
 if isinstance((9.8, 3.14, 2.7), tuple):
     print("tuple type")
+if isinstance(zip([1, 2], [3, 4]), zip):
+    print("zip type")
 print()
