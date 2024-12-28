@@ -8,4 +8,4 @@ print(final_value)  # 8
 
 # Find floor division of num_1 by num_2 and assign the value to a variable floor_division
 final_value2 = num_2 // num_1
-print(final_value2)
+print(final_value2)  # 1
