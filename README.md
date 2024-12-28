@@ -42,24 +42,25 @@ Code generate via autodocs
 ```py
 # Day 1 - 30DaysOfPython Challenge
 
-print(2 + 3)                     # addition(+)
-print(3 - 1)                     # subtraction(-)
-print(2 * 3)                     # multiplication(*)
-print(3 / 2)                     # division(/)
-print(3 ** 2)                    # exponential(**)
-print(3 % 2)                     # modulus(%)
-print(3 // 2)                    # Floor division operator(//)
+print(2 + 3)  #                                 addition(+)
+print(3 - 1)  #                                 subtraction(-)
+print(2 * 3)  #                                 multiplication(*)
+print(3 / 2)  #                                 division(/)
+print(3**2)  #                                  exponential(**)
+print(3 % 2)  #                                 modulus(%)
+print(3 // 2)  #                                Floor division operator(//)
+print(1 + 3j)  #                                <class 'complex'>
 print()
 
 # Checking data types
-print(type(10))                  # <class 'int'>
-print(type(3.14))                # <class 'float'>
-print(type(1 + 3j))              # <class 'complex'>
-print(type('Asabeneh'))          # <class 'str'>
-print(type([1, 2, 3]))           # Li<class 'list'>st   
-print(type({'name':'Asabeneh'})) # <class 'dict'>
-print(type({9.8, 3.14, 2.7}))    # <class 'set'>
-print(type((9.8, 3.14, 2.7)))    # <class 'tuple'>
+print(type(10))  #                              <class 'int'>
+print(type(3.14))  #                            <class 'float'>
+print(type(1 + 3j))  #                          <class 'complex'>
+print(type("Asabeneh"))  #                      <class 'str'>
+print(type([1, 2, 3]))  #                       Li<class 'list'>st
+print(type({"name": "Asabeneh"}))  #            <class 'dict'>
+print(type({9.8, 3.14, 2.7}))  #                <class 'set'>
+print(type((9.8, 3.14, 2.7)))  #                <class 'tuple'>
 print()
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -81,10 +82,10 @@ if type(3.14) == float:
 if type(1 + 3j) == complex:
     print("complex type")
 
-if type('Asabeneh') == str:
+if type("Asabeneh") == str:
     print("str type")
 
-if type([1,2,3]) == list:
+if type([1, 2, 3]) == list:
     print("list type")
 
 if type({9.8, 3.14, 2.7}) == set:
@@ -92,6 +93,11 @@ if type({9.8, 3.14, 2.7}) == set:
 
 if type((9.8, 3.14, 2.7)) == tuple:
     print("tuple type")
+
+if type(zip([1, 2], [3, 4])) == zip:
+    print("zip type")
+
+
 print()
 
 #### However, it's often better to use isinstance() for type checking, as it
@@ -107,10 +113,10 @@ if isinstance(3.14, float):
 if isinstance(1 + 3j, complex):
     print("complex type")
 
-if type('Asabeneh') == str:
+if type("Asabeneh") == str:
     print("str type")
 
-if isinstance([1,2,3], list):
+if isinstance([1, 2, 3], list):
     print("list type")
 
 if isinstance({9.8, 3.14, 2.7}, set):
@@ -118,6 +124,8 @@ if isinstance({9.8, 3.14, 2.7}, set):
 
 if isinstance((9.8, 3.14, 2.7), tuple):
     print("tuple type")
+if isinstance(zip([1, 2], [3, 4]), zip):
+    print("zip type")
 print()
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -422,11 +430,45 @@ Car stopped.
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/1.py -->
+```py
+# bakchodi
+text = "HelLOO"
+
+# print all available methods on this value
+print(dir(text))
+
+print(text.upper())  # HELLOO
+print(text.lower())  # helloo
+
+print(text.startswith("Hel"))  # True
+print(text.startswith("ABC"))  # False
+
+# print(text.join(' Sahil')) # bakchodi
+
+
+person_info = {
+    "firstname": "Asabeneh",
+    "lastname": "Yetayeh",
+    "country": "Finland",
+    "city": "Helsinki",
+}
+
+print(person_info)
+```
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/1.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_02/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/2.py -->
+```py
+first_name = input("What is your name: ")
+age = input("How old are you? ")
+
+print(first_name)
+print(age)
+```
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/2.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -434,11 +476,56 @@ Car stopped.
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/3.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/3.py -->
+```py
+# int to float
+num_int = 10
+print("num_int", num_int)  # 10
+num_float = float(num_int)
+print("num_float:", num_float)  # 10.0
+
+# float to int
+gravity = 9.81
+print(int(gravity))  # 9
+
+# int to str
+num_int = 10
+print(num_int)  # 10
+num_str = str(num_int)
+print(num_str)  # '10'
+
+# str to int or float
+num_str = "10.6"
+num_float = float(num_str)
+print("num_float", float(num_str))  # 10.6
+num_int = int(num_float)
+print("num_int", int(num_int))  # 10
+
+# str to list
+first_name = "Asabeneh"
+print(first_name)  # 'Asabeneh'
+first_name_to_list = list(first_name)
+print(first_name_to_list)  # ['A', 's', 'a', 'b', 'e', 'n', 'e', 'h']
+```
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/3.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_02/ex01.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex01.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex01.py -->
+```py
+# num_one to the power of num_two
+num_1 = 2
+num_2 = 3
+
+final_value = num_1**num_2
+print(final_value)  # 8
+
+
+# Find floor division of num_1 by num_2 and assign the value to a variable floor_division
+final_value2 = num_2 // num_1
+print(final_value2)
+```
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex01.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -446,11 +533,45 @@ Car stopped.
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex02.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex02.py -->
+```py
+# The radius of a circle is 30 meters.
+# Calculate the area of a circle and assign the value to a variable name of area_of_circle
+# Calculate the circumference of a circle and assign the value to a variable name of circum_of_circle
+# Take radius as user input and calculate the area.
+
+radius = input("Enter radius of circle: ")  # assuming input as 3
+r = int(radius)
+area_of_circle = 3.14 * r**2
+print(area_of_circle)  # 28.26
+
+
+circum_of_circle = 2 * 3.14 * r
+print(circum_of_circle)  # 18.84
+```
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex02.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_02/ex03.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex03.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex03.py -->
+```py
+help("keywords")
+# Output
+"""
+Here is a list of the Python keywords.  Enter any keyword to get more help.
+
+False               class               from                or
+None                continue            global              pass
+True                def                 if                  raise
+and                 del                 import              return
+as                  elif                in                  try
+assert              else                is                  while
+async               except              lambda              with
+await               finally             nonlocal            yield
+break               for                 not    
+"""
+```
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex03.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
