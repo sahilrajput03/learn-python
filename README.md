@@ -1,5 +1,32 @@
 _See older readme: [Click here](./README.old.md) (README.old.md)_
 
+## What is `error`, `exception` and `exception handling` in python. Be concise. (ChatGPT)
+
+Error: An issue in the program's syntax or logic that causes it to fail. Errors can be syntax errors (e.g., SyntaxError) or runtime errors (e.g., NameError, TypeError).
+
+Exception: A type of runtime error that can be caught and handled using try-except blocks. Examples include ValueError, KeyError, and ZeroDivisionError.
+
+*Errors terminate the program if unhandled, while exceptions allow for controlled recovery.*
+
+**What is exception handling?**
+
+Exception handling in Python refers to the process of managing and responding to runtime errors (exceptions) to prevent program crashes. It involves using constructs like `try`, `except`, `else`, and `finally` to handle exceptions gracefully.
+
+Example:
+
+```python
+try:
+    x = 10 / 0  # Potential exception
+except ZeroDivisionError:
+    print("Cannot divide by zero!")  # Handle the exception
+else:
+    print("No exceptions occurred.")  # Executes if no exceptions
+finally:
+    print("Execution complete.")  # Always executes
+```
+
+This ensures the program continues running even when unexpected issues arise.
+
 # 30 Days of Python
 
 Code generate via autodocs
