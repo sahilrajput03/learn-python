@@ -33,12 +33,12 @@ Code generate via autodocs
 
 ## Todos:
 
-- Move files of 1.1 to 5.1 to `day_01` folder
+- (future todos to add here)
 
-## File - `30-days-python-asabeneh/1.1.py`
+## File - `30-days-python-asabeneh/day_01/1.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/1.1.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/1.1.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/1.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/1.1.py -->
 ```py
 # Day 1 - 30DaysOfPython Challenge
 
@@ -64,10 +64,10 @@ print()
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/1.2.py`
+## File - `30-days-python-asabeneh/day_01/1.2.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/1.2.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/1.2.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/1.2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/1.2.py -->
 ```py
 # All below if statements resolve to true.
 
@@ -123,10 +123,10 @@ print()
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-## File - `30-days-python-asabeneh/2.1.py`
+## File - `30-days-python-asabeneh/day_01/2.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/2.1.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.1.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/2.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/2.1.py -->
 ```py
 # Printing variables
 # ##################
@@ -154,10 +154,10 @@ print("{}, good to meet you!".format(x))    # You can use single ('') or double 
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/2.2.py`
+## File - `30-days-python-asabeneh/day_01/2.2.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/2.2.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.2.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/2.2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/2.2.py -->
 ```py
 s = 'sahil'
 print(len(s)) # 5
@@ -167,10 +167,10 @@ if len(s) == 5:
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/2.3.py`
+## File - `30-days-python-asabeneh/day_01/2.3.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/2.3.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.3.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/2.3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/2.3.py -->
 ```py
 a = 4
 b = 3
@@ -184,10 +184,10 @@ print(f'{a} ** {b} = {a ** b}')     # 4 ** 3 = 64
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/2.4.py`
+## File - `30-days-python-asabeneh/day_01/2.4.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/2.4.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.4.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/2.4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/2.4.py -->
 ```py
 simple = 'Python'
 a,b,c,d,e,f = simple # unpacking sequence characters into variables
@@ -200,10 +200,10 @@ print(f) # n
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/2.5.py`
+## File - `30-days-python-asabeneh/day_01/2.5.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/2.5.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/2.5.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/2.5.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/2.5.py -->
 ```py
 language = 'Python'
 pto = language[0:6:2] #
@@ -212,10 +212,10 @@ print(type(pto) == str) # True
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/3.1.py`
+## File - `30-days-python-asabeneh/day_01/3.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.1.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.1.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/3.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/3.1.py -->
 ```py
 # Print weight in pounds, kg.
 print('This is weight calculate machine...')
@@ -248,10 +248,10 @@ userInput()
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/3.2.py`
+## File - `30-days-python-asabeneh/day_01/3.2.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.2.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.2.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/3.2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/3.2.py -->
 ```py
 # Nested list comprehension example.
 myLambda = lambda a, b, sum: a + b != sum # Returns True or False
@@ -293,10 +293,10 @@ print(points) # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]
 
 
 
-## File - `30-days-python-asabeneh/3.3.py`
+## File - `30-days-python-asabeneh/day_01/3.3.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/3.3.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/3.3.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/3.3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/3.3.py -->
 ```py
 # Nested list comprehension example.
 myLambda = lambda a, b, c, sum: a + b + c != sum # Returns True or False
@@ -331,10 +331,10 @@ print(points) # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/4.1.py`
+## File - `30-days-python-asabeneh/day_01/4.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/4.1.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/4.1.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/4.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/4.1.py -->
 ```py
 secret_number = 7 # right number
 
@@ -358,10 +358,10 @@ game(count)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/5.1.py`
+## File - `30-days-python-asabeneh/day_01/5.1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/5.1.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/5.1.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/5.1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/5.1.py -->
 ```py
 info = """
 start - to start the car
@@ -415,3 +415,42 @@ Car stopped.
 """
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+
+## File - `30-days-python-asabeneh/day_02/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/1.py -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_02/2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/2.py -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_02/3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/3.py -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_02/ex01.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex01.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex01.py -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_02/ex02.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex02.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex02.py -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_02/ex03.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex03.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex03.py -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
