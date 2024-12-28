@@ -33,6 +33,7 @@ Code generate via autodocs
 
 ## Todos:
 
+- start day 3
 - (future todos to add here)
 
 ## File - `30-days-python-asabeneh/day_01/1.1.py`
