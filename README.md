@@ -692,25 +692,101 @@ print(not not False)  # False
 ## File - `30-days-python-asabeneh/day_03/ex1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex1.py -->
+```py
+# Write a script that prompts the user to enter side a, side b, and side c of the triangle. Calculate the perimeter of the triangle (perimeter = a + b + c).
+a = int(input("Enter side a: "))
+b = int(input("Enter side b: "))
+c = int(input("Enter side c: "))
+
+print(f"The perimeter of the triangle is {a+b+c}")  # The perimeter of the triangle is 9
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_03/ex2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex2.py -->
+```py
+# Find the length of the text python and convert the value to float and convert it to string
+a = len("python")
+print(a)  # 6
+
+b = float(a)
+print(b)  # 6.0
+
+c = str(b)
+print(c)
+print(type(c))  # <class 'str'>
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_03/ex3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex3.py -->
+```py
+# Check if type of '10' is equal to type of 10
+a = "10"
+b = 10
+print(type(a) == type(b))  # False
+
+
+# Check if int('9.8') is equal to 10
+c = int("9.8")
+# Above statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_03/ex4.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex4.py -->
+```py
+# Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+# SAMPLE:
+# Enter number of years you have lived: 100
+# You have lived for 3153600000 seconds.
+
+
+years = int(input("Enter number of years you have lived: "))  # assuming input 100
+seconds = years * 365 * 24 * 60 * 60
+print(f"You have lived for {seconds} seconds.")
+
+print(3153600000 == seconds)  # True (assuming we entered `years = 100`)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_03/ex5.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex5.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex5.py -->
+```py
+# Write a Python script that displays the following table
+# 1 1 1 1 1
+# 2 1 2 4 8
+# 3 1 3 9 27
+# 4 1 4 16 64
+# 5 1 5 25 125
+
+a = 1
+b = 1
+d = 1
+e = 1
+
+print(f"{a} {b} {a} {a**2} {a**3}")
+a = a + 1
+
+print(f"{a} {b} {a} {a**2} {a**3}")
+a = a + 1
+
+print(f"{a} {b} {a} {a**2} {a**3}")
+a = a + 1
+
+print(f"{a} {b} {a} {a**2} {a**3}")
+a = a + 1
+
+print(f"{a} {b} {a} {a**2} {a**3}")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
