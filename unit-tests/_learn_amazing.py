@@ -5,8 +5,10 @@ a = 1
 b = 1
 c = 1
 
+
 def setA(a):
     a = 10
+
 
 def setB(b):
     b = 10

@@ -2,4 +2,4 @@
 
 n = 11
 s = range(1, n)
-# ^^^ this will go from 1 to 10. 
+# ^^^ this will go from 1 to 10.

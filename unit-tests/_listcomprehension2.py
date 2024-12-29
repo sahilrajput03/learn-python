@@ -1,5 +1,5 @@
 # src: https://www.w3schools.com/python/python_lists_comprehension.asp
-x = int(input('Enter x\n'))
+x = int(input("Enter x\n"))
 
 X = list(range(x))
 print(X)
