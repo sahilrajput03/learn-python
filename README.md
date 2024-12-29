@@ -40,7 +40,7 @@ Code generate via autodocs
   - **Steps:**
   - 1. Fix line system issue in vscode and gitconfig.
   - 2. Create new test file (test_for_line_system.txt) and test crlf and lf by pushing new lines from both systems (mac and windows) with both mac and windows.
-- start day 3
+- start day 4
 - (future todos to add here)
 
 ## File - `30-days-python-asabeneh/day_01/1.1.py`
