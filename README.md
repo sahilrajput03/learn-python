@@ -460,6 +460,10 @@ Car stopped.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+## File - `30-days-python-asabeneh/day_01/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_01/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## File - `30-days-python-asabeneh/day_02/1.py`
@@ -491,7 +495,6 @@ person_info = {
 
 print(person_info)
 ```
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/1.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_02/2.py`
@@ -505,7 +508,6 @@ age = input("How old are you? ")
 print(first_name)
 print(age)
 ```
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/2.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_02/3.py`
@@ -542,13 +544,12 @@ print(first_name)  # 'Asabeneh'
 first_name_to_list = list(first_name)
 print(first_name_to_list)  # ['A', 's', 'a', 'b', 'e', 'n', 'e', 'h']
 ```
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/3.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/day_02/ex01.py`
+## File - `30-days-python-asabeneh/day_02/ex1.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex01.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex01.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex1.py -->
 ```py
 # num_one to the power of num_two
 num_1 = 2
@@ -562,13 +563,12 @@ print(final_value)  # 8
 final_value2 = num_2 // num_1
 print(final_value2)  # 1
 ```
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex01.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/day_02/ex02.py`
+## File - `30-days-python-asabeneh/day_02/ex2.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex02.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex02.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex2.py -->
 ```py
 # The radius of a circle is 30 meters.
 # Calculate the area of a circle and assign the value to a variable name of area_of_circle
@@ -584,13 +584,12 @@ print(area_of_circle)  # 28.26
 circum_of_circle = 2 * 3.14 * r
 print(circum_of_circle)  # 18.84
 ```
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex02.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## File - `30-days-python-asabeneh/day_02/ex03.py`
+## File - `30-days-python-asabeneh/day_02/ex3.py`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex03.py) -->
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex03.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_02/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex3.py -->
 ```py
 help("keywords")
 # Output
@@ -608,6 +607,5 @@ await               finally             nonlocal            yield
 break               for                 not    
 """
 ```
-<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex03.py -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
