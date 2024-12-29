@@ -620,3 +620,8 @@ break               for                 not
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+
+## File - `30-days-python-asabeneh/day_03/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
