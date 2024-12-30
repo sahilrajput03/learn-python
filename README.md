@@ -787,6 +787,8 @@ print(f"{a} {b} {a} {a**2} {a**3}")
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/1.py -->
 ```py
+# source of this and following files in this day -- https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/day_4.py
+
 # Single line comment
 letter = "P"  # A string could be a single character or a bunch of texts
 print(letter)  # P
