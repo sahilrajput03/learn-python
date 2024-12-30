@@ -790,6 +790,10 @@ a = a + 1
 
 print(f"{a} {b} {a} {a**2} {a**3}")
 ```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_04/1.py`
+
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/1.py) -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
