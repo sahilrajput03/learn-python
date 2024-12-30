@@ -33,10 +33,10 @@ Code generate via autodocs
 
 ## 😇😇😇 Todos:
 
-- 😇😇😇 Continue doing day 4's exercise from 11th point
-    - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/04_strings.md)
-    - CODE - [day4.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/day_4.py
-- (future todos to add here))
+- Continue doing day 5
+    - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md)
+    - [Code](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/day_5.py)
+- (future todos to add here)
 
 ## File - `30-days-python-asabeneh/day_01/1.1.py`
 
