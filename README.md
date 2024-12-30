@@ -1173,7 +1173,7 @@ print(formated_string)
 
 
 """
-😇😇😇 String Interpolation / f-Strings (Python 3.6+)
+😇😇😇 String Interpolation / f-Strings (Python 3.6+) (Release date: Dec, 2016)
 Another new string formatting is string interpolation, f-strings. Strings start with f and we can inject the data in their corresponding positions.
 """
 a = 4
