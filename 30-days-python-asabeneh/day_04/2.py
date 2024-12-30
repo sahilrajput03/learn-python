@@ -67,7 +67,16 @@ print(pto)  # Pto
 print()
 
 
-# Escape sequence
+"""
+Escape Sequences in Strings
+In Python and other programming languages \ followed by a character is an escape sequence. Let us see the most common escape characters:
+
+\n: new line
+\t: Tab means(8 spaces)
+\\: Back slash
+\': Single quote (')
+\": Double quote (")
+"""
 print("I hope every one enjoying the python challenge.\nDo you ?")  # line break
 # Output
 """

@@ -10,9 +10,6 @@ print(text.lower())  # helloo
 print(text.startswith("Hel"))  # True
 print(text.startswith("ABC"))  # False
 
-# print(text.join(' Sahil')) # bakchodi
-
-
 person_info = {
     "firstname": "Asabeneh",
     "lastname": "Yetayeh",

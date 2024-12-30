@@ -4,9 +4,14 @@ result = ", ".join(web_tech)
 print(result)  # 'HTML, CSS, JavaScript, React'
 print()
 
-# strip(): Removes both leading and trailing characters
-challenge = " thirty days of python "
-print(challenge.strip("y"))  # 5
+
+# strip(): Removes all given characters starting from the beginning and end of the string
+print("strip()")
+print(" Thirty days of python ")
+# Removes leading and trailing white space character
+print(" Thirty days of python ".strip())
+print("thirty days of pythonBATMAN".strip("BATMAN"))  # "thirty days of python"
+print()
 
 
 # replace(): Replaces substring inside
@@ -16,6 +21,8 @@ print(challenge.replace("python", "coding"))  # 'thirty days of coding'
 # split():Splits String from Left
 challenge = "thirty days of python"
 print(challenge.split())  # ['thirty', 'days', 'of', 'python']
+challenge = "thirty, days, of, python"
+print(challenge.split(", "))  # ['thirty', 'days', 'of', 'python']
 
 # title(): Returns a Title Cased String
 challenge = "thirty days of python"
