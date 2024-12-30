@@ -48,6 +48,11 @@ last_three = language[3:]
 print(last_three)  # hon
 print()
 
+# Reversing a String: We can easily reverse strings in python.
+greeting = "Hello, World!"
+print(greeting[::-1])  # !dlroW ,olleH
+
+
 # Skipping character while splitting Python strings
 language = "Python"
 pto = language[0:6:2]  #

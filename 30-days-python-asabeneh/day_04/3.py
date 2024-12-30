@@ -17,34 +17,24 @@ print(challenge.endswith("on"))  # True
 print(challenge.endswith("tion"))  # False
 
 # expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
+# By default the \t expands to 8 spaces
 challenge = "thirty\tdays\tof\tpython"
+print(challenge)
 print(challenge.expandtabs())  # 'thirty  days    of      python'
+# We can pass how many spaces to use for tabs by passing argument
 print(challenge.expandtabs(10))  # 'thirty    days      of        python'
 
 # find(): Returns the index of first occurrence of substring
 challenge = "thirty days of python"
 print(challenge.find("y"))  # 5
 print(challenge.find("th"))  # 0
-
-# format()	formats string into nicer output
-first_name = "Asabeneh"
-last_name = "Yetayeh"
-job = "teacher"
-country = "Finland"
-sentence = "I am {} {}. I am a {}. I live in {}.".format(
-    first_name, last_name, job, country
-)
-print(sentence)  # I am Asabeneh Yetayeh. I am a teacher. I live in Finland.
 print()
 
 
-radius = 10
-pi = 3.14
-area = pi  # radius ## 2
-result = "The area of circle with {} is {}".format(str(radius), str(area))
-print(result)  # The area of circle with 10 is 314.0
-result = "The area of circle with {} is {}".format(radius, area)
-print(result)  # The area of circle with 10 is 314.0
+# rfind(): Returns the index of the last occurrence of a substring, if not found returns -1
+challenge = "thirty days of python"
+print(challenge.rfind("y"))  # 16
+print(challenge.rfind("th"))  # 17
 
 
 # index(): Returns the index of substring

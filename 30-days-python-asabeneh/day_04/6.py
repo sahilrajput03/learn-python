@@ -43,6 +43,15 @@ print(formated_string)
 a = 4
 b = 3
 
+radius = 10
+pi = 3.14
+area = pi  # radius ## 2
+result = "The area of circle with {} is {}".format(str(radius), str(area))
+print(result)  # The area of circle with 10 is 314.0
+result = "The area of circle with {} is {}".format(radius, area)
+print(result)  # The area of circle with 10 is 314.0
+
+
 print("{} + {} = {}".format(a, b, a + b))  # 4 + 3 = 7
 print("{} - {} = {}".format(a, b, a - b))  # 4 - 3 = 1
 print("{} * {} = {}".format(a, b, a * b))  # 4 * 3 = 12
