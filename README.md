@@ -723,10 +723,14 @@ a = "10"
 b = 10
 print(type(a) == type(b))  # False
 
-
-# Check if int('9.8') is equal to 10
-c = int("9.8")
-# Above statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+try:
+    # Check if int('9.8') is equal to 10
+    # This statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+    c = int("9.8")
+except ValueError:
+    print("Got ValueError")  # Got ValueError
+else:
+    print("No exceptions occurred.")
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1220,10 +1224,13 @@ challenge = "thirty days of python"
 sub_string = "da"
 print(challenge.index(sub_string))  # 7
 
-# print(challenge.index(sub_string, 9))  # runtime error
-"""
-ValueError: substring not found
-"""
+try:
+    # This statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+    print(challenge.index(sub_string, 9))
+except ValueError:
+    print("Got ValueError")  # Got ValueError
+else:
+    print("No exceptions occurred.")
 
 
 # rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1)
@@ -1232,10 +1239,14 @@ sub_string = "da"
 print(challenge.rindex(sub_string))  # 7
 print(challenge.rindex("on", 8))  # 19
 
-# print(challenge.rindex(sub_string, 9))  # runtime error
-"""
-ValueError: substring not found
-"""
+
+try:
+    # This statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+    print(challenge.rindex(sub_string, 9))
+except ValueError:
+    print("Got ValueError")  # Got ValueError
+else:
+    print("No exceptions occurred.")
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1255,9 +1266,18 @@ print(string.split(" ")[0])
 - find or other methods.
 """
 word = "Coding"
-indexOfWord = string.index(word)
-# Note: ^^^ It throws runtime error (`ValueError: substring not found`) incase `word` is not found in `string`
+
+try:
+    # Note: If `word` is not found in `string below statement throws runtime error (`ValueError: substring not found`)
+    indexOfWord = string.index(word)
+except ValueError:
+    print("Got ValueError")
+else:
+    print("No exceptions occurred.")  # "No exceptions occurred."
+
+
 print(type(indexOfWord) == int)  # True
+
 
 indexOfWord = string.find(word) != -1
 print(indexOfWord)  # True
