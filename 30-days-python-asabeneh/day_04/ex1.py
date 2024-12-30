@@ -15,5 +15,5 @@ print(type(indexOfWord) == int)  # True
 indexOfWord = string.find(word) != -1
 print(indexOfWord)  # True
 
-# TODO:
+# 😇😇😇 😇😇😇 TODO 😇😇😇 😇😇😇:
 # 11. Replace the word coding in the string 'Coding For All' to Python.
