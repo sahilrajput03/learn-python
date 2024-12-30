@@ -790,29 +790,273 @@ a = a + 1
 
 print(f"{a} {b} {a} {a**2} {a**3}")
 ```
-
-## File - `30-days-python-asabeneh/day_04/1.py`
-
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/1.py) -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_04/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/2.py -->
+```py
+# String Concatenation
+first_name = "Asabeneh"
+last_name = "Yetayeh"
+space = " "
+full_name = first_name + space + last_name
+print(full_name)  # Asabeneh Yetayeh
+print()
+
+#### Unpacking characters
+language = "Python"
+a, b, c, d, e, f = language  # unpacking sequence characters into variables
+print(a)  # P
+print(b)  # y
+print(c)  # t
+print(d)  # h
+print(e)  # o
+print(f)  # n
+print()
+
+# Accessing characters in strings by index
+language = "Python"
+print(language[0])  # P
+print(language[1])  # y
+last_letter = language[len(language) - 1]
+print(last_letter)  # n
+print()
+
+# If we want to start from right end we can use negative indexing. -1 is the last index
+language = "Python"
+# get last letter
+print(language[-1])  # n
+# get second last letter
+print(language[-2])  # o
+print()
+
+
+# Slicing
+language = "Python"
+first_three = language[0:3]  # starts at zero index and up to 3 but not include 3
+print(first_three)
+
+last_three = language[3:6]
+print(last_three)  # hon
+# Another way
+last_three = language[-3:]
+print(last_three)  # hon
+last_three = language[3:]
+print(last_three)  # hon
+print()
+
+# Skipping character while splitting Python strings
+language = "Python"
+pto = language[0:6:2]  #
+"""
+Python's slice notation with three parameters: [start:end:step]
+Let's break it down:
+0 is the starting index
+6 is the ending index (exclusive)
+2 is the step (or stride) - meaning it takes every 2nd character
+"""
+print(pto)  # Pto
+print()
+
+
+# Escape sequence
+print("I hope every one enjoying the python challenge.\nDo you ?")  # line break
+# Output
+"""
+I hope every one enjoying the python challenge.
+Do you ?
+"""
+
+print("Days\tTopics\tExercises")
+print("Day 1\t3\t5")
+print("Day 2\t3\t5")
+print("Day 3\t3\t5")
+print("Day 4\t3\t5")
+print("This is a back slash  symbol (\\)")  # To write a back slash
+print('In every programming language it starts with "Hello, World!"')
+# Output
+"""
+Days	Topics	Exercises
+Day 1	3	5
+Day 2	3	5
+Day 3	3	5
+Day 4	3	5
+This is a back slash  symbol (\)
+In every programming language it starts with "Hello, World!"
+"""
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_04/3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/3.py -->
+```py
+## String Methods
+# capitalize(): Converts the first character the string to Capital Letter
+challenge = "thirty days of python"
+print(challenge.capitalize())  # 'Thirty days of python'
+
+# count(): returns occurrences of substring in string, count(substring, start=.., end=..)
+
+challenge = "thirty days of python"
+print(challenge.count("y"))  # 3
+print(challenge.count("y", 7, 14))  # 1
+print(challenge.count("th"))  # 2`
+
+# endswith(): Checks if a string ends with a specified ending
+
+challenge = "thirty days of python"
+print(challenge.endswith("on"))  # True
+print(challenge.endswith("tion"))  # False
+
+# expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
+challenge = "thirty\tdays\tof\tpython"
+print(challenge.expandtabs())  # 'thirty  days    of      python'
+print(challenge.expandtabs(10))  # 'thirty    days      of        python'
+
+# find(): Returns the index of first occurrence of substring
+challenge = "thirty days of python"
+print(challenge.find("y"))  # 5
+print(challenge.find("th"))  # 0
+
+# format()	formats string into nicer output
+first_name = "Asabeneh"
+last_name = "Yetayeh"
+job = "teacher"
+country = "Finland"
+sentence = "I am {} {}. I am a {}. I live in {}.".format(
+    first_name, last_name, job, country
+)
+print(sentence)  # I am Asabeneh Yetayeh. I am a teacher. I live in Finland.
+print()
+
+
+radius = 10
+pi = 3.14
+area = pi  # radius ## 2
+result = "The area of circle with {} is {}".format(str(radius), str(area))
+print(result)  # The area of circle with 10 is 314.0
+result = "The area of circle with {} is {}".format(radius, area)
+print(result)  # The area of circle with 10 is 314.0
+
+
+# index(): Returns the index of substring
+challenge = "thirty days of python"
+print(challenge.find("y"))  # 5
+print(challenge.find("th"))  # 0
+
+# isalnum(): Checks alphanumeric character
+challenge = "ThirtyDaysPython"
+print(challenge.isalnum())  # True
+
+challenge = "30DaysPython"
+print(challenge.isalnum())  # True
+
+challenge = "thirty days of python"
+print(challenge.isalnum())  # False
+
+challenge = "thirty days of python 2019"
+print(challenge.isalnum())  # False
+
+# isalpha(): Checks if all characters are alphabets
+challenge = "thirty days of python"
+print(challenge.isalpha())  # True
+num = "123"
+print(num.isalpha())  # False
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_04/4.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/4.py -->
+```py
+# isdigit(): Checks Digit Characters
+print("Thirty".isdigit())  # False
+print("30".isdigit())  # True
+
+# isdecimal():Checks decimal characters
+print("10".isdecimal())  # True
+print("10.5".isdecimal())  # False
+
+# isidentifier():Checks for valid identifier means it check if a string is a valid variable name
+challenge = "30DaysOfPython"
+print(challenge.isidentifier())  # False, because it starts with a number
+challenge = "thirty_days_of_python"
+print(challenge.isidentifier())  # True
+
+
+# islower():Checks if all alphabets in a string are lowercase
+challenge = "thirty days of python"
+print(challenge.islower())  # True
+challenge = "Thirty days of python"
+print(challenge.islower())  # False
+
+# isupper(): returns if all characters are uppercase characters
+challenge = "thirty days of python"
+print(challenge.isupper())  #  False
+challenge = "THIRTY DAYS OF PYTHON"
+print(challenge.isupper())  # True
+
+
+# isnumeric():Checks numeric characters
+num = "10"
+print(num.isnumeric())  # True
+print("ten".isnumeric())  # False
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_04/5.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/5.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/5.py -->
+```py
+# join(): Returns a concatenated string
+web_tech = ["HTML", "CSS", "JavaScript", "React"]
+result = ", ".join(web_tech)
+print(result)  # 'HTML, CSS, JavaScript, React'
+print()
+
+# strip(): Removes both leading and trailing characters
+challenge = " thirty days of python "
+print(challenge.strip("y"))  # 5
+
+
+# replace(): Replaces substring inside
+challenge = "thirty days of python"
+print(challenge.replace("python", "coding"))  # 'thirty days of coding'
+
+# split():Splits String from Left
+challenge = "thirty days of python"
+print(challenge.split())  # ['thirty', 'days', 'of', 'python']
+
+# title(): Returns a Title Cased String
+challenge = "thirty days of python"
+print(challenge.title())  # Thirty Days Of Python
+print()
+
+# swapcase(): Checks if String Starts with the Specified String
+"""
+The swapcase() method returns a new string where all the case swapping rules below are applied:
+
+Uppercase characters are converted to lowercase
+Lowercase characters are converted to uppercase
+All other characters remain unchanged
+"""
+challenge = "thirty days of python"
+print(challenge.swapcase())  # THIRTY DAYS OF PYTHON
+challenge = "Thirty Days Of Python"
+print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
+
+# startswith(): Checks if String Starts with the Specified String
+challenge = "thirty days of python"
+print(challenge.startswith("thirty"))  # True
+challenge = "30 days of python"
+print(challenge.startswith("thirty"))  # False
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
