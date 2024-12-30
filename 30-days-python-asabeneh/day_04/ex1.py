@@ -8,9 +8,18 @@ print(string.split(" ")[0])
 - find or other methods.
 """
 word = "Coding"
-indexOfWord = string.index(word)
-# Note: ^^^ It throws runtime error (`ValueError: substring not found`) incase `word` is not found in `string`
+
+try:
+    # Note: If `word` is not found in `string below statement throws runtime error (`ValueError: substring not found`)
+    indexOfWord = string.index(word)
+except ValueError:
+    print("Got ValueError")
+else:
+    print("No exceptions occurred.")  # "No exceptions occurred."
+
+
 print(type(indexOfWord) == int)  # True
+
 
 indexOfWord = string.find(word) != -1
 print(indexOfWord)  # True
