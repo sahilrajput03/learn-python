@@ -1262,7 +1262,10 @@ print(type(indexOfWord) == int)  # True
 indexOfWord = string.find(word) != -1
 print(indexOfWord)  # True
 
-# 😇😇😇 😇😇😇 TODO 😇😇😇 😇😇😇:
-# 11. Replace the word coding in the string 'Coding For All' to Python.
+# 18. Create an acronym or an abbreviation for the name 'Python For Everyone'.
+string1 = "Python For Everyone"
+list = string1.split()
+acronym = list[0][0] + list[1][0] + list[2][0]
+print(acronym)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
