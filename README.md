@@ -1236,3 +1236,9 @@ ValueError: substring not found
 """
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## File - `30-days-python-asabeneh/day_04/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
