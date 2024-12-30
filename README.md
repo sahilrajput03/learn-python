@@ -496,9 +496,6 @@ print(text.lower())  # helloo
 print(text.startswith("Hel"))  # True
 print(text.startswith("ABC"))  # False
 
-# print(text.join(' Sahil')) # bakchodi
-
-
 person_info = {
     "firstname": "Asabeneh",
     "lastname": "Yetayeh",
@@ -908,7 +905,16 @@ print(pto)  # Pto
 print()
 
 
-# Escape sequence
+"""
+Escape Sequences in Strings
+In Python and other programming languages \ followed by a character is an escape sequence. Let us see the most common escape characters:
+
+\n: new line
+\t: Tab means(8 spaces)
+\\: Back slash
+\': Single quote (')
+\": Double quote (")
+"""
 print("I hope every one enjoying the python challenge.\nDo you ?")  # line break
 # Output
 """
@@ -947,14 +953,12 @@ challenge = "thirty days of python"
 print(challenge.capitalize())  # 'Thirty days of python'
 
 # count(): returns occurrences of substring in string, count(substring, start=.., end=..)
-
 challenge = "thirty days of python"
 print(challenge.count("y"))  # 3
 print(challenge.count("y", 7, 14))  # 1
 print(challenge.count("th"))  # 2`
 
 # endswith(): Checks if a string ends with a specified ending
-
 challenge = "thirty days of python"
 print(challenge.endswith("on"))  # True
 print(challenge.endswith("tion"))  # False
@@ -980,11 +984,6 @@ print(challenge.rfind("y"))  # 16
 print(challenge.rfind("th"))  # 17
 
 
-# index(): Returns the index of substring
-challenge = "thirty days of python"
-print(challenge.find("y"))  # 5
-print(challenge.find("th"))  # 0
-
 # isalnum(): Checks alphanumeric character
 challenge = "ThirtyDaysPython"
 print(challenge.isalnum())  # True
@@ -998,7 +997,7 @@ print(challenge.isalnum())  # False
 challenge = "thirty days of python 2019"
 print(challenge.isalnum())  # False
 
-# isalpha(): Checks if all characters are alphabets
+# isalpha(): Checks if all characters are alphabet characters (a-z and A-Z)
 challenge = "thirty days of python"
 print(challenge.isalpha())  # True
 num = "123"
@@ -1011,13 +1010,22 @@ print(num.isalpha())  # False
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/4.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/4.py -->
 ```py
-# isdigit(): Checks Digit Characters
+# isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
 print("Thirty".isdigit())  # False
 print("30".isdigit())  # True
+print("\u00B2")  # ²
+print("\u00B2".isdigit())  # True
+print()
 
-# isdecimal():Checks decimal characters
+# isdecimal(): Checks if all characters in a string are decimal (0-9)
+print("isdecimal()")
 print("10".isdecimal())  # True
 print("10.5".isdecimal())  # False
+print("thirty days of python".isdecimal())  # False
+print("123".isdecimal())  # True
+print("12 3".isdecimal())  # False, space not allowed
+print()
+
 
 # isidentifier():Checks for valid identifier means it check if a string is a valid variable name
 challenge = "30DaysOfPython"
@@ -1037,12 +1045,19 @@ challenge = "thirty days of python"
 print(challenge.isupper())  #  False
 challenge = "THIRTY DAYS OF PYTHON"
 print(challenge.isupper())  # True
+print()
 
 
 # isnumeric():Checks numeric characters
+print("isnumeric()")
 num = "10"
 print(num.isnumeric())  # True
 print("ten".isnumeric())  # False
+num = "\u00BD"  # ½
+print(num)
+print(num.isnumeric())  # True
+num = "10.5"
+print(num.isnumeric())  # False
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1057,9 +1072,14 @@ result = ", ".join(web_tech)
 print(result)  # 'HTML, CSS, JavaScript, React'
 print()
 
-# strip(): Removes both leading and trailing characters
-challenge = " thirty days of python "
-print(challenge.strip("y"))  # 5
+
+# strip(): Removes all given characters starting from the beginning and end of the string
+print("strip()")
+print(" Thirty days of python ")
+# Removes leading and trailing white space character
+print(" Thirty days of python ".strip())
+print("thirty days of pythonBATMAN".strip("BATMAN"))  # "thirty days of python"
+print()
 
 
 # replace(): Replaces substring inside
@@ -1069,6 +1089,8 @@ print(challenge.replace("python", "coding"))  # 'thirty days of coding'
 # split():Splits String from Left
 challenge = "thirty days of python"
 print(challenge.split())  # ['thirty', 'days', 'of', 'python']
+challenge = "thirty, days, of, python"
+print(challenge.split(", "))  # ['thirty', 'days', 'of', 'python']
 
 # title(): Returns a Title Cased String
 challenge = "thirty days of python"
