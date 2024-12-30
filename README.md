@@ -1101,3 +1101,8 @@ print(challenge.startswith("thirty"))  # False
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+## File - `30-days-python-asabeneh/day_04/6.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/6.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
