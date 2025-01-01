@@ -32,5 +32,4 @@ lines = [
     "That is why I created 30 days of python.",
 ]
 "\n".join(lines)
-print(multiline_string)
-print()
+print(lines)
