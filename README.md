@@ -621,8 +621,6 @@ break               for                 not
 # source of this file -- https://github.com/Asabeneh/30-Days-Of-Python/blob/master/03_Day_Operators/day-3.py
 # Note to Sahil: I have kept only non-repetitive code in this file from above reference file.
 
-# test1111
-
 print("Multiplying complex number: ", (1 + 1j) * (1 - 1j))
 
 print(3 > 2)  # True, because 3 is greater than 2
