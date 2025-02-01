@@ -33,8 +33,7 @@ print("---------")
 fruits = ["banana", "orange", "mango", "lemon"]
 print(fruits.index("orange"))  # 1
 ages = [22, 19, 24, 25, 26, 24, 25, 24]
-# returns the index of first encountered matching item
-print(ages.index(24))  # 2
+print(ages.index(24))  # 2, the first occurrence
 print("---------")
 
 
@@ -50,9 +49,13 @@ print(ages)  # [24, 25, 24, 26, 25, 24, 19, 22]
 
 
 # Sort
+# syntax
+lst = ["item1", "item2"]
+lst.sort()  # ascending
+lst.sort(reverse=True)  # descending
+
 fruits = ["banana", "orange", "mango", "lemon"]
-# alphabetical sort
-fruits.sort()
+fruits.sort()  # alphabetical sort
 print(fruits)  # ['banana', 'lemon', 'mango', 'orange']
 
 # alphabetical reverse sort
@@ -65,3 +68,14 @@ print(ages)  # [19, 22, 24, 24, 24, 25, 25, 26]
 
 ages.sort(reverse=True)
 print(ages)  # [26, 25, 25, 24, 24, 24, 22, 19]
+
+
+# sorted(): returns the ordered list without modifying the original list
+print("\n--------- sorted()")
+fruits = ["banana", "orange", "mango", "lemon"]
+print(sorted(fruits))  # ['banana', 'lemon', 'mango', 'orange']
+
+# Reverse order
+fruits = ["banana", "orange", "mango", "lemon"]
+fruits = sorted(fruits, reverse=True)
+print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
