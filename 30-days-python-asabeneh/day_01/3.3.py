@@ -25,7 +25,8 @@ points = [
     if xval + yval + zval != required_sum
 ]  # SIMPLE SOLUTION.
 print(points)  # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
-# We learn in this example that we can pass a condition after the `for-loop` and return values if that condition passes.
+# We learn in this example that we can pass a condition after the `for-loop` and
+# return values if that condition passes.
 
 points = [
     [xval, yval, zval]
@@ -35,8 +36,9 @@ points = [
     if myLambda(xval, yval, zval, required_sum)
 ]  # SOLUTION USING LAMBDA FUNCTION.
 print(points)  # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
-# We learn in this example that we can pass a lambda function after the `for-loop` and condition returned from
-#   lambda function will judge whether to show a variable
+# We learn in this example that we can pass a lambda function after the
+#   `for-loop` and condition returned from lambda function will judge whether to
+#   show a variable
 
 
 # Sahil: Probably these ways are helpful in using when we need functionalities

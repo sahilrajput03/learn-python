@@ -1,4 +1,5 @@
-# isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+# isdigit(): Checks if all characters in a string are numbers (0-9 and some
+# other unicode characters for numbers)
 print("Thirty".isdigit())  # False
 print("30".isdigit())  # True
 print("\u00B2")  # ²
@@ -15,7 +16,8 @@ print("12 3".isdecimal())  # False, space not allowed
 print()
 
 
-# isidentifier():Checks for valid identifier means it check if a string is a valid variable name
+# isidentifier():Checks for valid identifier means it check if a string is a
+# valid variable name
 challenge = "30DaysOfPython"
 print(challenge.isidentifier())  # False, because it starts with a number
 challenge = "thirty_days_of_python"

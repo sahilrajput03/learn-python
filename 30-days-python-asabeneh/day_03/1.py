@@ -1,5 +1,7 @@
-# source of this file -- https://github.com/Asabeneh/30-Days-Of-Python/blob/master/03_Day_Operators/day-3.py
-# Note to Sahil: I have kept only non-repetitive code in this file from above reference file.
+# source of this file:
+# https://github.com/Asabeneh/30-Days-Of-Python/blob/master/03_Day_Operators/day-3.py
+# Note to Sahil: I have kept only non-repetitive code in this file from above
+# reference file.
 
 print("Multiplying complex number: ", (1 + 1j) * (1 - 1j))
 

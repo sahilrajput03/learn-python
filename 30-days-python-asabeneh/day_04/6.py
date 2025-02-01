@@ -1,7 +1,11 @@
 """
 😇😇😇 String formatting
 Old Style String Formatting (% Operator)
-In Python there are many ways of formatting strings. In this section, we will cover some of them. The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s", "%d", "%f", "%.number of digitsf".
+In Python there are many ways of formatting strings. In this section, we will
+    cover some of them. The "%" operator is used to format a set of variables
+    enclosed in a "tuple" (a fixed size list), together with a format string, which
+    contains normal text together with "argument specifiers", special symbols like
+    "%s", "%d", "%f", "%.number of digitsf".
 
 %s - String (or any object with a string representation, like numbers)
 %d - Integers
@@ -27,9 +31,8 @@ formated_string = "The area of circle with a radius %d is %.2f." % (
 
 python_libraries = ["Django", "Flask", "NumPy", "Matplotlib", "Pandas"]
 formated_string = "The following are python libraries:%s" % (python_libraries)
-print(
-    formated_string
-)  # "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
+print(formated_string)
+# Output: "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
 
 """
 😇😇😇 New Style String Formatting (str.format)
@@ -75,7 +78,8 @@ print(formated_string)
 
 """
 😇😇😇 String Interpolation / f-Strings (Python 3.6+) (Release date: Dec, 2016)
-Another new string formatting is string interpolation, f-strings. Strings start with f and we can inject the data in their corresponding positions.
+Another new string formatting is string interpolation, f-strings. Strings start
+with f and we can inject the data in their corresponding positions.
 """
 a = 4
 b = 3

@@ -1,4 +1,5 @@
-# source of this and following files in this day -- https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/day_4.py
+# source of this and following files in this day --
+# https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/day_4.py
 
 # Single line comment
 letter = "P"  # A string could be a single character or a bunch of texts

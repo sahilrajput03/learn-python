@@ -1,4 +1,5 @@
-# Find the length of the text python and convert the value to float and convert it to string
+# Find the length of the text python and convert the value to float and convert
+# it to string
 a = len("python")
 print(a)  # 6
 
