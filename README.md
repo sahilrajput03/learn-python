@@ -153,9 +153,10 @@ print(
     f"{x}, good to meet you!"
 )  # You can use single ('') or double ("") quotes as you wish
 # Note:
-# 1. From Python 3.6 (2016) we use this `f-strings` syntax widely for their readability and efficiency
-# when formatting strings.)
-# 2. This approach is concise and more efficient compared to older methods like str.format() or string concatenation.
+# 1. From Python 3.6 (2016) we use this `f-strings` syntax widely for their
+# readability and efficiency when formatting strings.)
+# 2. This approach is concise and more efficient compared to older methods like
+#    str.format() or string concatenation.
 
 
 # Using str.format()                        (Way 2)
@@ -163,9 +164,11 @@ print(
     "{}, good to meet you!".format(x)
 )  # You can use single ('') or double ("") quotes as you wish
 
-# ###
-# Note: Both methods (`f-strings` & `str.format`) allow you to include multiple variables in a string, but f-strings are generally preferred for their cleaner syntax.
-# ###
+# ####
+# Note: Both methods (`f-strings` & `str.format`) allow you to include
+# multiple variables in a string, but f-strings are generally preferred for
+# their cleaner syntax. ###
+# ####
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -221,7 +224,9 @@ print(f)  # n
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_01/2.5.py -->
 ```py
 language = "Python"
-pto = language[0:6:2]  #
+
+# extended slicing of a sequence (like a string, list, or tuple)
+pto = language[0:6:2]
 print(pto)  # "Pto"
 print(type(pto) == str)  # True
 ```
@@ -343,7 +348,8 @@ points = [
     if xval + yval + zval != required_sum
 ]  # SIMPLE SOLUTION.
 print(points)  # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
-# We learn in this example that we can pass a condition after the `for-loop` and return values if that condition passes.
+# We learn in this example that we can pass a condition after the `for-loop` and
+# return values if that condition passes.
 
 points = [
     [xval, yval, zval]
@@ -353,8 +359,9 @@ points = [
     if myLambda(xval, yval, zval, required_sum)
 ]  # SOLUTION USING LAMBDA FUNCTION.
 print(points)  # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
-# We learn in this example that we can pass a lambda function after the `for-loop` and condition returned from
-#   lambda function will judge whether to show a variable
+# We learn in this example that we can pass a lambda function after the
+#   `for-loop` and condition returned from lambda function will judge whether to
+#   show a variable
 
 
 # Sahil: Probably these ways are helpful in using when we need functionalities
@@ -574,9 +581,10 @@ print(final_value2)  # 1
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_02/ex2.py -->
 ```py
 # The radius of a circle is 30 meters.
-# Calculate the area of a circle and assign the value to a variable name of area_of_circle
-# Calculate the circumference of a circle and assign the value to a variable name of circum_of_circle
-# Take radius as user input and calculate the area.
+# 1. Calculate the area of a circle and assign the value to a variable name of
+# area_of_circle
+# 2. Calculate the circumference of a circle and assign the value to a variable
+# name of circum_of_circle Take radius as user input and calculate the area.
 
 radius = input("Enter radius of circle: ")  # assuming input as 3
 r = int(radius)
@@ -618,8 +626,10 @@ break               for                 not
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/1.py -->
 ```py
-# source of this file -- https://github.com/Asabeneh/30-Days-Of-Python/blob/master/03_Day_Operators/day-3.py
-# Note to Sahil: I have kept only non-repetitive code in this file from above reference file.
+# source of this file:
+# https://github.com/Asabeneh/30-Days-Of-Python/blob/master/03_Day_Operators/day-3.py
+# Note to Sahil: I have kept only non-repetitive code in this file from above
+# reference file.
 
 print("Multiplying complex number: ", (1 + 1j) * (1 - 1j))
 
@@ -686,7 +696,9 @@ print(not not False)  # False
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex1.py -->
 ```py
-# Write a script that prompts the user to enter side a, side b, and side c of the triangle. Calculate the perimeter of the triangle (perimeter = a + b + c).
+# Write a script that prompts the user to enter side a, side b, and side c of
+# the triangle.
+#  - Calculate the perimeter of the triangle (perimeter = a + b + c).
 a = int(input("Enter side a: "))
 b = int(input("Enter side b: "))
 c = int(input("Enter side c: "))
@@ -700,7 +712,8 @@ print(f"The perimeter of the triangle is {a+b+c}")  # The perimeter of the trian
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex2.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex2.py -->
 ```py
-# Find the length of the text python and convert the value to float and convert it to string
+# Find the length of the text python and convert the value to float and convert
+# it to string
 a = len("python")
 print(a)  # 6
 
@@ -725,7 +738,8 @@ print(type(a) == type(b))  # False
 
 try:
     # Check if int('9.8') is equal to 10
-    # This statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+    # This statement throws runtime error: `ValueError: invalid literal for
+    # int() with base 10: '9.8'``
     c = int("9.8")
 except ValueError:
     print("Got ValueError")  # Got ValueError
@@ -739,10 +753,11 @@ else:
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_03/ex4.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_03/ex4.py -->
 ```py
-# Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+# Write a script that prompts the user to enter number of years. Calculate the
+# number of seconds a person can live. Assume a person can live hundred years
 # SAMPLE:
-# Enter number of years you have lived: 100
-# You have lived for 3153600000 seconds.
+#   Enter number of years you have lived: 100
+#   You have lived for 3153600000 seconds.
 
 
 years = int(input("Enter number of years you have lived: "))  # assuming input 100
@@ -791,7 +806,8 @@ print(f"{a} {b} {a} {a**2} {a**3}")
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/1.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/1.py -->
 ```py
-# source of this and following files in this day -- https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/day_4.py
+# source of this and following files in this day --
+# https://github.com/Asabeneh/30-Days-Of-Python/blob/master/04_Day_Strings/day_4.py
 
 # Single line comment
 letter = "P"  # A string could be a single character or a bunch of texts
@@ -905,13 +921,11 @@ print()
 
 """
 Escape Sequences in Strings
-In Python and other programming languages \ followed by a character is an escape sequence. Let us see the most common escape characters:
+In Python and other programming languages \ followed by a character is an escape
+sequence. Let us see the most common escape characters:
 
-\n: new line
-\t: Tab means(8 spaces)
-\\: Back slash
-\': Single quote (')
-\": Double quote (")
+\n: new line \t: Tab means(8 spaces) \\: Back slash \': Single quote (') \":
+Double quote (")
 """
 print("I hope every one enjoying the python challenge.\nDo you ?")  # line break
 # Output
@@ -1008,7 +1022,8 @@ print(num.isalpha())  # False
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/4.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/4.py -->
 ```py
-# isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+# isdigit(): Checks if all characters in a string are numbers (0-9 and some
+# other unicode characters for numbers)
 print("Thirty".isdigit())  # False
 print("30".isdigit())  # True
 print("\u00B2")  # ²
@@ -1025,7 +1040,8 @@ print("12 3".isdecimal())  # False, space not allowed
 print()
 
 
-# isidentifier():Checks for valid identifier means it check if a string is a valid variable name
+# isidentifier():Checks for valid identifier means it check if a string is a
+# valid variable name
 challenge = "30DaysOfPython"
 print(challenge.isidentifier())  # False, because it starts with a number
 challenge = "thirty_days_of_python"
@@ -1124,7 +1140,11 @@ print(challenge.startswith("thirty"))  # False
 """
 😇😇😇 String formatting
 Old Style String Formatting (% Operator)
-In Python there are many ways of formatting strings. In this section, we will cover some of them. The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s", "%d", "%f", "%.number of digitsf".
+In Python there are many ways of formatting strings. In this section, we will
+    cover some of them. The "%" operator is used to format a set of variables
+    enclosed in a "tuple" (a fixed size list), together with a format string, which
+    contains normal text together with "argument specifiers", special symbols like
+    "%s", "%d", "%f", "%.number of digitsf".
 
 %s - String (or any object with a string representation, like numbers)
 %d - Integers
@@ -1150,9 +1170,8 @@ formated_string = "The area of circle with a radius %d is %.2f." % (
 
 python_libraries = ["Django", "Flask", "NumPy", "Matplotlib", "Pandas"]
 formated_string = "The following are python libraries:%s" % (python_libraries)
-print(
-    formated_string
-)  # "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
+print(formated_string)
+# Output: "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
 
 """
 😇😇😇 New Style String Formatting (str.format)
@@ -1198,7 +1217,8 @@ print(formated_string)
 
 """
 😇😇😇 String Interpolation / f-Strings (Python 3.6+) (Release date: Dec, 2016)
-Another new string formatting is string interpolation, f-strings. Strings start with f and we can inject the data in their corresponding positions.
+Another new string formatting is string interpolation, f-strings. Strings start
+with f and we can inject the data in their corresponding positions.
 """
 a = 4
 b = 3
@@ -1218,7 +1238,9 @@ print(f"{a} ** {b} = {a ** b}")
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_04/7.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_04/7.py -->
 ```py
-# index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1). If the substring is not found it raises a valueError.
+# index(): Returns the lowest index of a substring, additional arguments
+# indicate starting and ending index (default 0 and string length - 1). If the
+# substring is not found it raises a valueError.
 challenge = "thirty days of python"
 sub_string = "da"
 print(challenge.index(sub_string))  # 7
@@ -1232,7 +1254,8 @@ else:
     print("No exceptions occurred.")
 
 
-# rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1)
+# rindex(): Returns the highest index of a substring, additional arguments
+# indicate starting and ending index (default 0 and string length - 1)
 challenge = "thirty days of python"
 sub_string = "da"
 print(challenge.rindex(sub_string))  # 7
@@ -1240,7 +1263,8 @@ print(challenge.rindex("on", 8))  # 19
 
 
 try:
-    # This statement throws runtime error: `ValueError: invalid literal for int() with base 10: '9.8'``
+    # This statement throws runtime error: `ValueError: invalid literal for
+    # int() with base 10: '9.8'``
     print(challenge.rindex(sub_string, 9))
 except ValueError:
     print("Got ValueError")  # Got ValueError
