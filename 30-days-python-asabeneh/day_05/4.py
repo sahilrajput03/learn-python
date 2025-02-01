@@ -27,7 +27,7 @@ fruits.remove("lemon")
 print(fruits)  # ['orange', 'mango']
 print("---------")
 
-# pop (remove last item by default)
+# pop (removes the last item if no argument is supplied)
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.pop()
 print(fruits)  # ['banana', 'orange', 'mango']
