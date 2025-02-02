@@ -1355,36 +1355,72 @@ print(fruits[0])  # banana
 print(fruits[1])  # orange
 print(fruits[len(fruits) - 1])  # lemon
 print(fruits[-2])  # mango (accessing second last item)
+print("-----")
+
+# --- Unpacking List Items - example 1  ---
+lst = ["item1", "item2", "item3", "item4", "item5"]
+first_item, second_item, third_item, *rest = lst
+print(first_item)  # item1
+print(second_item)  # item2
+print(third_item)  # item3
+print(rest)  # ['item4', 'item5']
+print("-----")
+
+# Unpacking List Items - example 2
+first, second, third, *rest, tenth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(first)  # 1
+print(second)  # 2
+print(third)  # 3
+print(rest)  # [4,5,6,7,8,9]
+print(tenth)  # 10
 
 # ---- Slicing items ----
+# Positive Indexing: We can specify a range of positive
+# indexes by specifying the start, end and step, the return value will be a new
+# list. (DEFAULT VALUES for start = 0, end = len(lst) - 1 (last item), step = 1)
 fruits = ["banana", "orange", "mango", "lemon"]
 print(fruits[0:4])  # returns all the fruits
 
 #  If we don't set where to stop it takes all the rest
 print(fruits[0:])  # returns all the fruits as above
 
-# exclude first item and the last item (Note: item at index 3 is excluded)
+# start items including item at index 1 and exclude item at index 3
 print(fruits[1:3])  # ['orange', 'mango']
 print(fruits[1:])  # ['orange', 'mango', 'lemon']
+print("------")
+print("------")
 
 fruits = ["banana", "orange", "mango", "lemon"]
-all_fruits = fruits[-4:]  # it returns all the fruits
-# this is also give the same result as the above
-orange_and_mango = fruits[-3:-1]  # it does not include the end index
-print(orange_and_mango)  # ['orange', 'mango']
+# negative indexes works like this:
+#  "banana"   "orange"   "mango"   "lemon"
+#      0          1          2         3
+#     -4         -3         -2        -1
 
-orange_mango_lemon = fruits[-3:]
-print(orange_mango_lemon)  # ['orange', 'mango', 'lemon']
+print(fruits[-4:])  # ["banana", "orange", "mango", "lemon"]
+print(fruits[-3:-1])  # ['orange', 'mango']         # does not include the end index
+print(fruits[-3:])  # ['orange', 'mango', 'lemon']
 
 
-# --- Modifying ---
+print("------ STEP EXAMPLE")
+# here we used a 3rd argument, step. It will take every 2nd item - ['banana', 'mango']
+fruits = ["banana", "orange", "mango", "lemon"]
+print(fruits[::2])  # ['banana', 'mango']
+
+
+print("------ NEGATIVE STEP EXAMPLE")
+# a negative step will take the list in reverse order
+print(fruits[::-1])  # ['lemon', 'mango', 'orange', 'banana']
+
+
+print("\n------ Modifying List")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits[0] = "Avocado"
 print(fruits)  #  ['avocado', 'orange', 'mango', 'lemon']
+
 fruits[1] = "apple"
 print(fruits)  #  ['avocado', 'apple', 'mango', 'lemon']
-last_index = len(fruits) - 1
-fruits[last_index] = "lime"
+
+fruits[len(fruits) - 1] = "lime"
 print(fruits)  #  ['avocado', 'apple', 'mango', 'lime']
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -1394,34 +1430,31 @@ print(fruits)  #  ['avocado', 'apple', 'mango', 'lime']
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_05/2.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_05/2.py -->
 ```py
-# checking items
+# checking items: Checking an item if it is a member of a list using in operator
 fruits = ["banana", "orange", "mango", "lemon"]
 print("banana" in fruits)  # True
 print("lime" in fruits)  # False
 
-# Append
+print("--------- Append")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.append("apple")
 print(fruits)  # ['banana', 'orange', 'mango', 'lemon', 'apple']
 fruits.append("lime")  # ['banana', 'orange', 'mango', 'lemon', 'apple', 'lime]
 print(fruits)
-print("---------")
 
-# Insert
+print("\n--------- Insert")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.insert(2, "apple")  # insert apple between orange and mango
 print(fruits)  # ['banana', 'orange', 'apple', 'mango', 'lemon']
 fruits.insert(3, "lime")
 print(fruits)  # ['banana', 'orange', 'apple', 'lime', 'mango','lemon']
-print("---------")
 
-# Remove
+print("\n--------- Remove: Removing Items from a List")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.remove("banana")
 print(fruits)  # ['orange', 'mango', 'lemon']
 fruits.remove("lemon")
 print(fruits)  # ['orange', 'mango']
-print("---------")
 
 # pop (removes the last item if no argument is supplied)
 fruits = ["banana", "orange", "mango", "lemon"]
@@ -1430,9 +1463,9 @@ print(fruits)  # ['banana', 'orange', 'mango']
 
 fruits.pop(0)  # remove item at index 0
 print(fruits)  # ['orange', 'mango']
-print("---------")
 
 # del
+print("\n--------- del")
 fruits = ["banana", "orange", "mango", "lemon"]
 del fruits[0]
 print(fruits)  # ['orange', 'mango', 'lemon']
@@ -1440,11 +1473,18 @@ print("---------")
 
 del fruits[1]
 print(fruits)  # ['orange', 'lemon']
-del fruits
-# print(fruits)  # Throws: NameError: name 'fruits' is not defined
-print("---------")
 
-# clear
+print("--------- DELETE THE ITEMS IN THE RANGE YOU SPECIFY")
+fruits = ["banana", "orange", "mango", "lemon"]
+# Deletes items between given indexes, so it does not delete the item with index 3!
+del fruits[1:3]
+print(fruits)  # ['banana', 'lemon']
+
+
+del fruits  # to delete the list completely
+# print(fruits)  # Throws: NameError: name 'fruits' is not defined
+
+print("\n--------- clear")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.clear()
 print(fruits)  # []
@@ -1500,8 +1540,7 @@ print("---------")
 fruits = ["banana", "orange", "mango", "lemon"]
 print(fruits.index("orange"))  # 1
 ages = [22, 19, 24, 25, 26, 24, 25, 24]
-# returns the index of first encountered matching item
-print(ages.index(24))  # 2
+print(ages.index(24))  # 2, the first occurrence
 print("---------")
 
 
@@ -1517,9 +1556,13 @@ print(ages)  # [24, 25, 24, 26, 25, 24, 19, 22]
 
 
 # Sort
+# syntax
+lst = ["item1", "item2"]
+lst.sort()  # ascending
+lst.sort(reverse=True)  # descending
+
 fruits = ["banana", "orange", "mango", "lemon"]
-# alphabetical sort
-fruits.sort()
+fruits.sort()  # alphabetical sort
 print(fruits)  # ['banana', 'lemon', 'mango', 'orange']
 
 # alphabetical reverse sort
@@ -1532,6 +1575,17 @@ print(ages)  # [19, 22, 24, 24, 24, 25, 25, 26]
 
 ages.sort(reverse=True)
 print(ages)  # [26, 25, 25, 24, 24, 24, 22, 19]
+
+
+# sorted(): returns the ordered list without modifying the original list
+print("\n--------- sorted()")
+fruits = ["banana", "orange", "mango", "lemon"]
+print(sorted(fruits))  # ['banana', 'lemon', 'mango', 'orange']
+
+# Reverse order
+fruits = ["banana", "orange", "mango", "lemon"]
+fruits = sorted(fruits, reverse=True)
+print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
