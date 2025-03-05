@@ -1,5 +1,10 @@
 _See older readme: [Click here](./README.old.md) (README.old.md)_
 
+**Quick Links:**
+- ❤️ 30 days of pythong: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
+- ❤️ trekhleb/learn-python: [Click here](https://github.com/trekhleb/learn-python)
+
+
 ## What is `error`, `exception` and `exception handling` in python. Be concise. (ChatGPT)
 
 Error: An issue in the program's syntax or logic that causes it to fail. Errors can be syntax errors (e.g., SyntaxError) or runtime errors (e.g., NameError, TypeError).
