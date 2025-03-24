@@ -22,7 +22,8 @@ def uppercase_decorator(greetFn):
     return lambda: greetFn().upper()
 
 
-# & Learn: The reason is that the decorator syntax @decorator can only be used with function definitions (using def), not with lambda expressions.
+# * Learn: The reason is that the decorator syntax @decorator can only be used with function definitions (using def), not with lambda expressions.
+# & Learn: Notice the pattern that `greeting` function is passed as arugment to `uppercase_decorator` function.
 @uppercase_decorator
 def greeting():
     return "Welcome to Python"

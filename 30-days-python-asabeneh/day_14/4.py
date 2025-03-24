@@ -11,6 +11,8 @@ def logLocationDecorator(logNameFn):
     return wrapper_accepting_parameters
 
 
+# & Learn: Notice the pattern that `logName` function is passed as arugment to
+# &     `logLocationDecorator` function.
 @logLocationDecorator
 def logName(first_name, last_name, country):
     print("I am {} {}. I love to teach.".format(first_name, last_name, country))
