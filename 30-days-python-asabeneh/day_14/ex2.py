@@ -19,7 +19,7 @@ def get_first_letter_count(country_list):
 print(get_first_letter_count(countries))
 
 
-# Ex.14 Declare a get_first_ten_countries function - it returns a list of first
+# Ex.14: Declare a get_first_ten_countries function - it returns a list of first
 #       ten countries from the countries.js list in the data folder.
 
 # Prompt: Read file `countries_data.json` from `data` folder which is present in
@@ -37,3 +37,17 @@ def get_first_ten_countries():
 
 
 print(get_first_ten_countries())
+
+
+# Ex.15: Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+def get_last_ten_countries():
+    dirname = os.path.dirname(os.path.dirname(__file__))
+    data_file = os.path.join(dirname, "data", "countries_data.json")
+
+    with open(data_file, "r") as f:
+        countries_data = json.load(f)
+
+    return countries_data[-10:]
+
+
+print(get_last_ten_countries())
