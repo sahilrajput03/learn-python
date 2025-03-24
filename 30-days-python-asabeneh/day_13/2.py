@@ -20,6 +20,6 @@ list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flattened_list = [number for row in list_of_lists for number in row]
 # There are 3 parts of above list comprehension:
 # 1st: `for row in list_of_lists`
-# 2nd: `number` (Here `row` variable is from 1st part)
-# 3rd: `number` (This is the very first expression which is fetched from 2nd part)
+# 2nd: `for number in row` (Here `row` variable is from 1st part)
+# 3rd: `number` (Here `number` variable is from 2nd part)
 print(flattened_list)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
