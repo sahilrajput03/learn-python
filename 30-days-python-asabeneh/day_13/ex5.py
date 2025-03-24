@@ -6,9 +6,9 @@ countries = [[("Finland", "Helsinki")], [("Sweden", "Stockholm")], [("Norway", "
 # {'country': 'NORWAY', 'city': 'OSLO'}]
 
 list = [
-    [{"country": tuple[0].upper(), "city": tuple[1].upper()}]
+    [{"country": country.upper(), "city": capital.upper()}]
     # #  Above line `tuple` is from the last line
     for list in countries
-    for tuple in list  # Here `list` is from above line
+    for (country, capital) in list  # Here `list` is from above line
 ]
 print(list)
