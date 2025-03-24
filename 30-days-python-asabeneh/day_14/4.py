@@ -4,11 +4,11 @@
 
 
 def logLocationDecorator(logNameFn):
-    def wrapper_accepting_parameters(para1, para2, para3):
+    def resultFn(para1, para2, para3):
         logNameFn(para1, para2, para3)  # `function` here is `printName` function
         print("I live in {}".format(para3))  # Log location
 
-    return wrapper_accepting_parameters
+    return resultFn  # This function is always executed in the end.
 
 
 # & Learn: Notice the pattern that `logName` function is passed as arugment to

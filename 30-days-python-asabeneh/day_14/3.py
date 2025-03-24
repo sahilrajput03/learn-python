@@ -15,7 +15,7 @@ def uppercase_decorator(greetFn):
 def split_string_decorator(uppercaseDecoratorFn):
     print("2 - split_string_decorator body")
     resultFn = lambda: uppercaseDecoratorFn().split()
-    return resultFn
+    return resultFn  # This function is always executed in the end.
 
 
 # & Learn: Notice the pattern that `greeting` function is passed as arugment to
