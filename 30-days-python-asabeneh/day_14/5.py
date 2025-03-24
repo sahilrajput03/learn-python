@@ -8,11 +8,11 @@ def square(x):
     return x**2
 
 
-numbers_squared = map(square, numberList)  # immutable function
+squaredNumberListSquared = map(square, numberList)  # immutable function
 # print(numbers_squared) # Prints address of the map object: <map object at 0x10ed60d30>
-print(list(numbers_squared))  # [1, 4, 9, 16, 25]
+print(list(squaredNumberListSquared))  # [1, 4, 9, 16, 25]
 
 # Passing lambda funtion as argument:
-numbers_squared = map(lambda x: x**2, numberList)
+squaredNumberListSquared = map(lambda x: x**2, numberList)
 # print(numbers_squared) # Prints address of the map object: <map object at 0x10ed60d30>
-print(list(numbers_squared))  # [1, 4, 9, 16, 25]
+print(list(squaredNumberListSquared))  # [1, 4, 9, 16, 25]
