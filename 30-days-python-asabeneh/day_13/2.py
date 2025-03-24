@@ -17,9 +17,9 @@ print(positive_even_numbers)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 # Flattening a three dimensional array
 list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-flattened_list = [number for row in list_of_lists for number in row]
+flattened_list = [item for list in list_of_lists for item in list]
 # There are 3 parts of above list comprehension:
-# 1st: `for row in list_of_lists`
-# 2nd: `for number in row` (Here `row` variable is from 1st part)
-# 3rd: `number` (Here `number` variable is from 2nd part)
+# 1st: `for list in list_of_lists`
+# 2nd: `for item in list` (Here `list` variable is from 1st part)
+# 3rd: `item` (Here `item` variable is from 2nd part)
 print(flattened_list)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
