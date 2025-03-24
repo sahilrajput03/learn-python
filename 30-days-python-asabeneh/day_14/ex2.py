@@ -7,15 +7,21 @@ from utils import readCountriesFromJsonFile
 countries = ["Estonia", "Finland", "Sweden", "Denmark", "Norway", "Iceland"]
 
 
+# & Learn: we get `KeyError: 'bad_key'` when we try to access key which is not defined in dictionary.
+a = {"a": 20}
+# print(a["badkey"])  # we get exception ---  `KeyError: 'bad_key'`
+
+
 def get_first_letter_count(country_list):
-    letter_count = {}
+    dictionary = {}
     for country in country_list:
-        first_letter = country[0]
-        letter_count[first_letter] = letter_count.get(first_letter, 0) + 1
-    return letter_count
+        firstLetterOfCountry = country[0]
+        # & Learn: We use `dictionary.get()` method because if we use dictionary["someBadKey"] then we get exception ---  `KeyError: 'bad_key'`
+        dictionary[firstLetterOfCountry] = dictionary.get(firstLetterOfCountry, 0) + 1
+    return dictionary
 
 
-print(get_first_letter_count(countries))
+# print(get_first_letter_count(countries))
 
 
 countries = readCountriesFromJsonFile()
