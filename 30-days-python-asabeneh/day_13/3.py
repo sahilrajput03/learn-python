@@ -14,7 +14,7 @@ print(sum1(2, 3))  # 5
 sum2 = lambda a, b: a + b
 print(sum2(2, 3))  # 5
 
-# Self invoking lambda function (Immediately Invoked Lambda Function)
+# Self invoking lambda function (Immediately Invoked Lambda Function) ~ Sahil
 print((lambda a, b: a + b)(100, 102))  # 202
 
 square = lambda x: x**2
