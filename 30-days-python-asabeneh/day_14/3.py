@@ -12,9 +12,9 @@ def uppercase_decorator(greetFn):
 
 
 # Second decorator
-def split_string_decorator(uppercaseFn):
+def split_string_decorator(uppercaseDecoratorFn):
     print("2 - split_string_decorator body")
-    resultFn = lambda: uppercaseFn().split()
+    resultFn = lambda: uppercaseDecoratorFn().split()
     return resultFn
 
 
