@@ -1,5 +1,4 @@
-import json
-import os
+from utils import readCountriesFromJsonFile
 
 # * Ex. 13: Create a function returning a dictionary, where keys stand for starting
 #   letters of countries and values are the number of country names starting
@@ -17,18 +16,6 @@ def get_first_letter_count(country_list):
 
 
 print(get_first_letter_count(countries))
-
-
-# * Prompt to Copilot for reading json file:
-# Read file `countries_data.json` from `data` folder which is present in
-#       parent folder of current script.
-def readCountriesFromJsonFile():
-    dirname = os.path.dirname(os.path.dirname(__file__))
-    data_file = os.path.join(dirname, "data", "countries_data.json")
-
-    with open(data_file, "r") as f:
-        countries_data = json.load(f)
-    return countries_data
 
 
 countries = readCountriesFromJsonFile()
