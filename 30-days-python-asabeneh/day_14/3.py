@@ -7,13 +7,15 @@ that take functions as parameters"""
 # First Decorator
 def uppercase_decorator(greetFn):
     print("1 - uppercase_decorator body")
-    return lambda: greetFn().upper()
+    uppercaseFn = lambda: greetFn().upper()
+    return uppercaseFn
 
 
 # Second decorator
 def split_string_decorator(uppercaseFn):
     print("2 - split_string_decorator body")
-    return lambda: uppercaseFn().split()
+    resultFn = lambda: uppercaseFn().split()
+    return resultFn
 
 
 @split_string_decorator  # * 2nd
