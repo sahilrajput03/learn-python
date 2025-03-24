@@ -2,15 +2,11 @@ print("------------------------ 1")
 
 
 # * Mimicing decorator functionality via normal function:
-def greeting():
-    return "Welcome to Python"
+greeting = lambda: "Welcome to Python"
 
 
 def uppercase_decorator(function):
-    def wrapper():
-        return function().upper()
-
-    return wrapper
+    return lambda: function().upper()
 
 
 g = uppercase_decorator(greeting)
@@ -23,12 +19,10 @@ print("------------------------ 2")
 
 
 def uppercase_decorator(function):
-    def wrapper():
-        return function().upper()
-
-    return wrapper
+    return lambda: function().upper()
 
 
+# & Learn: The reason is that the decorator syntax @decorator can only be used with function definitions (using def), not with lambda expressions.
 @uppercase_decorator
 def greeting():
     return "Welcome to Python"
