@@ -1,4 +1,4 @@
-# Using list comprehension create the following list of tuples:
+# Ex3: Using list comprehension create the following list of tuples:
 [
     (0, 1, 0, 0, 0, 0, 0),
     (1, 1, 1, 1, 1, 1, 1),

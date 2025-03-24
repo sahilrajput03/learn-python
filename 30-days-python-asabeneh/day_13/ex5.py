@@ -1,4 +1,4 @@
-# Change the following list to a list of dictionaries:
+# Ex5: Change the following list to a list of dictionaries:
 countries = [[("Finland", "Helsinki")], [("Sweden", "Stockholm")], [("Norway", "Oslo")]]
 # Output:
 # [{'country': 'FINLAND', 'city': 'HELSINKI'},

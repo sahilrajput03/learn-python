@@ -1,4 +1,4 @@
-# Change the following list of lists to a list of concatenated strings:
+# Ex6: Change the following list of lists to a list of concatenated strings:
 names = [
     [("Asabeneh", "Yetayeh")],
     [("David", "Smith")],
