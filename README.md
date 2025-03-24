@@ -286,7 +286,8 @@ myLambda = lambda a, b, sum: a + b != sum  # Returns True or False
 X = range(3)  # [0, 1, 2 , ...n-1]
 Y = range(2)
 
-# PRINTS ALL THE POINTS IN TWO-DIMENSION SPACE.
+# PRINTS ALL THE POINTS IN TWO-DIMENSION SPACE:
+# * Learn: We can use the variable after `for` keyword in the expression at the front and that expression is returend as item in the list.
 points = [[xval, yval] for xval in X for yval in Y]  # Prints all the points.
 print(points)  # [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0], [2, 1]]
 
