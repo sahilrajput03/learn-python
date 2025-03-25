@@ -1595,7 +1595,7 @@ print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-# Todo: continue doing exercise of day 5
+# 🛑🛑🛑🛑Todo: continue doing exercise of day 5🛑🛑🛑🛑
 
 [https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md#-exercises-day-5](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md#-exercises-day-5)
 
