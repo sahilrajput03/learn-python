@@ -1,19 +1,23 @@
-# Generating even numbers
+# Generating even numbers in range 0 to 21
 even_numbers = [
-    i for i in range(21) if i % 2 == 0
-]  # to generate even numbers list in range 0 to 21
+    i  # Here `i` is from last line
+    for i in range(21)
+    if i % 2 == 0  # Here `i` is from above line
+]
 print(even_numbers)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-# Generating odd numbers
+# Generating odd numbers in range 0 to 21
 odd_numbers = [
-    i for i in range(21) if i % 2 != 0
-]  # to generate odd numbers in range 0 to 21
+    i  # Here `i` is from last line
+    for i in range(21)
+    if i % 2 != 0  # Here `i` is from above line
+]
 print(odd_numbers)  # [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
 # Filter (getting) +ve even numbers from a `list` variable
 numbers = [-8, -7, -3, -1, 0, 1, 3, 4, 5, 7, 6, 8, 10]
 positive_even_numbers = [
-    i  # Here i is from last line
+    i  # Here `i` is from last line
     for i in numbers
     if i % 2 == 0 and i > 0  # Here `i` is from above line
 ]
