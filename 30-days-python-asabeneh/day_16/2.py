@@ -25,38 +25,38 @@ print("dd/mm/YY H:M:S", datetimeNow.strftime("%d/%m/%Y, %H:%M:%S"))
 print("\n\n--------------------------------")
 
 # * 🚀 Learn `strptime` function
-date_string = "5 December, 2019"
-date_object = datetime.strptime(date_string, "%d %B, %Y")
-print(type(date_object))  # <class 'datetime.datetime'>
-print(date_object)  # 2019-12-05 00:00:00
+datetimeString = "5 December, 2019"
+datetime1 = datetime.strptime(datetimeString, "%d %B, %Y")
+print(type(datetime1))  # <class 'datetime.datetime'>
+print(datetime1)  # 2019-12-05 00:00:00
 
 
 print("----------------- ")
 
-d = date(2020, 1, 1)
-print(d)  # 2020-01-01
-print("Current date:", d.today())  # 2025-03-25
-print(type(d.today()))  # <class 'datetime.date'>
+time1 = date(2020, 1, 1)
+print(time1)  # 2020-01-01
+print("Current date:", time1.today())  # 2025-03-25
+print(type(time1.today()))  # <class 'datetime.date'>
 
 # date object of today's date #
-today = date.today()
-print("\nCurrent year:", today.year)  # 2025
-print("Current month:", today.month)  # 3
-print("Current day:", today.day)  # 25
+datetimeToday = date.today()
+print("\nCurrent year:", datetimeToday.year)  # 2025
+print("Current month:", datetimeToday.month)  # 3
+print("Current day:", datetimeToday.day)  # 25
 
 
 # * 🚀 Learn `time` function
 # Default time: 00:00:00:00 (hour:minute:second:microsecond)
-a = time()
-print("a =", a)  # 00:00:00
-print(type(a))  # <class 'datetime.time'>
+time1 = time()
+print("a =", time1)  # 00:00:00
+print(type(time1))  # <class 'datetime.time'>
 
-b = time(10, 30, 50)
-print("b =", b)  # 10:30:50
+time1 = time(10, 30, 50)
+print("b =", time1)  # 10:30:50
 
-c = time(hour=10, minute=30, second=50)
-print("c =", c)  # 10:30:50
+time1 = time(hour=10, minute=30, second=50)
+print("c =", time1)  # 10:30:50
 
 # Passsing Arguments: time(hour, minute, second, microsecond)
-d = time(10, 30, 50, 200555)
-print("d =", d)  # 10:30:50.200555
+time1 = time(10, 30, 50, 200555)
+print("d =", time1)  # 10:30:50.200555
