@@ -2454,7 +2454,7 @@ except ImportError:
         "Got ImportError while importing non-existing function power from math module."
     )
 
-# CORRECT WAY OF usin `pow` function from math module:
+# Learn: Correct way of usin `pow` function from math module:
 from math import pow
 
 pow(2, 3)  # 8.0
