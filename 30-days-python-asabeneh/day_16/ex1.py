@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 # ex.1: Format the current date using this format:
 format = "%m/%d/%Y, %H:%M:%S"
@@ -21,4 +21,7 @@ print(datetimeNewYear1 - datetimeNow)  # way1
 print(datetimeNewYear2 - datetimeNow)  # way2
 
 
-# TODO ex.5 Calculate the time difference between 1 January 1970 and now
+# ex.5 Calculate the time difference between 1 January 1970 and now
+datetimeNow = datetime.now()
+datetime1970 = datetime(1970, 1, 1)
+print(datetimeNow - datetime1970)
