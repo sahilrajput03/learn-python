@@ -1745,14 +1745,9 @@ print(power(2)(5))  # 32
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex1.py -->
 ```py
 # Ex1: Filter only negative and zero in the list using list comprehension
-def negative_integers():
-    list1 = [-4, -3, -2, -1, 0, 2, 4, 6]
-    list2 = [i for i in list1 if i <= 0]
-    list3 = [i for i in list1 if i == 0]
-    return list2
-
-
-negative_integers()
+list1 = [-4, -3, -2, -1, 0, 2, 4, 6]
+print([i for i in list1 if i <= 0])
+# Output: [-4, -3, -2, -1, 0]
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1820,6 +1815,7 @@ list = [
     # In above line `country` and `capital` is from last line
     for list in countries
     for (country, capital) in list  # Here `list` is from above line
+    # In above line we are destructuring tuple values
 ]
 print(list)
 ```
@@ -1842,6 +1838,7 @@ list = [
     # #  Above line `country` and `capital` is from the last line
     for list in countries
     for (country, capital) in list  # Here `list` is from above line
+    # In above line we are destructuring tuple values
 ]
 print(list)
 ```
