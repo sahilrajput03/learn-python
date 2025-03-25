@@ -2393,3 +2393,9 @@ for country in top_ten:
     print(f"{country['name']}: {country['population']:,} people")
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## File - `30-days-python-asabeneh/day_15/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_15/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
