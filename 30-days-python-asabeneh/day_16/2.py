@@ -33,10 +33,12 @@ print(datetime1)  # 2019-12-05 00:00:00
 
 print("----------------- ")
 
-time1 = date(2020, 1, 1)
-print(time1)  # 2020-01-01
-print("Current date:", time1.today())  # 2025-03-25
-print(type(time1.today()))  # <class 'datetime.date'>
+# * Learn date function
+
+date1 = date(2020, 1, 1)
+print(date1)  # 2020-01-01
+print("Current date:", date1.today())  # 2025-03-25
+print(type(date1.today()))  # <class 'datetime.date'>
 
 # date object of today's date #
 datetimeToday = date.today()

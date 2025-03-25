@@ -29,7 +29,8 @@ print("")
 from datetime import datetime
 
 # We will learn about --- date, datetime, time and timedelta function from above:
-datetimeNow = datetime.now()
+datetimeNow = datetime.now()  # <class 'datetime.datetime'>
+print(type(datetimeNow))
 print(datetimeNow)  # 2025-03-25 20:26:48.087765
 print(datetimeNow.day)  # 25
 print(datetimeNow.month)  # 3
