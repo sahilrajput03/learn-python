@@ -33,5 +33,5 @@ if companyToCheck.lower() in [company.lower() for company in it_companies]:
 else:
     print(f"{companyToCheck} does not exist in the list")
 
-# TODO: ex.18: Slice out the first 3 companies from the list
+# TODO: ex.19: Slice out the last 3 companies from the list
 # https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md
