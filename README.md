@@ -70,6 +70,9 @@ print(type({"name": "Asabeneh"}))  #            <class 'dict'>
 print(type({9.8, 3.14, 2.7}))  #                <class 'set'>
 print(type((9.8, 3.14, 2.7)))  #                <class 'tuple'>
 print()
+
+a = b = 20
+print(a, b)  # 20, 20
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
