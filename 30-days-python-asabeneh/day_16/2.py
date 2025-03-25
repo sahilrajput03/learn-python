@@ -24,7 +24,7 @@ print("dd/mm/YY H:M:S", datetimeNow.strftime("%d/%m/%Y, %H:%M:%S"))
 
 print("\n\n--------------------------------")
 
-# * 🚀 Learn `strptime` function
+# * 🚀 Learn `strptime` function - To parse datetime from string
 datetimeString = "5 December, 2019"
 datetime1 = datetime.strptime(datetimeString, "%d %B, %Y")
 print(type(datetime1))  # <class 'datetime.datetime'>
