@@ -2475,3 +2475,29 @@ except ZeroDivisionError:
     print("Got ZeroDivisionError while running 1/0")
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## File - `30-days-python-asabeneh/day_15/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_15/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_16/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_16/2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_16/3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_16/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
