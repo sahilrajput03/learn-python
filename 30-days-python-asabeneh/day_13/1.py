@@ -2,6 +2,7 @@
 # *syntax*
 # [i for i in iterable if expression]
 
+# (Sahil) Learn: List comprehension in python is anonymous to a combination of both `map` and `filter` method of javascript.
 
 # * Converting string to list comprehension
 # * 1st Way
