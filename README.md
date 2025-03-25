@@ -1383,11 +1383,15 @@ print(tenth)  # 10
 # ---- Slicing items ----
 # Positive Indexing: We can specify a range of positive
 # indexes by specifying the start, end and step, the return value will be a new
-# list. (DEFAULT VALUES for start = 0, end = len(lst) - 1 (last item), step = 1)
+# list.
+# 🚀 Default Arguments:
+# 1. startIndex = 0 (inclusive)
+# 2. endIndex = len(lst) (exclusive)
+# 3. step = 1
 fruits = ["banana", "orange", "mango", "lemon"]
 print(fruits[0:4])  # returns all the fruits
 
-#  If we don't set where to stop it takes all the rest
+#  If we don't specify endIndex then default value is used i.e, `len(lst)`
 print(fruits[0:])  # returns all the fruits as above
 
 # start items including item at index 1 and exclude item at index 3
