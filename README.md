@@ -1441,28 +1441,29 @@ fruits = ["banana", "orange", "mango", "lemon"]
 print("banana" in fruits)  # True
 print("lime" in fruits)  # False
 
-print("--------- Append")
+print("--------- append(): To add item in the end of the list")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.append("apple")
 print(fruits)  # ['banana', 'orange', 'mango', 'lemon', 'apple']
 fruits.append("lime")  # ['banana', 'orange', 'mango', 'lemon', 'apple', 'lime]
 print(fruits)
 
-print("\n--------- Insert")
+print("\n--------- insert(): To add/put item at specified index")
 fruits = ["banana", "orange", "mango", "lemon"]
+# * Learn: insert() function expected 2 arguments else we get error - `TypeError: insert expected 2 arguments, got 1`
 fruits.insert(2, "apple")  # insert apple between orange and mango
 print(fruits)  # ['banana', 'orange', 'apple', 'mango', 'lemon']
 fruits.insert(3, "lime")
 print(fruits)  # ['banana', 'orange', 'apple', 'lime', 'mango','lemon']
 
-print("\n--------- Remove: Removing Items from a List")
+print("\n--------- .remove(itemHere): Removing specified item from list")
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.remove("banana")
 print(fruits)  # ['orange', 'mango', 'lemon']
 fruits.remove("lemon")
 print(fruits)  # ['orange', 'mango']
 
-# pop (removes the last item if no argument is supplied)
+# .pop(): Remove last item (when no argument is specified) OR remove item at specified index
 fruits = ["banana", "orange", "mango", "lemon"]
 fruits.pop()
 print(fruits)  # ['banana', 'orange', 'mango']
