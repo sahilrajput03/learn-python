@@ -26,7 +26,7 @@ countries_string = "#; ".join(it_companies)
 print(countries_string)
 
 
-# ex.15: Check if a certain company exists in the it_companies list (incase-sensitive checking)
+# ex.15: [(incase-sensitive searching)] Check if a certain company exists in the it_companies list
 companyToCheck = "FaceBook"
 if companyToCheck.lower() in [company.lower() for company in it_companies]:
     print(f"{companyToCheck} exists in the list")

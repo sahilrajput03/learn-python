@@ -21,7 +21,7 @@ def get_first_letter_count(country_list):
     return dictionary
 
 
-# print(get_first_letter_count(countries))
+print(get_first_letter_count(countries))
 
 
 countries = readCountriesFromJsonFile()
