@@ -1603,121 +1603,782 @@ print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
 ## File - `30-days-python-asabeneh/day_13/1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/1.py -->
+```py
+# List comprehension in Python is a compact way of creating a list from a sequence
+# *syntax*
+# [i for i in iterable if expression]
+
+
+# * Converting string to list comprehension
+# * 1st Way
+language = "Python"
+lst = list(language)  # changing the string to list
+print(type(lst))  # list
+print(lst)  # ['P', 'y', 't', 'h', 'o', 'n']
+
+# * 2nd Way
+lst = [i for i in language]
+print(type(lst))  # list
+print(lst)  # ['P', 'y', 't', 'h', 'o', 'n']
+
+
+# Learn: Range is not a primitive data type but a "class"
+print(type(range(11)))  # "range" type
+if isinstance(range(11), range):
+    print("range type")
+
+# #################
+# Generating numbers
+numbers = [i for i in range(11)]  # to generate numbers from 0 to 10
+print(numbers)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# It is possible to do mathematical operations during iteration
+squares = [i * i for i in range(11)]
+print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# Learn: From Sahil: This is like map in javascript. This way we create tuples form a list:
+numbers = [(i, i * i) for i in range(11)]
+print(numbers)  # [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/2.py -->
+```py
+# Generating even numbers
+even_numbers = [
+    i for i in range(21) if i % 2 == 0
+]  # to generate even numbers list in range 0 to 21
+print(even_numbers)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# Generating odd numbers
+odd_numbers = [
+    i for i in range(21) if i % 2 != 0
+]  # to generate odd numbers in range 0 to 21
+print(odd_numbers)  # [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+# Filter (getting) +ve even numbers from a `list` variable
+numbers = [-8, -7, -3, -1, 0, 1, 3, 4, 5, 7, 6, 8, 10]
+positive_even_numbers = [
+    i  # Here i is from last line
+    for i in numbers
+    if i % 2 == 0 and i > 0  # Here `i` is from above line
+]
+print(positive_even_numbers)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# Flattening a three dimensional list/array
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened_list = [
+    item  # Here `item` variable is from last line
+    for list in list_of_lists
+    for item in list  # Here `list` variable is from above line
+]
+print(flattened_list)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/3.py -->
+```py
+# Lambda function Synatx
+# x = lambda param1, param2, param3: param1 + param2 + param2
+# print(x(arg1, arg2, arg3))
+
+
+# Named function
+def sum1(a, b):
+    return a + b
+
+
+print(sum1(2, 3))  # 5
+
+# Using lambda function
+sum2 = lambda a, b: a + b
+print(sum2(2, 3))  # 5
+
+# Self invoking lambda function (Immediately Invoked Lambda Function) ~ Sahil
+print((lambda a, b: a + b)(100, 102))  # 202
+
+square = lambda x: x**2
+print(square(3))  # 9
+
+cube = lambda x: x**3
+print(cube(3))  # 27
+
+# Multiple variables
+y = lambda a, b, c: a**2 - 3 * b + 4 * c
+print(y(5, 5, 3))  # 22
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/4.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/4.py -->
+```py
+# Lambda Function Inside Another Function
+def power(x):
+    return lambda n: x**n
+
+
+# Learn: Here `2` is `x` and `3` is `n` thus --- 2**3 = 8
+print(power(2)(3))  # 8
+
+# Learn: Here `2` is `x` and `5` is `n` thus --- 2**5 = 32
+print(power(2)(5))  # 32
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex1.py -->
+```py
+# Ex1: Filter only negative and zero in the list using list comprehension
+def negative_integers():
+    list1 = [-4, -3, -2, -1, 0, 2, 4, 6]
+    list2 = [i for i in list1 if i <= 0]
+    list3 = [i for i in list1 if i == 0]
+    return list2
+
+
+negative_integers()
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex2.py -->
+```py
+# Ex2: Flatten the following list of lists of lists to a one dimensional list :
+y = [[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
+# Expected output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+list = [
+    item  # Here `item` is from last line
+    for nestedList in y
+    for subNestedList in nestedList  # Here `nestedList` is from above line
+    for item in subNestedList  # Here `subNestedList` is from above line
+]
+print(list)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex3.py -->
+```py
+# Ex3: Using list comprehension create the following list of tuples:
+[
+    (0, 1, 0, 0, 0, 0, 0),
+    (1, 1, 1, 1, 1, 1, 1),
+    (2, 1, 2, 4, 8, 16, 32),
+    (3, 1, 3, 9, 27, 81, 243),
+    (4, 1, 4, 16, 64, 256, 1024),
+    (5, 1, 5, 25, 125, 625, 3125),
+    (6, 1, 6, 36, 216, 1296, 7776),
+    (7, 1, 7, 49, 343, 2401, 16807),
+    (8, 1, 8, 64, 512, 4096, 32768),
+    (9, 1, 9, 81, 729, 6561, 59049),
+    (10, 1, 10, 100, 1000, 10000, 100000),
+]
+
+
+list = [(i, 1, i, i**2, i**3, i**4, i**5) for i in range(0, 11)]
+
+# We are on purpose printing each item in new line to easily compare the expected output:
+for item in list:
+    print(item)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex4.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex4.py -->
+```py
+# Ex4: Flatten the following list to a new list:
+countries = [[("Finland", "Helsinki")], [("Sweden", "Stockholm")], [("Norway", "Oslo")]]
+
+# output:
+# [['FINLAND','FIN', 'HELSINKI'], ['SWEDEN', 'SWE', 'STOCKHOLM'], ['NORWAY', 'NOR', 'OSLO']]
+
+list = [
+    [country.upper(), country[:3].upper(), capital.upper()]
+    # In above line `country` and `capital` is from last line
+    for list in countries
+    for (country, capital) in list  # Here `list` is from above line
+]
+print(list)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex5.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex5.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex5.py -->
+```py
+# Ex5: Change the following list to a list of dictionaries:
+countries = [[("Finland", "Helsinki")], [("Sweden", "Stockholm")], [("Norway", "Oslo")]]
+# Output:
+# [{'country': 'FINLAND', 'city': 'HELSINKI'},
+# {'country': 'SWEDEN', 'city': 'STOCKHOLM'},
+# {'country': 'NORWAY', 'city': 'OSLO'}]
+
+list = [
+    [{"country": country.upper(), "city": capital.upper()}]
+    # #  Above line `tuple` is from the last line
+    for list in countries
+    for (country, capital) in list  # Here `list` is from above line
+]
+print(list)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex6.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex6.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex6.py -->
+```py
+# Ex6: Change the following list of lists to a list of concatenated strings:
+names = [
+    [("Asabeneh", "Yetayeh")],
+    [("David", "Smith")],
+    [("Donald", "Trump")],
+    [("Bill", "Gates")],
+]
+# Output:
+# ["Asabeneh Yetaeyeh", "David Smith", "Donald Trump", "Bill Gates"]
+
+list = [
+    firstname + " " + lastname
+    # Above line `firstname` and `lastname` is from the last line
+    for list in names
+    for (firstname, lastname) in list  # Here `list` is from above line
+]
+print(list)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_13/ex7.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_13/ex7.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_13/ex7.py -->
+```py
+# Ex7: Write a lambda function which can solve a slope or y-intercept of linear functions.
+slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1)
+y_intercept = lambda x, y, m: y - (m * x)  # `y=mx+c`
+
+# Example usage
+x1, y1 = 0, 1  # First point
+x2, y2 = 2, 5  # Second point
+
+m = slope(x1, y1, x2, y2)
+b = y_intercept(x1, y1, m)  # when x=0
+
+print(f"Slope (m): {m}")
+print(f"Y-intercept (b): {b}")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/1.py -->
+```py
+# Higher Order Functions
+#  Python functions are treated as first class citizens, allowing you to perform
+#       the following operations on functions:
+# - A function can take one or more functions as parameters
+# - A function can be returned as a result of another function
+# - A function can be modified
+# - A function can be assigned to a variable
+
+# In this section, we will cover:
+# - Handling functions as parameters
+# - Returning functions as return value from another functions
+# - Using Python closures and decorators
+
+print("------------------------ 1")
+
+# Function as a Parameter
+sumFunction = lambda num: sum(num)  # Here `sum` is a builtin function.
+higherOrderFunction = lambda f, lst: f(lst)  # function (`f`) as parameter
+result = higherOrderFunction(sumFunction, [1, 2, 3, 4, 5])
+print(result)  # 15
+
+
+# ##############################################################
+print("------------------------ 2")
+
+
+def square(x):  # a square function
+    return x**2
+
+
+def cube(x):  # a cube function
+    return x**3
+
+
+def absolute(x):  # an absolute value function
+    if x >= 0:
+        return x
+    else:
+        return -(x)
+
+
+def higher_order_function(type):  # a higher order function returning a function
+    if type == "square":
+        return square
+    elif type == "cube":
+        return cube
+    elif type == "absolute":
+        return absolute
+
+
+# We can see from the below examples that the higher order function is returning different functions depending on the passed parameter
+result = higher_order_function("square")
+print("square:", result(3))  # 9
+result = higher_order_function("cube")
+print("cube:", result(3))  # 27
+result = higher_order_function("absolute")
+print("absolute:", result(-3))  # 3
+
+print("------------------------ 3")
+
+# PYTHON CLOSURES
+
+# Python allows a nested function to access the outer scope of the enclosing
+# function. This is is known as a Closure. Let us have a look at how closures
+# work in Python. In Python, closure is created by nesting a function inside
+# another encapsulating function and then returning the inner function. See the
+# example below.
+
+
+def add_ten():
+    ten = 10
+
+    def add(num):
+        return num + ten
+
+    return add
+
+
+closure_result = add_ten()
+print(closure_result(5))  # 15
+print(closure_result(10))  # 20
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/2.py -->
+```py
+print("------------------------ 1")
+
+
+# * Mimicing decorator functionality via normal function:
+greeting = lambda: "Welcome to Python"
+
+
+def uppercase_decorator(greetFn):
+    return lambda: greetFn().upper()
+
+
+g = uppercase_decorator(greeting)
+print(g())  # WELCOME TO PYTHON
+
+print("------------------------ 2")
+
+## * Using decorators in python:
+# This decorator function is a higher order function that takes a function as a parameter
+
+
+def uppercase_decorator(greetFn):
+    return lambda: greetFn().upper()
+
+
+# * Learn: The reason is that the decorator syntax @decorator can only be used with function definitions (using def), not with lambda expressions.
+# & Learn: Notice the pattern that `greeting` function is passed as arugment to `uppercase_decorator` function.
+@uppercase_decorator
+def greeting():
+    return "Welcome to Python"
+
+
+print(greeting())  # WELCOME TO PYTHON
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/3.py -->
+```py
+"""These decorator functions are higher order functions
+that take functions as parameters"""
+
+# * Applying Multiple Decorators to a Single Function
+
+
+# First Decorator
+def uppercase_decorator(greetFn):
+    print("1 - uppercase_decorator body")
+    uppercaseFn = lambda: greetFn().upper()
+    return uppercaseFn
+
+
+# Second decorator
+def split_string_decorator(uppercaseDecoratorFn):
+    print("2 - split_string_decorator body")
+    resultFn = lambda: uppercaseDecoratorFn().split()
+    return resultFn  # This function is always executed in the end.
+
+
+# & Learn: Notice the pattern that `greeting` function is passed as arugment to
+# &     `uppercase_decorator` function. Then `uppercase_decorator` function is passed
+# &     as an argument to `split_string_decorator` function.
+@split_string_decorator  # * 2nd
+@uppercase_decorator  # * 1st
+def greeting():  # * 3rd
+    print("3 - greetingFunction body")
+    return "Welcome to Python"
+
+
+print(greeting())  # WELCOME TO PYTHON
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/4.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/4.py -->
+```py
+# & Accepting Parameters in Decorator Functions
+# * Most of the time we need our functions to take parameters, so we might need to
+# * define a decorator that accepts parameters.
+
+
+def logLocationDecorator(logNameFn):
+    def resultFn(para1, para2, para3):
+        logNameFn(para1, para2, para3)  # `function` here is `printName` function
+        print("I live in {}".format(para3))  # Log location
+
+    return resultFn  # This function is always executed in the end.
+
+
+# & Learn: Notice the pattern that `logName` function is passed as arugment to
+# &     `logLocationDecorator` function.
+@logLocationDecorator
+def logName(first_name, last_name, country):
+    print("I am {} {}. I love to teach.".format(first_name, last_name, country))
+
+
+logName("Asabeneh", "Yetayeh", "Finland")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/5.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/5.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/5.py -->
+```py
+# * The map() function is a built-in higher order function that takes a function
+# *     (i.e., first arugment) and iterates over items over the data (i.e, the
+# *     second argument)
+
+# & map() It iterates over a list. For instance, it changes the names to upper
+# &         case and returns a new list.
+# &         SYNTAX:
+# map(function, iterable)
+
+numberList = [1, 2, 3, 4, 5]  # iterable
+
+
+def square(x):
+    return x**2
+
+
+squaredNumberListSquared = map(square, numberList)  # immutable function
+# print(numbers_squared) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(squaredNumberListSquared))  # [1, 4, 9, 16, 25]
+
+# Passing lambda funtion as argument:
+squaredNumberListSquared = map(lambda x: x**2, numberList)
+# print(numbers_squared) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(squaredNumberListSquared))  # [1, 4, 9, 16, 25]
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/6.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/6.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/6.py -->
+```py
+print("--------------------------------- 1")
+numbers_str = ["1", "2", "3", "4", "5"]  # iterable
+numbers_int = map(int, numbers_str)
+# print(numbers_int) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(numbers_int))  # [1, 2, 3, 4, 5]
+
+print("\n\n--------------------------------- 2")
+names = ["Asabeneh", "Lidiya", "Ermias", "Abraham"]  # iterable
+
+
+toUpper = lambda name: name.upper()
+names_upper_cased = map(toUpper, names)
+# print(names_upper_cased) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(names_upper_cased))  # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
+
+# * Passing lambda function inline as argument:
+names_upper_cased = map(lambda name: name.upper(), names)
+# print(names_upper_cased) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(names_upper_cased))  # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/7.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/7.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/7.py -->
+```py
+# * The filter() function calls the specified function which returns boolean for
+#       each item of the specified iterable (list). it filters the items that satisfy
+#       the filtering criteria.
+# * SYNTAX
+# filter(function, iterable)
+
+
+print("--------------------------------- 1")
+# Filter even numbers using `filter` function
+numbers = [1, 2, 3, 4, 5]  # iterable
+even_numbers = filter(lambda num: num % 2 == 0, numbers)
+# print(even_numbers) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(even_numbers))  # [2, 4]
+
+
+print("\n\n--------------------------------- 2")
+
+numbers = [1, 2, 3, 4, 5]  # iterable
+odd_numbers = filter(lambda num: num % 2 != 0, numbers)
+# print(odd_numbers) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(odd_numbers))  # [1, 3, 5]
+
+
+print("\n\n--------------------------------- 3")
+
+# Filter long name
+names = ["Asabeneh", "Lidiya", "Ermias", "Abraham"]  # iterable
+long_names = filter(lambda name: len(name) > 7, names)
+# print(long_names) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(long_names))  # ['Asabeneh']
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## File - `30-days-python-asabeneh/day_14/8.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/8.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/8.py -->
+```py
+# * Python - Reduce Function
+# * The reduce() function is defined in the functools module and we should
+#   import it from this module. Like map and filter it takes two parameters, a
+#   function and an iterable. However, it does not return another iterable,
+#   instead it returns a single value. Example:1
+
+from functools import reduce
+
+print("---------- 1")
+numbers_str = ["1", "2", "3", "4", "5"]  # iterable
+
+
+def reduceFn(accumulator, current):
+    print(accumulator, current)
+    return int(accumulator) + int(current)
+
+
+# * Without initial value
+total = reduce(reduceFn, numbers_str)
+print(total)  # 15
+
+# * With initial value
+print("\n\n---------- 2")
+intialValue = 10
+total = reduce(reduceFn, numbers_str, intialValue)
+print(total)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/ex1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/ex1.py -->
+```py
+from functools import reduce
+
+countries = ["Estonia", "Finland", "Sweden", "Denmark", "Norway", "Iceland"]
+names = ["Asabeneh", "Lidiya", "Ermias", "Abraham"]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Ex. Use map to create a new list by changing each country to uppercase in the
+#    countries list
+
+uppercase_countries = map(lambda v: v.upper(), countries)
+# print(uppercase_countries) # Prints address of the map object: <map object at 0x10ed60d30>
+print(list(uppercase_countries))
+
+
+# Ex. Use filter to filter out countries containing 'land'.
+print(list(filter(lambda text: text.find("land") != -1, countries)))
+
+# Ex. Use filter to filter out countries having exactly six characters.
+print(list(filter(lambda country: len(country) == 6, countries)))
+
+# Ex. Use filter to filter out countries containing six letters and more in the country list.
+print(list(filter(lambda country: len(country) > 6, countries)))
+
+# Ex. Use filter to filter out countries starting with an 'E'
+print(list(filter(lambda country: country.startswith("E"), countries)))
+
+
+# Ex. Declare a function called get_string_lists which takes a list as a
+# parameter and then returns a list containing only string items.
+def get_string_lists(list1):
+    return list(filter(lambda x: type(x) == str, list1))
+
+
+list1 = ["1", 2, 3, "4", 5, "6"]
+print(get_string_lists(list1))  # Output: ["1", "4", "6"]
+
+
+# Ex. Use reduce to concatenate all the countries and to produce this sentence:
+#       Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European
+#       countries
+
+
+def joinCountriesProperly(accumulator, current):
+    isLastElement = current == countries[-1]
+    if isLastElement:
+        return accumulator + ", and " + current
+    return accumulator + ", " + current
+
+
+print(reduce(joinCountriesProperly, countries) + " are north European countries")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## File - `30-days-python-asabeneh/day_14/utils.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/utils.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/utils.py -->
+```py
+import json
+import os
+
+
+# * Prompt to Copilot for reading json file:
+#       Read file `countries_data.json` from `data` folder which is present in
+#               parent folder of current script.
+def readCountriesFromJsonFile():
+    dirname = os.path.dirname(os.path.dirname(__file__))
+    data_file = os.path.join(dirname, "data", "countries_data.json")
+
+    with open(data_file, "r") as f:
+        countries_data = json.load(f)
+    return countries_data
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/ex2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/ex2.py -->
+```py
+from utils import readCountriesFromJsonFile
+
+# * Ex. 13: Create a function returning a dictionary, where keys stand for starting
+#   letters of countries and values are the number of country names starting
+#   with that letter.
+
+countries = ["Estonia", "Finland", "Sweden", "Denmark", "Norway", "Iceland"]
+
+
+# & Learn: we get `KeyError: 'bad_key'` when we try to access key which is not defined in dictionary.
+a = {"a": 20}
+# print(a["badkey"])  # we get exception ---  `KeyError: 'bad_key'`
+
+
+def get_first_letter_count(country_list):
+    dictionary = {}
+    for country in country_list:
+        firstLetterOfCountry = country[0]
+        # & Learn: We use `dictionary.get()` method because if we use dictionary["someBadKey"] then we get exception ---  `KeyError: 'bad_key'`
+        dictionary[firstLetterOfCountry] = dictionary.get(firstLetterOfCountry, 0) + 1
+    return dictionary
+
+
+# print(get_first_letter_count(countries))
+
+
+countries = readCountriesFromJsonFile()
+
+# Ex.14: Declare a get_first_ten_countries function - it returns a list of first
+#       ten countries from the countries.js list in the data folder.
+print(countries[:10])  # get_first_ten_countries
+
+# Ex.15: Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+print(countries[-10:])  # get_last_ten_countries
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/ex3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/ex3.py -->
+```py
+from utils import readCountriesFromJsonFile
+
+# Level 3: Sort countries by name, by capital, by population
+countries = readCountriesFromJsonFile()
+sorted_by_name = sorted(countries, key=lambda x: x["name"])
+sorted_by_capital = sorted(countries, key=lambda x: x.get("capital", ""))
+sorted_by_population = sorted(countries, key=lambda x: x.get("population", 0))
+
+print("Countries sorted by name:")
+print([country["name"] for country in sorted_by_name[:5]])
+
+print("\nCountries sorted by capital:")
+print([country["name"] for country in sorted_by_capital[:5]])
+
+print("\nCountries sorted by population:")
+print([country["name"] for country in sorted_by_population[:5]])
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_14/ex4.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_14/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_14/ex4.py -->
+```py
+from utils import readCountriesFromJsonFile
+
+# Level 3: Sort out the ten most populated countries
+countries = readCountriesFromJsonFile()
+sorted_countries = sorted(countries, key=lambda x: x["population"], reverse=True)
+
+top_ten = sorted_countries[:10]
+print("Ten most populated countries:")
+
+for country in top_ten:
+    print(f"{country['name']}: {country['population']:,} people")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
