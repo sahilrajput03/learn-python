@@ -21,5 +21,17 @@ print(it_companies)
 it_companies[1] = it_companies[1].upper()
 print(it_companies)
 
-# TODO: continue from ex.14
+# ex.14: Join the it_companies with a string '#;  '
+countries_string = "#; ".join(it_companies)
+print(countries_string)
+
+
+# ex.15: Check if a certain company exists in the it_companies list (incase-sensitive checking)
+companyToCheck = "FaceBook"
+if companyToCheck.lower() in [company.lower() for company in it_companies]:
+    print(f"{companyToCheck} exists in the list")
+else:
+    print(f"{companyToCheck} does not exist in the list")
+
+# TODO: ex.18: Slice out the first 3 companies from the list
 # https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md

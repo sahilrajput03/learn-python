@@ -22,14 +22,14 @@ print(num1)  #  [0, 1, 2, 3, 4, 5, 6]
 print("---------")
 
 
-# count
+# .count() : To count the number of given items in the list
 fruits = ["banana", "orange", "mango", "lemon"]
 print(fruits.count("orange"))  # 1
 ages = [22, 19, 24, 25, 26, 24, 25, 24]
 print(ages.count(24))  # 3
 print("---------")
 
-# index
+# .index(): To get the index of specified item
 fruits = ["banana", "orange", "mango", "lemon"]
 print(fruits.index("orange"))  # 1
 ages = [22, 19, 24, 25, 26, 24, 25, 24]
@@ -48,7 +48,7 @@ ages.reverse()
 print(ages)  # [24, 25, 24, 26, 25, 24, 19, 22]
 
 
-# Sort
+# .sort(): To sort the items in ascending order. You can specify `reverse=True` to get in descending order.
 # syntax
 lst = ["item1", "item2"]
 lst.sort()  # ascending
