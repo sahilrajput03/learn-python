@@ -2480,24 +2480,287 @@ except ZeroDivisionError:
 ## File - `30-days-python-asabeneh/day_15/1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_15/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_15/1.py -->
+```py
+# SyntaxError (can not be caught by try-catch)
+# print "hello world"
+
+# NameError
+try:
+    print(age)
+except NameError:
+    print("Got NameError because variable age is not defined")
+
+
+# IndexError
+numbers = [1, 2]
+try:
+    numbers[5]
+except IndexError:
+    print("Got IndexError because the index is out of range")
+
+
+# ModuleNotFoundError
+try:
+    import maths  # an extra s to math deliberately to trigger error
+except ModuleNotFoundError:
+    print("Got ModuleNotFoundError because no module named maths")
+
+import math
+
+# AttributeError
+try:
+    math.PI  # Instead of `pi` we are intentionlly accessing `PI`
+except AttributeError:
+    print("Got AttributeError while executing math.PI")
+
+
+# KeyError
+user = {"name": "Asab", "age": 250, "country": "Finland"}
+try:
+    user["someNonExistingProperty"]
+except KeyError:
+    print("Got `KeyError` on running user[someNonExistingProperty].")
+
+# TypeError
+try:
+    4 + "3"
+except TypeError:
+    print("Got TypeError while adding integer and string type variable.")
+
+# ImportError
+try:
+    from math import power
+except ImportError:
+    print(
+        "Got ImportError while importing non-existing function power from math module."
+    )
+
+# Learn: Correct way of usin `pow` function from math module:
+from math import pow
+
+pow(2, 3)  # 8.0
+
+# ValueError
+try:
+    int("12a")
+except ValueError:
+    print("Got ValueError while running int('12a')")
+
+# ZeroDivisionError
+try:
+    1 / 0
+except ZeroDivisionError:
+    print("Got ZeroDivisionError while running 1/0")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_16/1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_16/1.py -->
+```py
+import datetime  # `datetime` module to handle date and time
+
+# Using `dir` or `help` built-in commands it is possible to know the available
+#       functions in a certain module
+print(dir(datetime))
+[
+    "MAXYEAR",
+    "MINYEAR",
+    "__builtins__",
+    "__cached__",
+    "__doc__",
+    "__file__",
+    "__loader__",
+    "__name__",
+    "__package__",
+    "__spec__",
+    "date",
+    "datetime",
+    "datetime_CAPI",
+    "sys",
+    "time",
+    "timedelta",
+    "timezone",
+    "tzinfo",
+]
+
+print("")
+
+from datetime import datetime
+
+# We will learn about --- date, datetime, time and timedelta function from above:
+datetimeNow = datetime.now()  # <class 'datetime.datetime'>
+print(type(datetimeNow))
+print(datetimeNow)  # 2025-03-25 20:26:48.087765
+print(datetimeNow.day)  # 25
+print(datetimeNow.month)  # 3
+print(datetimeNow.year)  # 2025
+print(datetimeNow.hour)  # 20
+print(datetimeNow.minute)  # 27
+print(datetimeNow.second)  # 10
+# Timestamp or Unix timestamp is the number of seconds elapsed from 1st of January 1970 UTC
+print(datetimeNow.timestamp())  # 1742914630.235397
+
+print("\n\nPassing argument to datetime(..)")
+newYear = datetime(2020, 1, 1)
+print(newYear)
+# Output: 2020-01-01 00:00:00
+
+print(
+    newYear.day,
+    newYear.month,
+    newYear.year,
+    newYear.hour,
+    newYear.minute,
+    newYear.second,
+)
+# Output: 1 1 2020 0 0 0
+
+print(
+    f"{newYear.day}/{newYear.month}/{newYear.year}, {newYear.hour}:{newYear.minute}:{newYear.second}"
+)
+# Output: 1/1/2020, 0:0:0
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_16/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_16/2.py -->
+```py
+from datetime import datetime, date, time
+
+# * 🚀 Learn strftime - To parse datetime from string
+# Docs: https://strftime.org/
+#       The full set of format codes supported varies across
+#       platforms, because Python calls the platform C
+#       library's strftime() function, and platform
+#       variations are common.
+# * Linux C Library Docs of strftime (from above docs page):
+#       https://man7.org/linux/man-pages/man3/strftime.3.html
+
+datetimeNow = datetime.now()  # current date and time
+
+print(type(datetimeNow.strftime("%H:%M:%S")))  # <class 'str'>
+
+print("H:M:S:", datetimeNow.strftime("%H:%M:%S"))
+# Output: H:M:S: 20:39:24
+
+print("mm/dd/YY H:M:S", datetimeNow.strftime("%m/%d/%Y, %H:%M:%S"))
+# Output: mm/dd/YY H:M:S 03/25/2025, 20:39:24
+
+print("dd/mm/YY H:M:S", datetimeNow.strftime("%d/%m/%Y, %H:%M:%S"))
+# Output: dd/mm/YY H:M:S 25/03/2025, 20:39:24
+
+print("\n\n--------------------------------")
+
+# * 🚀 Learn `strptime` function - To parse datetime from string
+datetimeString = "5 December, 2019"
+datetime1 = datetime.strptime(datetimeString, "%d %B, %Y")
+print(type(datetime1))  # <class 'datetime.datetime'>
+print(datetime1)  # 2019-12-05 00:00:00
+
+
+print("----------------- ")
+
+# * Learn date function
+
+date1 = date(2020, 1, 1)
+print(date1)  # 2020-01-01
+print("Current date:", date1.today())  # 2025-03-25
+print(type(date1.today()))  # <class 'datetime.date'>
+
+# date object of today's date #
+datetimeToday = date.today()
+print("\nCurrent year:", datetimeToday.year)  # 2025
+print("Current month:", datetimeToday.month)  # 3
+print("Current day:", datetimeToday.day)  # 25
+
+
+# * 🚀 Learn `time` function
+# Default time: 00:00:00:00 (hour:minute:second:microsecond)
+time1 = time()
+print("a =", time1)  # 00:00:00
+print(type(time1))  # <class 'datetime.time'>
+
+time1 = time(10, 30, 50)
+print("b =", time1)  # 10:30:50
+
+time1 = time(hour=10, minute=30, second=50)
+print("c =", time1)  # 10:30:50
+
+# Passsing Arguments: time(hour, minute, second, microsecond)
+time1 = time(10, 30, 50, 200555)
+print("d =", time1)  # 10:30:50.200555
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_16/3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_16/3.py -->
+```py
+from datetime import date, datetime
+
+####### * Difference Between Two Points in Time ########
+today = date(year=2019, month=12, day=5)
+new_year = date(year=2020, month=1, day=1)
+
+time_left_for_newyear = new_year - today
+
+# print(type(time_left_for_newyear))  # <class 'datetime.timedelta'>
+print("Time left for new year: ", time_left_for_newyear)  # 27 days, 0:00:00
+
+t1 = datetime(year=2019, month=12, day=5, hour=0, minute=59, second=0)
+t2 = datetime(year=2020, month=1, day=1, hour=0, minute=0, second=0)
+diff = t2 - t1
+
+print("Time left for new year:", diff)  # 26 days, 23:01:00
+
+
+####### * Difference Between Two Points in Time via timedelta function
+from datetime import timedelta
+
+t1 = timedelta(weeks=12, days=10, hours=4, seconds=20)
+t2 = timedelta(days=7, hours=5, minutes=3, seconds=30)
+t3 = t1 - t2
+print("t3 =", t3)  #  86 days, 22:56:50
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_16/ex1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_16/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_16/ex1.py -->
+```py
+from datetime import date, datetime, timedelta
+
+# ex.1: Format the current date using this format:
+format = "%m/%d/%Y, %H:%M:%S"
+currentDatetime = datetime.now()  # current date and time
+print(currentDatetime.strftime(format))
+
+# ex.3: Today is 5 December, 2019. Change this time string to time
+datetimeString = "5 December, 2019"
+datetimeNow = datetime.strptime(datetimeString, "%d %B, %Y")
+print(datetimeNow)  # 2019-12-05 00:00:00
+print(type(datetimeNow))  # <class 'datetime.datetime'>
+
+# ex.4 Calculate the time difference between now and new year.
+datetimeNow = datetime.now()
+# (arguments order: year, month, day, hour, minute, second, microsecond)
+datetimeNewYear1 = datetime(2026, 1, 1)
+datetimeNewYear2 = datetime(year=2026, month=1, day=1, hour=0, minute=0, second=0)
+
+print(datetimeNewYear1 - datetimeNow)  # way1
+print(datetimeNewYear2 - datetimeNow)  # way2
+
+
+# ex.5 Calculate the time difference between 1 January 1970 and now
+datetimeNow = datetime.now()
+datetime1970 = datetime(1970, 1, 1)
+print(datetimeNow - datetime1970)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
