@@ -128,7 +128,7 @@ print(matches)  # ['6', '2019', '8', '2021'] - now, this is better!
 
 print("------------------------------ ")
 
-# & Period(.)
+# & Period(.) - Any character except new line character
 inputText = """Apple and banana are fruits"""
 # The square bracket means a and . means any character except new line
 regexPattern = r"[a]."
@@ -139,3 +139,48 @@ print(matches)  # ['an', 'an', 'an', 'a ', 'ar'] # ✅
 regexPattern = r"[a].+"
 matches = re.findall(regexPattern, inputText)
 print(matches)  # ['and banana are fruits'] # ✅✅
+
+
+# & Asterisk(*) - Any character ZERO or MORE TIMES
+# . means any character, * any character zero or more times
+regexPattern = r"[a].*"
+inputText = """Apple and banana are fruits"""
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅
+
+# & (?) - Any character ZERO or ONE TIME
+# Zero or one time. The pattern may not occur or it may occur once.
+
+inputText = """I am not sure if there is a convention how to write the word e-mail.
+Some people write it as email others may write it as Email or E-mail."""
+regexPattern = r"[Ee]-?mail"  # ? means here that '-' is optional
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['e-mail', 'email', 'Email', 'E-mail'] # ✅
+
+# & Quantifier ({})
+# We can specify the length of the substring we are looking for in a
+#       text, using a curly bracket. Let us imagine, we are interested in a
+#       substring with a length of 4 characters:
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{4}"  # exactly four times
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['2019', '2021']
+
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{1, 4}"  # 1 to 4
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021']
+
+
+# & Cart ^ (❤️)
+#  1. Starts with
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"^This"  # ^ means starts with
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['This']
+
+# 2. Negation
+txt = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regex_pattern = r"[^A-Za-z ]+"  # ^ in set character means negation, not A to Z, not a to z, no space
+matches = re.findall(regex_pattern, txt)
+print(matches)  # ['6,', '2019', '8', '2021']
