@@ -94,5 +94,3 @@ print(matches)  # ['Python', 'python']
 # Way 2 to search for python or Python without using re.I
 matches = re.findall("[Pp]ython", inputText)
 print(matches)  # ['Python', 'python']
-
-# TODO: continue from - Replacing a Substring
