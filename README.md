@@ -2594,10 +2594,11 @@ print("Current date:", date1.today())  # 2025-03-25
 print(type(date1.today()))  # <class 'datetime.date'>
 
 # date object of today's date #
-datetimeToday = date.today()
-print("\nCurrent year:", datetimeToday.year)  # 2025
-print("Current month:", datetimeToday.month)  # 3
-print("Current day:", datetimeToday.day)  # 25
+dateToday = date.today()
+print(type(dateToday.today()))  # <class 'datetime.date'>
+print("\nCurrent year:", dateToday.year)  # 2025
+print("Current month:", dateToday.month)  # 3
+print("Current day:", dateToday.day)  # 25
 
 
 # * 🚀 Learn `time` function
