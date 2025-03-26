@@ -96,10 +96,6 @@ print(matches)  # ['Apple', 'apple']
 #   r'apple|banana' means either apple or a banana
 # (): Capture and group
 
-# 🛑🛑🛑🛑🛑🛑🛑🛑 TODO: add below image just below this file's code in readme.
-# ![](./30-days-python-asabeneh/images/regex-chart.png)
-# 🛑🛑🛑🛑🛑🛑🛑🛑🛑
-
 # & Square Bracket
 regexPattern = r"[Aa]pple"  # this square bracket mean either A or a
 matches = re.findall(regexPattern, inputText)

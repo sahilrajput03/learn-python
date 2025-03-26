@@ -2686,3 +2686,58 @@ datetime1970 = datetime(1970, 1, 1)
 print(datetimeNow - datetime1970)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## File - `30-days-python-asabeneh/day_17/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_17/2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_17/3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_17/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## Regex Pattern Chart from course
+
+![](./30-days-python-asabeneh/images/regex-chart.png)
+
+## File - `30-days-python-asabeneh/day_18/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
