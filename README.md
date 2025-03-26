@@ -2691,31 +2691,1381 @@ print(datetimeNow - datetime1970)
 ## File - `30-days-python-asabeneh/day_17/1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_17/1.py -->
+```py
+# try:
+#       code in this block if things go well
+# except: # (May or may not have a condition)
+#       code in this block run if things go wrong
+
+try:
+    name = input("Enter your name:")
+    year_born = input("Year you born:")
+    age = 2019 - int(year_born)
+    print(f"You are {name}. And your age is {age}.")
+except TypeError:
+    print("Type error occur")
+except ValueError:
+    print("Value error occur")
+except ZeroDivisionError:
+    print("zero division error occur")
+else:  # This runs without when there is no exception:
+    print("I usually run with the try block")
+finally:
+    print("I alway run.")
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_17/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_17/2.py -->
+```py
+# Shorter version of above code:
+try:
+    name = input("Enter your name:")
+    year_born = input("Year you born:")  # * Try inputing string here to trigger error.
+    age = 2025 - int(year_born)
+    print(f"You are {name}. And your age is {age}.")
+except Exception as e:  # * Catching all exceptions in a single instruction.
+    print("Sorry we got exception:", e)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_17/3.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_17/3.py -->
+```py
+# & Packing and Unpacking Arguments in Python
+# & We use two operators:
+# &     1. Python uses * for tuples
+# &     2. Python uses ** for dictionaries
+
+
+def sum_of_five_nums(a, b, c, d, e):
+    return a + b + c + d + e
+
+
+lst = [1, 2, 3, 4, 5]
+
+# Below instruction throws: TypeError: sum_of_five_nums() missing 4 required positional arguments: 'b', 'c', 'd', and 'e'
+# print(sum_of_five_nums(lst))
+
+# unpack/destructure the list
+print(sum_of_five_nums(*lst))
+
+# Destructuting/Unpacking `range(..)`
+numbers = range(2, 7)  # normal call with separate arguments
+print(numbers)  # range(2, 7)
+print(list(numbers))  # [2, 3, 4, 5, 6]
+
+# Passing list (array) of values as `args` to function via destructuting/unpacking
+args = [2, 7]
+numbers = range(*args)  # call with arguments unpacked from a list
+print(numbers)  # [2, 3, 4, 5,6]
+
+
+# * list destructuring/unpacking
+countries = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"]
+fin, sw, nor, *rest = countries
+print(fin, sw, nor, rest)  # Finland Sweden Norway ['Denmark', 'Iceland']
+
+# * tuple destructuring/unpacking
+numbers = (1, 2, 3, 4, 5, 6, 7)
+one, *middle, last = numbers
+print(one, middle, last)  #  1 [2, 3, 4, 5, 6] 7
+
+
+# * Unpacking Dictionaries
+def unpacking_person_info(name, country, city, age):
+    return f"{name} lives in {country}, {city}. He is {age} year old."
+
+
+dct = {"name": "Sahil", "country": "India", "city": "Chandigarh", "age": 250}
+print(unpacking_person_info(**dct))
+# Output Sahil lives in India, Chandigarh. He is 1750 years old.
+
+
+# * Packing Dictionaries
+def sum_all(*args):
+    s = 0
+    for i in args:
+        s += i
+    return s
+
+
+print(sum_all(1, 2, 3))  # 6
+print(sum_all(1, 2, 3, 4, 5, 6, 7))  # 28
+
+
+# & Packing Dictionaries
+# `kwargs` stands for "keyword arguments"
+# * Learn: Appening ** before an argument allows a function to accept any number of keyword arguments
+def packing_person_info(**kwargs):
+    print(type(kwargs))  # <class 'dict'>
+    for key in kwargs:
+        print(f"{key} = {kwargs[key]}")
+    return kwargs
+
+
+# Passing keyword arguments to function call:
+print(packing_person_info(name="Asabeneh", country="Finland", city="Helsinki", age=250))
+
+# * List Spreading (like spreading in javascript)
+lst_one = [1, 2, 3]
+lst_two = [4, 5, 6, 7]
+lst = [0, *lst_one, *lst_two]
+print(lst)  # [0, 1, 2, 3, 4, 5, 6, 7]
+
+country_lst1 = ["Finland", "Sweden", "Norway"]
+country_lst2 = ["Denmark", "Iceland"]
+nordic_countries = [*country_lst1, *country_lst2]
+print(nordic_countries)  # ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+
+
+# * Enumerate
+# If we are interested in an index of a list, we use `enumerate ()` built-in function to get the index of each item in the list.
+
+for index, item in enumerate([20, 30, 40]):
+    print(index, item)
+    # Output:
+    # 0 20
+    # 1 30
+    # 2 40
+
+countries = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"]
+for index, country in enumerate(countries):
+    print("hi", index)
+    if country == "Finland":
+        print(f"The country {country} has been found at index {index}")
+        # Output:
+        # hi 0
+        # The country Finland has been found at index 0
+        # hi 1
+        # hi 2
+        # hi 3
+        # hi 4
+
+
+# * Zip - To loop over two lists using a single for loop instead of two nested for loops
+fruits = ["banana", "orange"]
+veges = ["Tomato", "Potato"]  # (vegetables)
+fruits_and_veges = []
+for fruit, veg in zip(fruits, veges):
+    fruits_and_veges.append({"fruit": fruit, "veg": veg})
+print(fruits_and_veges)
+# [{'fruit': 'banana', 'veg': 'Tomato'}, {'fruit': 'orange', 'veg': 'Potato'}]
+
+# Doing above functioning without using `zip`
+fruits_and_veges = []
+for i in range(len(fruits)):
+    fruits_and_veges.append({"fruit": fruits[i], "veg": veges[i]})
+print(fruits_and_veges)
+# [{'fruit': 'banana', 'veg': 'Tomato'}, {'fruit': 'orange', 'veg': 'Potato'}]
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_17/ex1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_17/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_17/ex1.py -->
+```py
+# Unpack the first five countries and store them in a variable nordic_countries, store Estonia and Russia in es, and ru respectively.
+names = ["Finland", "Sweden", "Norway", "Denmark", "Iceland", "Estonia", "Russia"]
+*firstFiveCountries, es, ru = names
+print(firstFiveCountries)
+print(es)
+print(ru)
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_18/1.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/1.py -->
+```py
+import re
+
+# * A regular expression or RegEx is a special text string
+#       that helps to find patterns in data. A RegEx can be used
+#       to check if some pattern exists in a different data type.
+#       To use RegEx in python first we should import the RegEx
+#       module which is called re.
+
+# * Methods in re Module
+#   To find a pattern we use different set of re character sets that allows to search for a match in a string.
+#       - re.match(): searches only in the beginning of the first line
+#       of the string and returns matched objects if found, else
+#       returns None.
+#        - re.search: Returns a match object if there is
+#           one anywhere in the string, including multiline strings.
+#       - re.findall: Returns a list containing all matches
+#       - re.split: Takes a string, splits it at the match points,
+#           returns a list
+#       - re.sub: Replaces one or many matches within a string
+
+# & SYNTAX (re.I to ignore case)
+# re.match(STRING_OR_PATTERN, INPUT_TEXT, re.I)
+
+inputText = "I love to teach python and javaScript"
+# It returns an object with span, and match
+searchText = "I love to teach"
+# print(len(searchText))  # 15
+
+#  The match function returns an object only if the `txt` starts with the pattern
+match = re.match(searchText, inputText, re.I)
+print(match)  # <re.Match object; span=(0, 15), match='I love to teach'>
+
+# * Using span() we get starting and ending position of the match as tuple
+print(match.span())  # (0, 15)
+
+# Destructure start and end from `span`
+start, end = match.span()
+print(start, end)  # 0, 15
+
+# * awesome
+substring = inputText[start:end]
+print(substring)  # I love to teach
+
+# inline way (looks a little dirty though)
+print(inputText[match.span()[0] : match.span()[1]])  # I love to teach
+
+
+# when searchText is not found in inputText
+inputText = "I love to teach python and javaScript"
+match = re.match("Baburaav ghr pe hai?", inputText, re.I)
+print(match)  # None
+
+
+print(" ---------------------------------")
+
+
+# & re.search
+# SYNTAX: re.search(STRING_OR_PATTERN, INPUT_TEXT, re.I)
+
+# re.search is much better than re.match because it can look for the pattern
+#       throughout the text. re.search returns a match object with a first
+#       match that was found, otherwise it returns None.
+
+inputText = """Python is the most beautiful language that a human being has ever created.
+I recommend python for a first programming language"""
+
+# It returns an object with span and match
+match = re.search("first", inputText, re.I)
+print(match)  # <re.Match object; span=(100, 105), match='first'>
+
+# * Using span() we get starting and ending position of the match as tuple
+span = match.span()
+print(span)  # (100, 105)
+
+# Lets find the start and stop position from the span
+start, end = span
+print(start, end)  # 100 105
+
+substring = inputText[start:end]
+print(substring)  # first
+
+
+# & re.findall - Searching for *all* matches
+matches = re.findall("language", inputText, re.I)
+print(matches)  # ['language', 'language']
+
+matches = re.findall("python", inputText, re.I)
+print(matches)  # ['Python', 'python']
+
+# Way 1 to search for python or Python without using re.I
+matches = re.findall("Python|python", inputText)
+print(matches)  # ['Python', 'python']
+
+# Way 2 to search for python or Python without using re.I
+matches = re.findall("[Pp]ython", inputText)
+print(matches)  # ['Python', 'python']
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## File - `30-days-python-asabeneh/day_18/2.py`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/2.py -->
+```py
+import re
+
+# & Replacing a Substring
+# & =====================
+inputText = """Python is the most beautiful language that a human being has ever created.
+I recommend python for a first programming language"""
+
+match_replaced = re.sub("Python|python", "JavaScript", inputText, re.I)
+print(match_replaced)
+# Output: JavaScript is the most beautiful language that a human being has ever created. I recommend JavaScript for a first programming language
+
+# OR
+
+match_replaced = re.sub("[Pp]ython", "JavaScript", inputText, re.I)
+print(match_replaced)
+# Output: JavaScript is the most beautiful language that a human being has ever created. I recommend JavaScript for a first programming language
+
+
+print("-----------------------")
+
+inputText = """%I a%m te%%a%%che%r% a%n%d %% I l%o%ve te%ach%ing. 
+T%he%re i%s n%o%th%ing as r%ewarding a%s e%duc%at%i%ng a%n%d e%m%p%ow%er%ing p%e%o%ple.
+I fo%und te%a%ching m%ore i%n%t%er%%es%ting t%h%an any other %jobs. 
+D%o%es thi%s m%ot%iv%a%te %y%o%u to b%e a t%e%a%cher?"""
+
+matches = re.sub("%", "", inputText)
+print(matches)
+# Output:
+# I am teacher and  I love teaching.
+# There is nothing as rewarding as educating and empowering people.
+# I found teaching more interesting than any other jobs.
+# Does this motivate you to be a teacher?
+
+
+print("-----------------------")
+
+inputText = """I am teacher and  I love teaching.
+There is nothing as rewarding as educating and empowering people.
+I found teaching more interesting than any other jobs.
+Does this motivate you to be a teacher?"""
+
+print(re.split("\n", inputText))  # splitting using \n - end of line symbol
+# Output:
+# [
+#     "I am teacher and  I love teaching.",
+#     "There is nothing as rewarding as educating and empowering people.",
+#     "I found teaching more interesting than any other jobs.",
+#     "Does this motivate you to be a teacher?",
+# ]
+
+# & Writing RegEx Patterns
+regexPattern = r"apple"
+inputText = "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. "
+
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['apple']
+
+# case insensitive search
+matches = re.findall(regexPattern, inputText, re.I)
+print(matches)  # ['Apple', 'apple']
+
+# Or we can use a set of characters method i.e, [Aa]  --- this mean the first letter could be A or a
+regexPattern = r"[Aa]pple"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'apple']
+
+# & Writing RegEx Patterns
+# & ======================
+
+# []: A set of characters
+#   [a-c] means, a or b or c
+#   [a-z] means, any letter from a to z
+#   [A-Z] means, any character from A to Z
+#   [0-3] means, 0 or 1 or 2 or 3
+#   [0-9] means any number from 0 to 9
+#   [A-Za-z0-9] any single character, that is a to z, A to Z or 0 to 9
+# \: uses to escape special characters
+#   \d means: match where the string contains digits (numbers from 0-9)
+#   \D means: match where the string does not contain digits
+# . : any character except new line character(\n)
+# ^: starts with
+#   r'^substring' eg r'^love', a sentence that starts with a word love
+#   r'[^abc] means not a, not b, not c.
+# $: ends with
+#   r'substring
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex2.py -->
+```py
+import re
+
+# ex2. The position of some particles on the horizontal x-axis are
+#       -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8
+#       in the positive direction. Extract these numbers from this whole
+#       text and find the distance between the two furthest particles.
+
+# *EXPECTED RESULTS*
+# points = ["-12", "-4", "-3", "-1", "0", "4", "8"]
+# sorted_points = [-12, -4, -3, -1, -1, 0, 2, 4, 8]
+# distance = 8 - (-12)  # 20
+
+# Solution:
+inputText = "The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles."
+points = re.findall(r"-?\d+", inputText)
+points = [int(p) for p in points]  # converting str to int via list comprehension
+print(points)  # [-12, -4, -3, -1, 0, 4, 8]
+sorted_points = sorted(points)  # [-12, -4, -3, -1, 0, 4, 8]
+
+# distance b/w most extreme points
+distance = sorted_points[-1] - sorted_points[0]
+print(f"\nDistance between furthest points: {distance}")
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex3.py -->
+```py
+import re
+
+# ex3. Write a pattern which identifies if a string is a valid python variable
+
+
+# Using regex (solution for exercise purpose)
+def is_valid_variable(name):
+    pattern = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+    return print(bool(re.match(pattern, name)))
+
+
+# * Solution with idiomatic Code (without using regex)
+# def is_valid_variable(name):
+#     if not name.isidentifier():
+#         return print(False)
+#     return print(True)
+
+
+# Test cases from exercise
+is_valid_variable("first_name")  # True
+is_valid_variable("first-name")  # False
+is_valid_variable("1first_name")  # False
+is_valid_variable("firstname")  # True
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex4.py -->
+```py
+import re
+
+# Clean the following text. After cleaning, count three most frequent
+#       words in the string.
+sentence = """%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?"""
+# Clean the text using regex to remove special characters
+clean_sentence = re.sub(r"[%$@#&;!?,.]", "", sentence)
+
+# From exercise
+expectedSentence = "I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher"
+if clean_sentence == expectedSentence:
+    print("Sentence cleaning successful ✅")
+else:
+    print("Sentence cleaning FAILED 🛑")
+
+# Split into words and count frequencies
+words = clean_sentence.split()
+wordsCount = {}
+for word in words:
+    wordsCount[word] = wordsCount.get(word, 0) + 1
+
+# Get 3 most frequent words
+mostCountWord = sorted(wordsCount.items(), key=lambda x: x[1], reverse=True)[:3]
+print("Most frequent words:", mostCountWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+ eg r'love
+
+## Regex Pattern Chart from course
+
+![](./30-days-python-asabeneh/images/regex-chart.png)
+
+## File - `30-days-python-asabeneh/day_18/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex1.py -->
+```py
+import re
+
+# ex1: What is the most frequent word in the following paragraph?
+
+paragraph = "I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love."
+words = re.split(r"\W+", paragraph.lower())
+wordsCount = {}
+
+for word in words:
+    if word:  # Skip empty strings
+        wordsCount[word] = wordsCount.get(word, 0) + 1
+
+mostFrequentWord = max(wordsCount.items(), key=lambda x: x[1])
+print(mostFrequentWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex2.py -->
+```py
+import re
+
+# ex2. The position of some particles on the horizontal x-axis are
+#       -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8
+#       in the positive direction. Extract these numbers from this whole
+#       text and find the distance between the two furthest particles.
+
+# *EXPECTED RESULTS*
+# points = ["-12", "-4", "-3", "-1", "0", "4", "8"]
+# sorted_points = [-12, -4, -3, -1, -1, 0, 2, 4, 8]
+# distance = 8 - (-12)  # 20
+
+# Solution:
+inputText = "The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles."
+points = re.findall(r"-?\d+", inputText)
+points = [int(p) for p in points]  # converting str to int via list comprehension
+print(points)  # [-12, -4, -3, -1, 0, 4, 8]
+sorted_points = sorted(points)  # [-12, -4, -3, -1, 0, 4, 8]
+
+# distance b/w most extreme points
+distance = sorted_points[-1] - sorted_points[0]
+print(f"\nDistance between furthest points: {distance}")
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex3.py -->
+```py
+import re
+
+# ex3. Write a pattern which identifies if a string is a valid python variable
+
+
+# Using regex (solution for exercise purpose)
+def is_valid_variable(name):
+    pattern = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+    return print(bool(re.match(pattern, name)))
+
+
+# * Solution with idiomatic Code (without using regex)
+# def is_valid_variable(name):
+#     if not name.isidentifier():
+#         return print(False)
+#     return print(True)
+
+
+# Test cases from exercise
+is_valid_variable("first_name")  # True
+is_valid_variable("first-name")  # False
+is_valid_variable("1first_name")  # False
+is_valid_variable("firstname")  # True
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex4.py -->
+```py
+import re
+
+# Clean the following text. After cleaning, count three most frequent
+#       words in the string.
+sentence = """%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?"""
+# Clean the text using regex to remove special characters
+clean_sentence = re.sub(r"[%$@#&;!?,.]", "", sentence)
+
+# From exercise
+expectedSentence = "I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher"
+if clean_sentence == expectedSentence:
+    print("Sentence cleaning successful ✅")
+else:
+    print("Sentence cleaning FAILED 🛑")
+
+# Split into words and count frequencies
+words = clean_sentence.split()
+wordsCount = {}
+for word in words:
+    wordsCount[word] = wordsCount.get(word, 0) + 1
+
+# Get 3 most frequent words
+mostCountWord = sorted(wordsCount.items(), key=lambda x: x[1], reverse=True)[:3]
+print("Most frequent words:", mostCountWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+, sentence that ends with a word love
+# *: zero or more times
+#   r'[a]*' means a optional or it can occur many times.
+# +: one or more times
+#   r'[a]+' means at least once (or more)
+# ?: zero or one time
+#   r'[a]?' means zero times or once
+# {3}: Exactly 3 characters
+# {3,}: At least 3 characters
+# {3,8}: 3 to 8 characters
+# |: Either or
+#   r'apple|banana' means either apple or a banana
+# (): Capture and group
+
+# & Square Bracket
+regexPattern = r"[Aa]pple"  # this square bracket mean either A or a
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'apple']
+
+# Using square brackets and or (|) operator - we extract Apple, apple, Banana, banana
+regexPattern = r"[Aa]pple|[Bb]anana"
+inputText = "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'banana', 'apple', 'banana']
+
+
+# & Escape character(\)
+regexPattern = r"\d"  # d is a special character which means digits
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)
+# ['6', '2', '0', '1', '9', '8', '2', '0', '2', '1']
+
+# & One or more times(+)
+# d is a special character which means digits, + mean one or more times
+regexPattern = r"\d+"
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021'] - now, this is better!
+
+print("------------------------------ ")
+
+# & Period(.) - Any character except new line character
+inputText = """Apple and banana are fruits"""
+# The square bracket means a and . means any character except new line
+regexPattern = r"[a]."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['an', 'an', 'an', 'a ', 'ar'] # ✅
+
+# . means any character except new line character, + means any character one or more times
+regexPattern = r"[a].+"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅✅
+
+
+# & Asterisk(*) - Any character ZERO or MORE TIMES
+# . means any character, * any character zero or more times
+regexPattern = r"[a].*"
+inputText = """Apple and banana are fruits"""
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅
+
+# & (?) - Any character ZERO or ONE TIME
+# Zero or one time. The pattern may not occur or it may occur once.
+
+inputText = """I am not sure if there is a convention how to write the word e-mail.
+Some people write it as email others may write it as Email or E-mail."""
+regexPattern = r"[Ee]-?mail"  # ? means here that '-' is optional
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['e-mail', 'email', 'Email', 'E-mail'] # ✅
+
+# & Quantifier ({})
+# We can specify the length of the substring we are looking for in a
+#       text, using a curly bracket. Let us imagine, we are interested in a
+#       substring with a length of 4 characters:
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{4}"  # exactly four times
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['2019', '2021']
+
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{1, 4}"  # 1 to 4
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021']
+
+
+# & Cart ^ (❤️)
+#  1. Starts with
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"^This"  # ^ means starts with
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['This']
+
+# 2. Negation
+txt = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regex_pattern = r"[^A-Za-z ]+"  # ^ in set character means negation, not A to Z, not a to z, no space
+matches = re.findall(regex_pattern, txt)
+print(matches)  # ['6,', '2019', '8', '2021']
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## Regex Pattern Chart from course
+
+![](./30-days-python-asabeneh/images/regex-chart.png)
+
+## File - `30-days-python-asabeneh/day_18/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex1.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex1.py -->
+```py
+import re
+
+# ex1: What is the most frequent word in the following paragraph?
+
+paragraph = "I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love."
+words = re.split(r"\W+", paragraph.lower())
+wordsCount = {}
+
+for word in words:
+    if word:  # Skip empty strings
+        wordsCount[word] = wordsCount.get(word, 0) + 1
+
+mostFrequentWord = max(wordsCount.items(), key=lambda x: x[1])
+print(mostFrequentWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex2.py -->
+```py
+import re
+
+# ex2. The position of some particles on the horizontal x-axis are
+#       -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8
+#       in the positive direction. Extract these numbers from this whole
+#       text and find the distance between the two furthest particles.
+
+# *EXPECTED RESULTS*
+# points = ["-12", "-4", "-3", "-1", "0", "4", "8"]
+# sorted_points = [-12, -4, -3, -1, -1, 0, 2, 4, 8]
+# distance = 8 - (-12)  # 20
+
+# Solution:
+inputText = "The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles."
+points = re.findall(r"-?\d+", inputText)
+points = [int(p) for p in points]  # converting str to int via list comprehension
+print(points)  # [-12, -4, -3, -1, 0, 4, 8]
+sorted_points = sorted(points)  # [-12, -4, -3, -1, 0, 4, 8]
+
+# distance b/w most extreme points
+distance = sorted_points[-1] - sorted_points[0]
+print(f"\nDistance between furthest points: {distance}")
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex3.py -->
+```py
+import re
+
+# ex3. Write a pattern which identifies if a string is a valid python variable
+
+
+# Using regex (solution for exercise purpose)
+def is_valid_variable(name):
+    pattern = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+    return print(bool(re.match(pattern, name)))
+
+
+# * Solution with idiomatic Code (without using regex)
+# def is_valid_variable(name):
+#     if not name.isidentifier():
+#         return print(False)
+#     return print(True)
+
+
+# Test cases from exercise
+is_valid_variable("first_name")  # True
+is_valid_variable("first-name")  # False
+is_valid_variable("1first_name")  # False
+is_valid_variable("firstname")  # True
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex4.py -->
+```py
+import re
+
+# Clean the following text. After cleaning, count three most frequent
+#       words in the string.
+sentence = """%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?"""
+# Clean the text using regex to remove special characters
+clean_sentence = re.sub(r"[%$@#&;!?,.]", "", sentence)
+
+# From exercise
+expectedSentence = "I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher"
+if clean_sentence == expectedSentence:
+    print("Sentence cleaning successful ✅")
+else:
+    print("Sentence cleaning FAILED 🛑")
+
+# Split into words and count frequencies
+words = clean_sentence.split()
+wordsCount = {}
+for word in words:
+    wordsCount[word] = wordsCount.get(word, 0) + 1
+
+# Get 3 most frequent words
+mostCountWord = sorted(wordsCount.items(), key=lambda x: x[1], reverse=True)[:3]
+print("Most frequent words:", mostCountWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+ eg r'love
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex2.py -->
+```py
+import re
+
+# ex2. The position of some particles on the horizontal x-axis are
+#       -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8
+#       in the positive direction. Extract these numbers from this whole
+#       text and find the distance between the two furthest particles.
+
+# *EXPECTED RESULTS*
+# points = ["-12", "-4", "-3", "-1", "0", "4", "8"]
+# sorted_points = [-12, -4, -3, -1, -1, 0, 2, 4, 8]
+# distance = 8 - (-12)  # 20
+
+# Solution:
+inputText = "The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles."
+points = re.findall(r"-?\d+", inputText)
+points = [int(p) for p in points]  # converting str to int via list comprehension
+print(points)  # [-12, -4, -3, -1, 0, 4, 8]
+sorted_points = sorted(points)  # [-12, -4, -3, -1, 0, 4, 8]
+
+# distance b/w most extreme points
+distance = sorted_points[-1] - sorted_points[0]
+print(f"\nDistance between furthest points: {distance}")
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex3.py -->
+```py
+import re
+
+# ex3. Write a pattern which identifies if a string is a valid python variable
+
+
+# Using regex (solution for exercise purpose)
+def is_valid_variable(name):
+    pattern = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+    return print(bool(re.match(pattern, name)))
+
+
+# * Solution with idiomatic Code (without using regex)
+# def is_valid_variable(name):
+#     if not name.isidentifier():
+#         return print(False)
+#     return print(True)
+
+
+# Test cases from exercise
+is_valid_variable("first_name")  # True
+is_valid_variable("first-name")  # False
+is_valid_variable("1first_name")  # False
+is_valid_variable("firstname")  # True
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex4.py -->
+```py
+import re
+
+# Clean the following text. After cleaning, count three most frequent
+#       words in the string.
+sentence = """%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?"""
+# Clean the text using regex to remove special characters
+clean_sentence = re.sub(r"[%$@#&;!?,.]", "", sentence)
+
+# From exercise
+expectedSentence = "I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher"
+if clean_sentence == expectedSentence:
+    print("Sentence cleaning successful ✅")
+else:
+    print("Sentence cleaning FAILED 🛑")
+
+# Split into words and count frequencies
+words = clean_sentence.split()
+wordsCount = {}
+for word in words:
+    wordsCount[word] = wordsCount.get(word, 0) + 1
+
+# Get 3 most frequent words
+mostCountWord = sorted(wordsCount.items(), key=lambda x: x[1], reverse=True)[:3]
+print("Most frequent words:", mostCountWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+ eg r'love
+
+## Regex Pattern Chart from course
+
+![](./30-days-python-asabeneh/images/regex-chart.png)
+
+## File - `30-days-python-asabeneh/day_18/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+, sentence that ends with a word love
+# *: zero or more times
+#   r'[a]*' means a optional or it can occur many times.
+# +: one or more times
+#   r'[a]+' means at least once (or more)
+# ?: zero or one time
+#   r'[a]?' means zero times or once
+# {3}: Exactly 3 characters
+# {3,}: At least 3 characters
+# {3,8}: 3 to 8 characters
+# |: Either or
+#   r'apple|banana' means either apple or a banana
+# (): Capture and group
+
+# & Square Bracket
+regexPattern = r"[Aa]pple"  # this square bracket mean either A or a
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'apple']
+
+# Using square brackets and or (|) operator - we extract Apple, apple, Banana, banana
+regexPattern = r"[Aa]pple|[Bb]anana"
+inputText = "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'banana', 'apple', 'banana']
+
+
+# & Escape character(\)
+regexPattern = r"\d"  # d is a special character which means digits
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)
+# ['6', '2', '0', '1', '9', '8', '2', '0', '2', '1']
+
+# & One or more times(+)
+# d is a special character which means digits, + mean one or more times
+regexPattern = r"\d+"
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021'] - now, this is better!
+
+print("------------------------------ ")
+
+# & Period(.) - Any character except new line character
+inputText = """Apple and banana are fruits"""
+# The square bracket means a and . means any character except new line
+regexPattern = r"[a]."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['an', 'an', 'an', 'a ', 'ar'] # ✅
+
+# . means any character except new line character, + means any character one or more times
+regexPattern = r"[a].+"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅✅
+
+
+# & Asterisk(*) - Any character ZERO or MORE TIMES
+# . means any character, * any character zero or more times
+regexPattern = r"[a].*"
+inputText = """Apple and banana are fruits"""
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅
+
+# & (?) - Any character ZERO or ONE TIME
+# Zero or one time. The pattern may not occur or it may occur once.
+
+inputText = """I am not sure if there is a convention how to write the word e-mail.
+Some people write it as email others may write it as Email or E-mail."""
+regexPattern = r"[Ee]-?mail"  # ? means here that '-' is optional
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['e-mail', 'email', 'Email', 'E-mail'] # ✅
+
+# & Quantifier ({})
+# We can specify the length of the substring we are looking for in a
+#       text, using a curly bracket. Let us imagine, we are interested in a
+#       substring with a length of 4 characters:
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{4}"  # exactly four times
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['2019', '2021']
+
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{1, 4}"  # 1 to 4
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021']
+
+
+# & Cart ^ (❤️)
+#  1. Starts with
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"^This"  # ^ means starts with
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['This']
+
+# 2. Negation
+txt = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regex_pattern = r"[^A-Za-z ]+"  # ^ in set character means negation, not A to Z, not a to z, no space
+matches = re.findall(regex_pattern, txt)
+print(matches)  # ['6,', '2019', '8', '2021']
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## Regex Pattern Chart from course
+
+![](./30-days-python-asabeneh/images/regex-chart.png)
+
+## File - `30-days-python-asabeneh/day_18/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+, sentence that ends with a word love
+# *: zero or more times
+#   r'[a]*' means a optional or it can occur many times.
+# +: one or more times
+#   r'[a]+' means at least once (or more)
+# ?: zero or one time
+#   r'[a]?' means zero times or once
+# {3}: Exactly 3 characters
+# {3,}: At least 3 characters
+# {3,8}: 3 to 8 characters
+# |: Either or
+#   r'apple|banana' means either apple or a banana
+# (): Capture and group
+
+# & Square Bracket
+regexPattern = r"[Aa]pple"  # this square bracket mean either A or a
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'apple']
+
+# Using square brackets and or (|) operator - we extract Apple, apple, Banana, banana
+regexPattern = r"[Aa]pple|[Bb]anana"
+inputText = "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'banana', 'apple', 'banana']
+
+
+# & Escape character(\)
+regexPattern = r"\d"  # d is a special character which means digits
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)
+# ['6', '2', '0', '1', '9', '8', '2', '0', '2', '1']
+
+# & One or more times(+)
+# d is a special character which means digits, + mean one or more times
+regexPattern = r"\d+"
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021'] - now, this is better!
+
+print("------------------------------ ")
+
+# & Period(.) - Any character except new line character
+inputText = """Apple and banana are fruits"""
+# The square bracket means a and . means any character except new line
+regexPattern = r"[a]."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['an', 'an', 'an', 'a ', 'ar'] # ✅
+
+# . means any character except new line character, + means any character one or more times
+regexPattern = r"[a].+"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅✅
+
+
+# & Asterisk(*) - Any character ZERO or MORE TIMES
+# . means any character, * any character zero or more times
+regexPattern = r"[a].*"
+inputText = """Apple and banana are fruits"""
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅
+
+# & (?) - Any character ZERO or ONE TIME
+# Zero or one time. The pattern may not occur or it may occur once.
+
+inputText = """I am not sure if there is a convention how to write the word e-mail.
+Some people write it as email others may write it as Email or E-mail."""
+regexPattern = r"[Ee]-?mail"  # ? means here that '-' is optional
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['e-mail', 'email', 'Email', 'E-mail'] # ✅
+
+# & Quantifier ({})
+# We can specify the length of the substring we are looking for in a
+#       text, using a curly bracket. Let us imagine, we are interested in a
+#       substring with a length of 4 characters:
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{4}"  # exactly four times
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['2019', '2021']
+
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{1, 4}"  # 1 to 4
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021']
+
+
+# & Cart ^ (❤️)
+#  1. Starts with
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"^This"  # ^ means starts with
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['This']
+
+# 2. Negation
+txt = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regex_pattern = r"[^A-Za-z ]+"  # ^ in set character means negation, not A to Z, not a to z, no space
+matches = re.findall(regex_pattern, txt)
+print(matches)  # ['6,', '2019', '8', '2021']
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex2.py -->
+```py
+import re
+
+# ex2. The position of some particles on the horizontal x-axis are
+#       -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8
+#       in the positive direction. Extract these numbers from this whole
+#       text and find the distance between the two furthest particles.
+
+# *EXPECTED RESULTS*
+# points = ["-12", "-4", "-3", "-1", "0", "4", "8"]
+# sorted_points = [-12, -4, -3, -1, -1, 0, 2, 4, 8]
+# distance = 8 - (-12)  # 20
+
+# Solution:
+inputText = "The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles."
+points = re.findall(r"-?\d+", inputText)
+points = [int(p) for p in points]  # converting str to int via list comprehension
+print(points)  # [-12, -4, -3, -1, 0, 4, 8]
+sorted_points = sorted(points)  # [-12, -4, -3, -1, 0, 4, 8]
+
+# distance b/w most extreme points
+distance = sorted_points[-1] - sorted_points[0]
+print(f"\nDistance between furthest points: {distance}")
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex3.py -->
+```py
+import re
+
+# ex3. Write a pattern which identifies if a string is a valid python variable
+
+
+# Using regex (solution for exercise purpose)
+def is_valid_variable(name):
+    pattern = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+    return print(bool(re.match(pattern, name)))
+
+
+# * Solution with idiomatic Code (without using regex)
+# def is_valid_variable(name):
+#     if not name.isidentifier():
+#         return print(False)
+#     return print(True)
+
+
+# Test cases from exercise
+is_valid_variable("first_name")  # True
+is_valid_variable("first-name")  # False
+is_valid_variable("1first_name")  # False
+is_valid_variable("firstname")  # True
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_18/ex4.py -->
+```py
+import re
+
+# Clean the following text. After cleaning, count three most frequent
+#       words in the string.
+sentence = """%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?"""
+# Clean the text using regex to remove special characters
+clean_sentence = re.sub(r"[%$@#&;!?,.]", "", sentence)
+
+# From exercise
+expectedSentence = "I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher"
+if clean_sentence == expectedSentence:
+    print("Sentence cleaning successful ✅")
+else:
+    print("Sentence cleaning FAILED 🛑")
+
+# Split into words and count frequencies
+words = clean_sentence.split()
+wordsCount = {}
+for word in words:
+    wordsCount[word] = wordsCount.get(word, 0) + 1
+
+# Get 3 most frequent words
+mostCountWord = sorted(wordsCount.items(), key=lambda x: x[1], reverse=True)[:3]
+print("Most frequent words:", mostCountWord)
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+ eg r'love
+
+## Regex Pattern Chart from course
+
+![](./30-days-python-asabeneh/images/regex-chart.png)
+
+## File - `30-days-python-asabeneh/day_18/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex3.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex3.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_18/ex4.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/ex4.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+, sentence that ends with a word love
+# *: zero or more times
+#   r'[a]*' means a optional or it can occur many times.
+# +: one or more times
+#   r'[a]+' means at least once (or more)
+# ?: zero or one time
+#   r'[a]?' means zero times or once
+# {3}: Exactly 3 characters
+# {3,}: At least 3 characters
+# {3,8}: 3 to 8 characters
+# |: Either or
+#   r'apple|banana' means either apple or a banana
+# (): Capture and group
+
+# & Square Bracket
+regexPattern = r"[Aa]pple"  # this square bracket mean either A or a
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'apple']
+
+# Using square brackets and or (|) operator - we extract Apple, apple, Banana, banana
+regexPattern = r"[Aa]pple|[Bb]anana"
+inputText = "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['Apple', 'banana', 'apple', 'banana']
+
+
+# & Escape character(\)
+regexPattern = r"\d"  # d is a special character which means digits
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)
+# ['6', '2', '0', '1', '9', '8', '2', '0', '2', '1']
+
+# & One or more times(+)
+# d is a special character which means digits, + mean one or more times
+regexPattern = r"\d+"
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021'] - now, this is better!
+
+print("------------------------------ ")
+
+# & Period(.) - Any character except new line character
+inputText = """Apple and banana are fruits"""
+# The square bracket means a and . means any character except new line
+regexPattern = r"[a]."
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['an', 'an', 'an', 'a ', 'ar'] # ✅
+
+# . means any character except new line character, + means any character one or more times
+regexPattern = r"[a].+"
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅✅
+
+
+# & Asterisk(*) - Any character ZERO or MORE TIMES
+# . means any character, * any character zero or more times
+regexPattern = r"[a].*"
+inputText = """Apple and banana are fruits"""
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['and banana are fruits'] # ✅
+
+# & (?) - Any character ZERO or ONE TIME
+# Zero or one time. The pattern may not occur or it may occur once.
+
+inputText = """I am not sure if there is a convention how to write the word e-mail.
+Some people write it as email others may write it as Email or E-mail."""
+regexPattern = r"[Ee]-?mail"  # ? means here that '-' is optional
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['e-mail', 'email', 'Email', 'E-mail'] # ✅
+
+# & Quantifier ({})
+# We can specify the length of the substring we are looking for in a
+#       text, using a curly bracket. Let us imagine, we are interested in a
+#       substring with a length of 4 characters:
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{4}"  # exactly four times
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['2019', '2021']
+
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"\d{1, 4}"  # 1 to 4
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['6', '2019', '8', '2021']
+
+
+# & Cart ^ (❤️)
+#  1. Starts with
+inputText = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regexPattern = r"^This"  # ^ means starts with
+matches = re.findall(regexPattern, inputText)
+print(matches)  # ['This']
+
+# 2. Negation
+txt = "This regular expression example was made on December 6,  2019 and revised on July 8, 2021"
+regex_pattern = r"[^A-Za-z ]+"  # ^ in set character means negation, not A to Z, not a to z, no space
+matches = re.findall(regex_pattern, txt)
+print(matches)  # ['6,', '2019', '8', '2021']
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Regex Pattern Chart from course
