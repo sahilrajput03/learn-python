@@ -2986,7 +2986,8 @@ print(matches)  # ['Python', 'python']
 
 ## File - `30-days-python-asabeneh/day_18/2.py`
 
-🛑 Needs debugging for this.
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_18/2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Regex Pattern Chart from course
 
