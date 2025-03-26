@@ -79,21 +79,21 @@ print(matches)  # ['Apple', 'apple']
 #   \D means: match where the string does not contain digits
 # . : any character except new line character(\n)
 # ^: starts with
-#   r'^substring' eg r'^love', a sentence that starts with a word love
-#   r'[^abc] means not a, not b, not c.
+#   r"^substring" eg r"^love", a sentence that starts with a word love
+#   r"[^abc]" means not a, not b, not c.
 # $: ends with
-#   r'substring$' eg r'love$', sentence that ends with a word love
+#   r"substring$" eg r"love$", sentence that ends with a word love
 # *: zero or more times
-#   r'[a]*' means a optional or it can occur many times.
+#   r"[a]*" means a optional or it can occur many times.
 # +: one or more times
-#   r'[a]+' means at least once (or more)
+#   r"[a]+" means at least once (or more)
 # ?: zero or one time
-#   r'[a]?' means zero times or once
+#   r"[a]?" means zero times or once
 # {3}: Exactly 3 characters
 # {3,}: At least 3 characters
 # {3,8}: 3 to 8 characters
 # |: Either or
-#   r'apple|banana' means either apple or a banana
+#   r"apple|banana" means either apple or a banana
 # (): Capture and group
 
 # & Square Bracket
