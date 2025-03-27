@@ -38,9 +38,11 @@ Code generate via autodocs
 
 ## 😇😇😇 Todos:
 
-- Continue doing day 5
+- Continue exercise of day 5
     - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md)
     - [Code](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/day_5.py)
+- Continue doing exercise of day 19
+    - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md)
 - (future todos to add here)
 
 ## File - `30-days-python-asabeneh/day_01/1.1.py`
