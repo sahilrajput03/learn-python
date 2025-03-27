@@ -151,3 +151,77 @@ person1 = {
 filePath = os.path.join(dirname, "json_example.json")  # & Using `json_example.json` now
 with open(filePath, "w", encoding="utf-8") as f:
     json.dump(person1, f, ensure_ascii=False, indent=4)
+
+
+# & Reading a csv file
+# CSV stands for comma separated values. CSV is a simple file format
+#       used to store tabular data, such as a spreadsheet or database. CSV
+#       is a very common data format in data science.
+# Example:
+""""
+"name","country","city","skills"
+"Asabeneh","Finland","Helsinki","JavaScript"
+"""
+
+import csv
+
+filePath = os.path.join(dirname, "myCSVfile.csv")  # & Using `myCSVfile.csv` now
+with open(filePath) as f:
+    csv_reader = csv.reader(f, delimiter=",")  # we use, reader() method to read csv
+    line_count = 0
+    for entry in csv_reader:
+        if line_count == 0:
+            print(f'Column names are {", ".join(entry)}')
+            # Output: Column names are name, country, city, skills
+        else:
+            print(f"\t{entry[0]} is a teachers. He lives in {entry[1]}, {entry[2]}.")
+            # Output: Sahil is a teachers. He lives in India, Chandigarh.
+        line_count += 1
+    print(f"Number of lines:  {line_count}")  # 2
+
+# & File with xlsx Extension
+# To read excel files we need to install xlrd package. We will cover this after we cover package installing using pip.
+# import xlrd
+# excel_book = xlrd.open_workbook('sample.xls)
+# print(excel_book.nsheets)
+# print(excel_book.sheet_names)
+
+
+print("-----------------------------------")
+
+# & File with xml Extension
+# XML is another structured data format which looks like HTML. In XML
+#       the tags are not predefined. The first line is an XML declaration.
+#       The person tag is the root of the XML. The person has a gender
+#       attribute. Example:XML
+
+"""
+<?xml version="1.0"?>
+<person gender="female">
+  <name>Asabeneh</name>
+  <country>Finland</country>
+  <city>Helsinki</city>
+  <skills>
+    <skill>JavaScrip</skill>
+    <skill>React</skill>
+    <skill>Python</skill>
+  </skills>
+</person>
+"""
+
+# For more information on how to read an XML file check the documentation at https://docs.python.org/2/library/xml.etree.elementtree.html
+
+import xml.etree.ElementTree as ET
+
+filePath = os.path.join(dirname, "myXMLfile.xml")  # & Using `myXMLfile.xml` now
+tree = ET.parse(filePath)
+root = tree.getroot()
+print("Root tag:", root.tag)  # person
+print("Attribute:", root.attrib)  # {'gender': 'female'}
+for child in root:
+    print("field: ", child.tag)
+    # Output:
+    # field:  name
+    # field:  country
+    # field:  city
+    # field:  skills
