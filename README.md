@@ -3311,3 +3311,5 @@ print("Most frequent words:", mostCountWord)
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_19/ex2.py) -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+# 🛑🛑🛑🛑Todo: continue doing exercise of day 19🛑🛑🛑🛑
