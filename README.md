@@ -3292,3 +3292,18 @@ mostCountWord = sorted(wordsCount.items(), key=lambda x: x[1], reverse=True)[:3]
 print("Most frequent words:", mostCountWord)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_19/1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_19/1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_19/ex1.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_19/ex1.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## File - `30-days-python-asabeneh/day_19/ex2.py`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_19/ex2.py) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
