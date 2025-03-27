@@ -94,3 +94,60 @@ if os.path.exists(filePath):
     os.remove(filePath)
 else:
     print("The file does not exist")
+
+# & File with json Extension
+# JSON stands for JavaScript Object Notation. Actually, it is a stringified JavaScript object or Python dictionary.
+# dictionary
+person1 = {
+    "name": "Sahil",
+    "country": "India",
+    "city": "Chandigarh",
+    "skills": ["JavaScrip", "React", "Python"],
+}
+# JSON: A string form a dictionary
+json1 = "{'name': 'Sahil', 'country': 'India', 'city': 'Chandigarh', 'skills': ['JavaScrip', 'React', 'Python']}"
+
+# we use three quotes and make it multiple line to make it more readable
+json1 = """{
+    "name":"Sahil",
+    "country":"India",
+    "city":"Chandigarh",
+    "skills":["JavaScrip", "React","Python"]
+}"""
+
+# & Converting json to dictionary
+# To change a JSON to a dictionary, first we import the json module and then we use loads method.
+import json
+
+json1 = """{
+    "name": "Sahil",
+    "country": "India",
+    "city": "Chandigarh",
+    "skills": ["JavaScrip", "React", "Python"]
+}"""
+
+person1 = json.loads(json1)
+
+print(type(person1))  # <class 'dict'>
+print(person1)
+# Output: {'name': 'Sahil', 'country': 'India', 'city': 'Chandigarh', 'skills': ['JavaScrip', 'React', 'Python']}
+
+print(person1["name"])  # Sahil
+
+# & Saving dictionary as a JSON File
+# We can also save our data as a json file. Let us save it as a json
+#       file using the following steps. For writing a json file, we use the
+#       json.dump() method, it can take dictionary, output file,
+#       ensure_ascii and indent.  we use encoding and indentation.
+#       Indentation makes the json file easy to read.
+
+person1 = {
+    "name": "Sahil",
+    "country": "India",
+    "city": "Chandigarh",
+    "skills": ["JavaScrip", "React", "Python"],
+}
+
+filePath = os.path.join(dirname, "json_example.json")  # & Using `json_example.json` now
+with open(filePath, "w", encoding="utf-8") as f:
+    json.dump(person1, f, ensure_ascii=False, indent=4)
