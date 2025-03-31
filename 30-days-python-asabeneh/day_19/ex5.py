@@ -27,10 +27,9 @@ def find_most_common_words(text, n):
     return sorted_word_counts[:n]
 
 
+print("\nBy providing filepath as argument:")
 dirname = os.path.dirname(__file__)
 data_file = os.path.join(dirname, "sample.txt")
-
-print("\nBy providing filepath as argument:")
 [print(word) for word in find_most_common_words(data_file, 10)]
 
 text = """
@@ -38,3 +37,22 @@ The Apollo 15 postal covers incident was a 1972 NASA scandal involving the astro
 
 print("\nBy providing text as argument:")
 [print(word) for word in find_most_common_words(text, 10)]
+
+
+print("----------------------")
+# ex6. Use the function, find_most_frequent_words to find: a) The ten most frequent words used in Obama's speech b) The ten most frequent words used in Michelle's speech c) The ten most frequent words used in Trump's speech d) The ten most frequent words used in Melina's speech
+print("\nObama Speech")
+data_file = os.path.join(dirname, "..", "data", "obama_speech.txt")
+[print(word) for word in find_most_common_words(data_file, 10)]
+
+print("\nMischelle Speech")
+data_file = os.path.join(dirname, "..", "data", "michelle_obama_speech.txt")
+[print(word) for word in find_most_common_words(data_file, 10)]
+
+print("\nDonald Trump Speech")
+data_file = os.path.join(dirname, "..", "data", "donald_speech.txt")
+[print(word) for word in find_most_common_words(data_file, 10)]
+
+print("\nMelina Trump Speech")
+data_file = os.path.join(dirname, "..", "data", "melina_trump_speech.txt")
+[print(word) for word in find_most_common_words(data_file, 10)]
