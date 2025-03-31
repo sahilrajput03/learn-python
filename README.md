@@ -1437,12 +1437,17 @@ print("------")
 
 fruits = ["banana", "orange", "mango", "lemon"]
 # negative indexes works like this:
-#  "banana"   "orange"   "mango"   "lemon"
-#      0          1          2         3
-#     -4         -3         -2        -1
+#                   "banana"   "orange"   "mango"   "lemon"
+#  Index                0          1          2         3
+#  Index from END      -4         -3         -2        -1
 
+# Get first 3 fruits
+print(fruits[:3])
+# Get last 4 fruits (start from -4 to the end)
 print(fruits[-4:])  # ["banana", "orange", "mango", "lemon"]
+# Get items starting from -3 to -1(non-inclusive)
 print(fruits[-3:-1])  # ['orange', 'mango']         # does not include the end index
+# Get last 3 fruits (start from -3 to end)
 print(fruits[-3:])  # ['orange', 'mango', 'lemon']
 
 
@@ -3597,7 +3602,46 @@ with open(filePath) as f:
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_19/ex2.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_19/ex2.py -->
 ```py
-# TODO: ex2: Read the countries_data.json data file in data directory, create a function that finds the ten most spoken languages
+from utils import readCountriesFromJsonFile
+
+# ex2: Read the countries_data.json data file in data directory, create a function that finds the ten most spoken languages
+
+countries = readCountriesFromJsonFile()
+# print(countries)
+# Output:
+#  [{
+#     "name": "Norway",
+#     "capital": "Oslo",
+#     "languages": [
+#         "Norwegian",
+#         "Norwegian Bokmål",
+#         "Norwegian Nynorsk"
+#     ],
+#     "population": 5223256,
+#     "flag": "https://restcountries.eu/data/nor.svg",
+#     "currency": "Norwegian krone"
+# }]
+print("")
+
+
+def most_spoken_languages(countries, n):
+    languages = {}
+    for country in countries:
+        for language in country["languages"]:
+            if language in languages:
+                languages[language] += 1
+            else:
+                languages[language] = 1
+    # print(languages.items()) # dict_items([('Pashto', 1), ('Uzbek', 2),..])
+    # print(type(languages.items())) # <class 'dict_items'>
+    sorted_languages = sorted(languages.items(), key=lambda x: x[1], reverse=True)
+    return sorted_languages[:n]
+    # return sorted_languages[-10:] # (Get least spoken languages)
+
+
+mostSpokenLanguages = most_spoken_languages(countries, 10)
+for mostSpokenLanguage in mostSpokenLanguages:
+    print(mostSpokenLanguage)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
