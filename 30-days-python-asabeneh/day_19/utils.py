@@ -12,3 +12,12 @@ def readCountriesFromJsonFile():
     with open(data_file, "r") as f:
         countries_data = json.load(f)
     return countries_data
+
+
+def readEmailsBigFromTxtFile():
+    dirname = os.path.dirname(os.path.dirname(__file__))
+    data_file = os.path.join(dirname, "data", "email_exchanges_big.txt")
+
+    with open(data_file, "r") as f:
+        emails_data = f.read()
+    return emails_data
