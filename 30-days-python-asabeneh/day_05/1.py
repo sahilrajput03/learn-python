@@ -62,12 +62,17 @@ print("------")
 
 fruits = ["banana", "orange", "mango", "lemon"]
 # negative indexes works like this:
-#  "banana"   "orange"   "mango"   "lemon"
-#      0          1          2         3
-#     -4         -3         -2        -1
+#                   "banana"   "orange"   "mango"   "lemon"
+#  Index                0          1          2         3
+#  Index from END      -4         -3         -2        -1
 
+# Get first 3 fruits
+print(fruits[:3])
+# Get last 4 fruits (start from -4 to the end)
 print(fruits[-4:])  # ["banana", "orange", "mango", "lemon"]
+# Get items starting from -3 to -1(non-inclusive)
 print(fruits[-3:-1])  # ['orange', 'mango']         # does not include the end index
+# Get last 3 fruits (start from -3 to end)
 print(fruits[-3:])  # ['orange', 'mango', 'lemon']
 
 
