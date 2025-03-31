@@ -32,6 +32,37 @@ finally:
 
 This ensures the program continues running even when unexpected issues arise.
 
+## Learn conda from Corey Schafer
+
+src: [Corey Schafer - Python Tutorial: How I Manage Multiple Projects, Virtual Environments, and Environment Variables](https://youtu.be/cY2NXB_Tqq0?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
+
+```bash
+# Creating a conda environment
+mkdir my_project && cd my_project
+# 1. creating a virtual environment along with installing dependencies
+conda create --name my_project_env flask [more dependencies]
+# 2. activate environment
+source activate my_project_env
+# 3. create environment.yaml file
+conda env export > environment.yaml
+# 4. deactivate environment
+source deactivate
+# (info) show packages installed
+pip list
+# (info) show all conda environments on current machine
+conda env list
+
+
+# replicating environment on a new machine
+conda env create -f environment.yaml
+
+# OTHER: conda auto_env script for .bashrc
+# (timestamped) check here (description of video) - https://youtu.be/cY2NXB_Tqq0?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&t=1016
+
+# OTHER: activating env scripts so your env variables automatically changes as you activate the environment
+# (timestamped) https://youtu.be/cY2NXB_Tqq0?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&t=501
+```
+
 # 30 Days of Python
 
 Code generate via autodocs
