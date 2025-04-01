@@ -2,10 +2,10 @@
 #       a) Count the number of lines containing python or Python
 #       b) Count the number lines containing JavaScript, javascript or Javascript
 #       c) Count the number lines containing Java and not JavaScript
-from utils import readTextFileFromUrl
+from utils import readTextFileFromUrlViaNativeModule
 
 hackerNewsCsvFileUrl = "https://raw.githubusercontent.com/Asabeneh/30-Days-Of-Python/refs/heads/master/data/hacker_news.csv"
-fileContent = readTextFileFromUrl(hackerNewsCsvFileUrl)
+fileContent = readTextFileFromUrlViaNativeModule(hackerNewsCsvFileUrl)
 
 
 def countLines(keyword):

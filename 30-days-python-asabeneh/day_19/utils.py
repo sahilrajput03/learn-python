@@ -24,7 +24,8 @@ def readEmailsBigFromTxtFile():
     return emails_data
 
 
-def readTextFileFromUrl(fileUrl):
+# Fetching text file content from a url using *native* `urllib` module of python
+def readTextFileFromUrlViaNativeModule(fileUrl):
     try:
         response = urllib.request.urlopen(fileUrl)
         data = response.read().decode()  # Default argument value of `decode` is 'utf-8'
