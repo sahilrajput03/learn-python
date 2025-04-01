@@ -56,3 +56,9 @@ data_file = os.path.join(dirname, "..", "data", "donald_speech.txt")
 print("\nMelina Trump Speech")
 data_file = os.path.join(dirname, "..", "data", "melina_trump_speech.txt")
 [print(word) for word in find_most_common_words(data_file, 10)]
+
+
+# ex8. Find the 10 most repeated words in the romeo_and_juliet.txt
+print("\nromeo_and_juliet.txt")
+data_file = os.path.join(dirname, "..", "data", "romeo_and_juliet.txt")
+[print(word) for word in find_most_common_words(data_file, 10)]

@@ -1,3 +1,4 @@
+import urllib.request
 import json
 import os
 
@@ -21,3 +22,13 @@ def readEmailsBigFromTxtFile():
     with open(data_file, "r") as f:
         emails_data = f.read()
     return emails_data
+
+
+def readTextFileFromUrl(fileUrl):
+    try:
+        response = urllib.request.urlopen(fileUrl)
+        data = response.read().decode()  # Default argument value of `decode` is 'utf-8'
+        return data
+    except urllib.error.URLError as e:
+        print(f"Error accessing URL: {e}")
+        return 0
