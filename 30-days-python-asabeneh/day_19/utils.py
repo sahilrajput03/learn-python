@@ -33,3 +33,14 @@ def readTextFileFromUrlViaNativeModule(fileUrl):
     except urllib.error.URLError as e:
         print(f"Error accessing URL: {e}")
         return 0
+
+
+# Key Differences from requests (From ChatGPT)
+"""
+Feature             urllib.request	            requests
+==========================================================================
+Ease of Use         Less user-friendly	        More intuitive
+Built-in?           Yes (comes with Python)	    Needs pip install requests
+Exception Handling	Requires manual handling	Built-in error handling
+Performance	        Similar	                    Similar
+"""
