@@ -35,6 +35,7 @@ def readTextFileFromUrlViaNativeModule(fileUrl):
         return 0
 
 
+# ChatGPT - https://chatgpt.com/c/67ebbfb9-8280-8007-b4e8-b709ee406881
 # Key Differences from requests (From ChatGPT)
 """
 Feature             urllib.request	            requests
