@@ -6,6 +6,8 @@ _See older readme: [Click here](./README.old.md) (README.old.md)_
 
 ## Create http server (to show directory listings)
 
+[Source](https://cloudinit.readthedocs.io/en/latest/tutorial/qemu.html)
+
 ```bash
 # Start the built-in Python webserver:
 python3 -m http.server --directory .
