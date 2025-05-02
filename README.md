@@ -4,6 +4,12 @@ _See older readme: [Click here](./README.old.md) (README.old.md)_
 - ❤️ 30 days of pythong: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
 - ❤️ trekhleb/learn-python: [Click here](https://github.com/trekhleb/learn-python)
 
+## Create http server (to show directory listings)
+
+```bash
+# Start the built-in Python webserver:
+python3 -m http.server --directory .
+```
 
 ## What is `error`, `exception` and `exception handling` in python. Be concise. (ChatGPT)
 
