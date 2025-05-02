@@ -3,7 +3,8 @@ _See older readme: [Click here](./README.old.md) (README.old.md)_
 **Quick Links:**
 - ❤️ 30 days of pythong: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
 - ❤️ trekhleb/learn-python: [Click here](https://github.com/trekhleb/learn-python)
-- [discuss.python.org](https://discuss.python.org)
+- Discussions on Python.org: [discuss.python.org](https://discuss.python.org)
+    - *(Discussions related to the Python Programming Language, Python Community, and Python Software Foundation operations)*
     - Example User Profiles: [Pradyun](https://discuss.python.org/u/pradyunsg/summary)
 
 ## Create http server (to show directory listings)
