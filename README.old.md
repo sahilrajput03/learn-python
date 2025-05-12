@@ -81,9 +81,9 @@ Read amazing quick start in Official Docs: [Click here](https://flask.palletspro
 }
 ```
 
-## Interesting feature of debugger
+## Debugger Feature
 
-This is an intersting thing to use in debuggers, especially when you are leanring a new language so you get to whenever some exception occurs and where exactly it occured.
+Show exception whenever some exception occurs wherever it occurs.
 
 ![image](https://user-images.githubusercontent.com/31458531/187025194-436d4961-d58a-4114-9cdb-3dab439fb50a.png)
 
