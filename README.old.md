@@ -51,8 +51,7 @@ git push heroku main
 
 Read amazing quick start in Official Docs: [Click here](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application)
 
-![image](https://user-images.githubusercontent.com/31458531/187025342-236c7b0e-7ce5-4f12-9166-47ce37ec913d.png)
-
+![187025342-236c7b0e-7ce5-4f12-9166-47ce37ec913d (1)](https://github.com/user-attachments/assets/dadd8b91-2866-412c-a687-6a47e39f4fb5)
 
 ## Python Debugger for autoattach works really great
 
