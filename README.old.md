@@ -11,13 +11,13 @@
 
 ## Python Libraries
 
-![image](https://github.com/user-attachments/assets/a8c554b6-ff39-4ebd-a776-71d347d2240c)
+![389238395-a8c554b6-ff39-4ebd-a776-71d347d2240c](https://github.com/user-attachments/assets/bbe442f1-1c22-45d2-8811-026ab6d8bf1a)
 
 ## Learn fixing some more dependencies
 
 Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)
 
-<img src="https://github.com/sahilrajput03/learn-python/assets/31458531/5e20b00d-136c-4d67-9c6e-8a9cb1b2d516" width="700" />
+
 
 ## Learn fixing the dependency issue of `psycopg2` dependency issue?
 
