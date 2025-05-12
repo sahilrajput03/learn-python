@@ -1,20 +1,17 @@
 # Learn Python
 
-Learn Python - Google Doc: [Click here](https://docs.google.com/document/d/1A3uFSiQv_FtVT9IAJ6fB2gxJwdjMEMLsDE6sSNZTnn8/edit?tab=t.0)
+❤️ ️Learn Python - Google Doc: [Click here](https://docs.google.com/document/d/1A3uFSiQv_FtVT9IAJ6fB2gxJwdjMEMLsDE6sSNZTnn8/edit?tab=t.0)
 
 # 30 Days of Python
 
-- ❤️ 30 days of python: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
+- 30 days of python Github Repository: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
+- **😇😇😇 Todos:**
+    - Continue exercise of day 5:
+        - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md)
+        - [Code](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/day_5.py)
+    - Continue doing exercise of day 19
 
-Code generate via autodocs
-
-## 😇😇😇 Todos:
-
-- Continue exercise of day 5
-    - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md)
-    - [Code](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/day_5.py)
-- Continue doing exercise of day 19
-- (future todos to add here)
+**Below code is generated automatically via autodocs.**
 
 ## File - `30-days-python-asabeneh/day_01/1.1.py`
 
