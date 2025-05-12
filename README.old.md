@@ -17,7 +17,7 @@
 
 Date: 19, August, 2023 - While trying to run this project - [reactjs-django-twitter-clone](https://github.com/sahilrajput03/reactjs-django-twitter-clone)
 
-
+![261826675-5e20b00d-136c-4d67-9c6e-8a9cb1b2d516 (1)](https://github.com/user-attachments/assets/48ad785d-fcbd-4177-b530-e36f6946aee0)
 
 ## Learn fixing the dependency issue of `psycopg2` dependency issue?
 
