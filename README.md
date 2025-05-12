@@ -1,80 +1,10 @@
-_See older readme: [Click here](./README.old.md) (README.old.md)_
+# Learn Python
 
-**Quick Links:**
-- ❤️ 30 days of pythong: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
-- ❤️ trekhleb/learn-python: [Click here](https://github.com/trekhleb/learn-python)
-- Discussions on Python.org: [discuss.python.org](https://discuss.python.org)
-    - *(Discussions related to the Python Programming Language, Python Community, and Python Software Foundation operations)*
-    - Example User Profiles: [Pradyun](https://discuss.python.org/u/pradyunsg/summary)
-
-## Create http server (to show directory listings)
-
-[Source](https://cloudinit.readthedocs.io/en/latest/tutorial/qemu.html)
-
-```bash
-# Start the built-in Python webserver:
-python3 -m http.server --directory .
-```
-
-## What is `error`, `exception` and `exception handling` in python. Be concise. (ChatGPT)
-
-Error: An issue in the program's syntax or logic that causes it to fail. Errors can be syntax errors (e.g., SyntaxError) or runtime errors (e.g., NameError, TypeError).
-
-Exception: A type of runtime error that can be caught and handled using try-except blocks. Examples include ValueError, KeyError, and ZeroDivisionError.
-
-*Errors terminate the program if unhandled, while exceptions allow for controlled recovery.*
-
-**What is exception handling?**
-
-Exception handling in Python refers to the process of managing and responding to runtime errors (exceptions) to prevent program crashes. It involves using constructs like `try`, `except`, `else`, and `finally` to handle exceptions gracefully.
-
-Example:
-
-```python
-try:
-    x = 10 / 0  # Potential exception
-except ZeroDivisionError:
-    print("Cannot divide by zero!")  # Handle the exception
-else:
-    print("No exceptions occurred.")  # Executes if no exceptions
-finally:
-    print("Execution complete.")  # Always executes
-```
-
-This ensures the program continues running even when unexpected issues arise.
-
-## Learn conda from Corey Schafer
-
-src: [Corey Schafer - Python Tutorial: How I Manage Multiple Projects, Virtual Environments, and Environment Variables](https://youtu.be/cY2NXB_Tqq0?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
-
-```bash
-# Creating a conda environment
-mkdir my_project && cd my_project
-# 1. creating a virtual environment along with installing dependencies
-conda create --name my_project_env flask [more dependencies]
-# 2. activate environment
-source activate my_project_env
-# 3. create environment.yaml file
-conda env export > environment.yaml
-# 4. deactivate environment
-source deactivate
-# (info) show packages installed
-pip list
-# (info) show all conda environments on current machine
-conda env list
-
-
-# replicating environment on a new machine
-conda env create -f environment.yaml
-
-# OTHER: conda auto_env script for .bashrc
-# (timestamped) check here (description of video) - https://youtu.be/cY2NXB_Tqq0?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&t=1016
-
-# OTHER: activating env scripts so your env variables automatically changes as you activate the environment
-# (timestamped) https://youtu.be/cY2NXB_Tqq0?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&t=501
-```
+Learn Python - Google Doc: [Click here](https://docs.google.com/document/d/1A3uFSiQv_FtVT9IAJ6fB2gxJwdjMEMLsDE6sSNZTnn8/edit?tab=t.0)
 
 # 30 Days of Python
+
+- ❤️ 30 days of python: [Click here](https://github.com/Asabeneh/30-Days-Of-Python)
 
 Code generate via autodocs
 
