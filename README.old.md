@@ -84,7 +84,7 @@ Read amazing quick start in Official Docs: [Click here](https://flask.palletspro
 
 Show exception whenever some exception occurs wherever it occurs.
 
-![image](https://user-images.githubusercontent.com/31458531/187025194-436d4961-d58a-4114-9cdb-3dab439fb50a.png)
+![187025194-436d4961-d58a-4114-9cdb-3dab439fb50a (1)](https://github.com/user-attachments/assets/64f3e80f-7091-44b9-8d5c-33eb3355c5ab)
 
 
 ## mimic input in python
