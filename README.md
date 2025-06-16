@@ -10,6 +10,37 @@
         - [Content](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/05_lists.md)
         - [Code](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/day_5.py)
     - Continue doing exercise of day 19
+- **🚀Progress:**
+    - [x] Day 1  
+    - [x] Day 2  
+    - [x] Day 3  
+    - [x] Day 4  
+    - ⏳ Day 5  
+    - [ ] Day 6  
+    - [ ] Day 7  
+    - [ ] Day 8  
+    - [ ] Day 9  
+    - [ ] Day 10  
+    - [ ] Day 11  
+    - [ ] Day 12  
+    - [x] Day 13  
+    - [x] Day 14  
+    - [x] Day 15  
+    - [x] Day 16  
+    - [x] Day 17  
+    - [x] Day 18  
+    - ⏳ Day 19  
+    - [ ] Day 20  
+    - [ ] Day 21  
+    - [ ] Day 22  
+    - [ ] Day 23  
+    - [ ] Day 24  
+    - [ ] Day 25  
+    - [ ] Day 26  
+    - [ ] Day 27  
+    - [ ] Day 28  
+    - [ ] Day 29  
+    - [ ] Day 30  
 
 **Below code is generated automatically via autodocs.**
 
