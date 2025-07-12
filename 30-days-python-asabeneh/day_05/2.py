@@ -1,3 +1,6 @@
+# Tags: in, list1.append(), list1.insert(), list1.remove(), list1.pop(),
+#       list1.pop(2), del list1, del list1[2], list1.copy(), list1.clear(),
+
 # checking items: Checking an item if it is a member of a list using in operator
 fruits = ["banana", "orange", "mango", "lemon"]
 print("banana" in fruits)  # True

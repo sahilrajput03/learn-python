@@ -1,7 +1,10 @@
+# Tags: joining lists, list1.extend(list2), list1.count(item1), list1.index(item1),
+#       list1.reverse(), list1.sort(reverse=True), , sorted(list1).
+
 # join - example 1
-positive_numbers = [1, 2, 3]
 zero = [0]
 negative_numbers = [-3, -2, -1]
+positive_numbers = [1, 2, 3]
 integers = negative_numbers + zero + positive_numbers
 print(integers)  # [-3, -2, -1, 0, 1, 2, 3]
 print("---------")
