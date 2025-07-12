@@ -1345,6 +1345,9 @@ There are four collection data types in Python :
 # source -
 # https://github.com/Asabeneh/30-Days-Of-Python/blob/master/05_Day_Lists/day_5.py
 
+# Tags: list, len(), negative indices,
+#       Syntax of step - list1[:1], list1[1:2], list1[::1], list1[1:5:1]
+
 empty_list = list()  # this is an empty list, no item in the list
 print(len(empty_list))  # 0
 print(len(empty_list) == 0)  # True
@@ -1449,6 +1452,9 @@ print(fruits)  #  ['avocado', 'apple', 'mango', 'lime']
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_05/2.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_05/2.py -->
 ```py
+# Tags: in, list1.append(), list1.insert(), list1.remove(), list1.pop(),
+#       list1.pop(2), del list1, del list1[2], list1.copy(), list1.clear(),
+
 # checking items: Checking an item if it is a member of a list using in operator
 fruits = ["banana", "orange", "mango", "lemon"]
 print("banana" in fruits)  # True
@@ -1525,10 +1531,13 @@ print("---------")
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./30-days-python-asabeneh/day_05/3.py) -->
 <!-- The below code snippet is automatically added from ./30-days-python-asabeneh/day_05/3.py -->
 ```py
+# Tags: joining lists, list1.extend(list2), list1.count(item1), list1.index(item1),
+#       list1.reverse(), list1.sort(reverse=True), , sorted(list1).
+
 # join - example 1
-positive_numbers = [1, 2, 3]
 zero = [0]
 negative_numbers = [-3, -2, -1]
+positive_numbers = [1, 2, 3]
 integers = negative_numbers + zero + positive_numbers
 print(integers)  # [-3, -2, -1, 0, 1, 2, 3]
 print("---------")
